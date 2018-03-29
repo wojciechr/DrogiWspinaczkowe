@@ -1,37 +1,18 @@
--## Welcome to GitHub Pages
--
--You can use the [editor on GitHub](https://github.com/wojciechr/DrogiWspinaczkowe/edit/master/README.md) to maintain and preview the content for your website in Markdown files.
--
--Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
--
--### Markdown
--
--Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
--
--```markdown
--Syntax highlighted code block
--
--# Header 1
--## Header 2
--### Header 3
--
--- Bulleted
--- List
--
--1. Numbered
--2. List
--
--**Bold** and _Italic_ and `Code` text
--
--[Link](url) and ![Image](src)
--```
--
--For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
--
--### Jekyll Themes
--
--Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/wojciechr/DrogiWspinaczkowe/settings). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
--
--### Support or Contact
--
--Having trouble with Pages? Check out our [documentation](https://help.github.com/categories/github-pages-basics/) or [contact support](https://github.com/contact) and we’ll help you sort it out.
+# Witaj na stronie Dróg wspinaczkowych
+## Opis:
+Aplikacja do zapisywania dróg wspinaczkowych które się przeszło, lub które próbowało się przejść. Użytkownik będzie miał w każdej chwili dostęp do swoich dotychczasowych osiągnięć. Będzie mógł przeglądać drogi które zrobił (lub próbował) oraz modyfikować je (na przykład styl: podjęta (nieudana) próba -> RP)
+## Funkcjonalność:
+1. podziały według różnych kategorii:
+    - gdzie dana droga się znajduje: moonboard (https://www.moonboard.com) / ścianka / skały.
+    - styl przejścia (posortowane wg trudności, OS najtrudniejszy): OS / FL / RP / podjęta próba (nieudane) / [opcjonalnie TR do każdego ze wspomnianych]
+    - trudność, trzy skale do wyboru: Kurtyki/francuska/USA (dodać konwersje między nimi)
+2. Wyświetlenie listy dróg w zależności od 
+    - lokalizacji (Rejon – Skała – Droga) (w przypadku drogi w skałach)
+    - trudności
+3. Drogi będzie można przeglądać co najmniej w postaci:
+    - piramidy przejść
+    - ilości ‘zrobionych’ dróg w okresie czasu
+    - najtrudniejszej drogi w okresie czasu
+4. Zapisywanie danych użytkowników (dróg które się przeszło):
+    - w przypadku braku dostępu do Internetu zapisywanie lokalnie, przy nawiązaniu polaczenia synchronizacja
+    - po połączeniu z Internetem dane będą zsynchronizowane z tymi na serwerze
