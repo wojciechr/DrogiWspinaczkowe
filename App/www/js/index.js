@@ -33,14 +33,16 @@ function login(){
 		var userEmail = document.getElementById("email_field").value;
 		var userPass = document.getElementById("password_field").value;
 		
-		
-//		firebase.auth().signInWithEmailAndPassword(userEmail, userPass).catch(function(error) {
+		firebase.auth().signInWithEmailAndPassword(userEmail, userPass).catch(function(error) {
 		// Handle Errors here.
-//		var errorCode = error.code;
-//		var errorMessage = error.message;
-//		window.alert("Error : " errorMessage);
-	  // ...
-//	});
+		var errorCode = error.code;
+		var errorMessage = error.message;
+		//		window.alert("Error : " errorMessage);
+
+		console.log(errorMessage);
+
+});
+
 }
 function logout(){
 	firebase.auth().signOut().then(function() {
@@ -51,18 +53,22 @@ function logout(){
 	
 }
 function login_facebook(){
-	firebase.auth.FacebookAuthProvider();	
+	    var provider = new firebase.auth.FacebookAuthProvider();
 	
 	firebase.auth().signInWithPopup(provider).then(function(result) {
 		  // This gives you a Facebook Access Token. You can use it to access the Facebook API.
 		  var token = result.credential.accessToken;
 		  // The signed-in user info.
 		  var user = result.user;
+		  		  console.log('Test');
+
 		  // ...
 		}).catch(function(error) {
 		  // Handle Errors here.
 		  var errorCode = error.code;
 		  var errorMessage = error.message;
+		  		  console.log(errorMessage);
+
 		  // The email of the user's account used.
 		  var email = error.email;
 		  // The firebase.auth.AuthCredential type that was used.
