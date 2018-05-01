@@ -5,18 +5,23 @@
 		<meta name="format-detection" content="telephone=no" />
 		<meta name="msapplication-tap-highlight" content="no" />
 		<meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width" />
-		<title>Drogi wspinaczkowe</title>
-		<script src="cordova.js"></script>
-		<link rel="stylesheet" type="text/css" href="css/style.css">
 		<meta http-equiv="Content-type" content="text/html; charset=utf-8">
-		<link rel="stylesheet" href="css/jquery.mobile-1.4.5.min.css" />
+		<title>Drogi wspinaczkowe</title>
+		<script src="https://www.gstatic.com/firebasejs/4.13.0/firebase.js"></script>
+		<script src="https://www.gstatic.com/firebasejs/4.13.0/firebase-app.js"></script>
+		<script src="https://www.gstatic.com/firebasejs/4.13.0/firebase-auth.js"></script>
+		<script src="https://www.gstatic.com/firebasejs/4.13.0/firebase-database.js"></script>
 		<script src="js/jquery-2.1.4.js"></script>
 		<script src="js/jquery.mobile-1.4.5.min.js"></script>
-		<link href="css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
 		<script src="js/bootstrap.min.js"></script>
+		<script src="cordova.js"></script>
+		<link rel="stylesheet" type="text/css" href="css/style.css">
+		<link rel="stylesheet" href="css/jquery.mobile-1.4.5.min.css" />
+		<link href="css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+
 
 	</head>
-	<body onload="init()">
+	<body>
 	     <div class="container">
 		    <h3 class="form-signin-heading"><center>Logowanie</center></h3>
 			  <hr class="colorgraph"><br>
@@ -28,7 +33,7 @@
 			  <br>
 			  <input type="password" class="form-control" name="Password" placeholder="Hasło" required="" id="password_field"/>  
 			  <br>
-			<button onclick="login()" class="btn btn-lg btn-primary btn-block">Logowanie</button>
+			<button onclick="login();" class="btn btn-lg btn-primary btn-block">Logowanie</button>
 			<button class="btn btn-lg btn-primary btn-block">Rejestracja</button>
 			  </div>
 			  <div id="user_div">
@@ -48,22 +53,7 @@
       </div>
 	  </div>
 
-<script src="https://www.gstatic.com/firebasejs/4.13.0/firebase.js"></script>
-<script src="https://www.gstatic.com/firebasejs/4.13.0/firebase-app.js"></script>
-<script src="https://www.gstatic.com/firebasejs/4.13.0/firebase-auth.js"></script>
-<script src="https://www.gstatic.com/firebasejs/4.13.0/firebase-database.js"></script>
-<script>
-  // Initialize Firebase
-  var config = {
-    apiKey: "AIzaSyA-ejZDxLBfqxuqcsakiY31p6iXt4cJc8M",
-    authDomain: "drogi-wspinaczkowe.firebaseapp.com",
-    databaseURL: "https://drogi-wspinaczkowe.firebaseio.com",
-    projectId: "drogi-wspinaczkowe",
-    storageBucket: "drogi-wspinaczkowe.appspot.com",
-    messagingSenderId: "81802368109"
-  };
-  firebase.initializeApp(config);
-</script>
+
 <script src="js/index.js"></script>	  
 	
 
