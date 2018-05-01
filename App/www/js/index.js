@@ -31,7 +31,6 @@ function login(){
 		var errorMessage = error.message;
 		//		window.alert("Error : " errorMessage);
 
-		console.log(errorMessage);
 
 });
 
@@ -73,14 +72,14 @@ function login_facebook(){
 		  var token = result.credential.accessToken;
 		  // The signed-in user info.
 		  var user = result.user;
-		  		  console.log('Test');
+
 
 		  // ...
 		}).catch(function(error) {
 		  // Handle Errors here.
 		  var errorCode = error.code;
 		  var errorMessage = error.message;
-		  		  console.log(errorMessage);
+
 
 		  // The email of the user's account used.
 		  var email = error.email;
@@ -98,7 +97,7 @@ function login_google(){
 		  var token = result.credential.accessToken;
 		  // The signed-in user info.
 		  var user = result.user;
-		   console.log('Test');
+
 		  // ...
 		}).catch(function(error) {
 		  // Handle Errors here.
