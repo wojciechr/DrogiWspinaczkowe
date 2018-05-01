@@ -11,7 +11,7 @@
 		  }());*/
 
   // Initialize Firebase
-  var config = {
+  const config = {
     apiKey: "AIzaSyA-ejZDxLBfqxuqcsakiY31p6iXt4cJc8M",
     authDomain: "drogi-wspinaczkowe.firebaseapp.com",
     databaseURL: "https://drogi-wspinaczkowe.firebaseio.com",
