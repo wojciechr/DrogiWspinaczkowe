@@ -10,6 +10,17 @@
 		  firebase.initializeApp(config);
 		  }());*/
 
+  // Initialize Firebase
+  const config = {
+    apiKey: "AIzaSyA-ejZDxLBfqxuqcsakiY31p6iXt4cJc8M",
+    authDomain: "drogi-wspinaczkowe.firebaseapp.com",
+    databaseURL: "https://drogi-wspinaczkowe.firebaseio.com",
+    projectId: "drogi-wspinaczkowe",
+    storageBucket: "drogi-wspinaczkowe.appspot.com",
+    messagingSenderId: "81802368109"
+  };
+  firebase.initializeApp(config);
+
 function login(){
 		var userEmail = document.getElementById("email_field").value;
 		var userPass = document.getElementById("password_field").value;
@@ -36,7 +47,7 @@ firebase.auth().onAuthStateChanged(function(user) {
 		
 		var email_id=user.email;
 		
-		document.getElementById("user_para").innerHTML = "Welcome User : " + email 
+		document.getElementById("user_para").innerHTML = "Welcome User : " + user.email 
 	}
 	
   } else {
