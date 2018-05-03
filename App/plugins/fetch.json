@@ -2,7 +2,83 @@
   "cordova-plugin-whitelist": {
     "source": {
       "type": "registry",
-      "id": "cordova-plugin-whitelist@1"
+      "id": "cordova-plugin-whitelist@^1.3.3"
+    },
+    "is_top_level": true,
+    "variables": {}
+  },
+  "cordova-plugin-buildinfo": {
+    "source": {
+      "type": "registry",
+      "id": "cordova-plugin-buildinfo@2.0.1"
+    },
+    "is_top_level": true,
+    "variables": {}
+  },
+  "cordova-universal-links-plugin": {
+    "source": {
+      "type": "registry",
+      "id": "cordova-universal-links-plugin"
+    },
+    "is_top_level": true,
+    "variables": {}
+  },
+  "cordova-plugin-browsertab": {
+    "source": {
+      "type": "registry",
+      "id": "cordova-plugin-browsertab"
+    },
+    "is_top_level": true,
+    "variables": {}
+  },
+  "cordova-plugin-compat": {
+    "source": {
+      "type": "registry",
+      "id": "cordova-plugin-compat@^1.0.0"
+    },
+    "is_top_level": false,
+    "variables": {}
+  },
+  "cordova-plugin-inappbrowser": {
+    "source": {
+      "type": "registry",
+      "id": "cordova-plugin-inappbrowser@3.0.0"
+    },
+    "is_top_level": true,
+    "variables": {}
+  },
+  "cordova-plugin-customurlscheme": {
+    "source": {
+      "type": "registry",
+      "id": "cordova-plugin-customurlscheme"
+    },
+    "is_top_level": true,
+    "variables": {
+      "URL_SCHEME": "com.firebase.cordova"
+    }
+  },
+  "cordova-plugin-firebase-messaging": {
+    "source": {
+      "type": "registry",
+      "id": "cordova-plugin-firebase-messaging"
+    },
+    "is_top_level": true,
+    "variables": {
+      "FIREBASE_VERSION": "11.6.+"
+    }
+  },
+  "cordova-support-google-services": {
+    "source": {
+      "type": "registry",
+      "id": "cordova-support-google-services@~1.1.0"
+    },
+    "is_top_level": false,
+    "variables": {}
+  },
+  "cordova-plugin-firebase": {
+    "source": {
+      "type": "registry",
+      "id": "cordova-plugin-firebase"
     },
     "is_top_level": true,
     "variables": {}

@@ -9,7 +9,33 @@
   "installed_plugins": {
     "cordova-plugin-whitelist": {
       "PACKAGE_NAME": "HelloCordova"
+    },
+    "cordova-plugin-buildinfo": {
+      "PACKAGE_NAME": "HelloCordova"
+    },
+    "cordova-universal-links-plugin": {
+      "PACKAGE_NAME": "HelloCordova"
+    },
+    "cordova-plugin-browsertab": {
+      "PACKAGE_NAME": "HelloCordova"
+    },
+    "cordova-plugin-inappbrowser": {
+      "PACKAGE_NAME": "HelloCordova"
+    },
+    "cordova-plugin-customurlscheme": {
+      "URL_SCHEME": "com.firebase.cordova",
+      "PACKAGE_NAME": "HelloCordova"
+    },
+    "cordova-plugin-firebase-messaging": {
+      "PACKAGE_NAME": "HelloCordova"
+    },
+    "cordova-plugin-firebase": {
+      "PACKAGE_NAME": "HelloCordova"
     }
   },
-  "dependent_plugins": {}
+  "dependent_plugins": {
+    "cordova-plugin-compat": {
+      "PACKAGE_NAME": "HelloCordova"
+    }
+  }
 }
