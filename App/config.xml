@@ -34,9 +34,6 @@
         <variable name="ANDROID_PATHPREFIX" value="/" />
     </plugin>
     <preference name="AndroidLaunchMode" value="singleTask" />
-    <plugin name="cordova-plugin-firebase-messaging" spec="^0.13.0">
-        <variable name="FIREBASE_VERSION" value="11.6.+" />
-    </plugin>
     <plugin name="cordova-plugin-firebase" spec="^1.0.4" />
     <engine name="android" spec="^7.0.0" />
     <engine name="browser" spec="^5.0.3" />
