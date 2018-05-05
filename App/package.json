@@ -35,9 +35,6 @@
         "ANDROID_HOST": " ",
         "ANDROID_PATHPREFIX": "/"
       },
-      "cordova-plugin-firebase-messaging": {
-        "FIREBASE_VERSION": "11.6.+"
-      },
       "cordova-plugin-firebase": {}
     },
     "platforms": [
