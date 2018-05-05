@@ -69,6 +69,12 @@
     "cordova-plugin-customurlscheme": {
       "URL_SCHEME": "com.firebase.cordova",
       "PACKAGE_NAME": "HelloCordova"
+    },
+    "cordova-plugin-firebase-messaging": {
+      "PACKAGE_NAME": "HelloCordova"
+    },
+    "cordova-plugin-firebase": {
+      "PACKAGE_NAME": "HelloCordova"
     }
   },
   "dependent_plugins": {},
@@ -127,6 +133,14 @@
       "clobbers": [
         "window.plugins.launchmyapp"
       ]
+    },
+    {
+      "id": "cordova-plugin-firebase-messaging.FirebaseMessaging",
+      "file": "plugins/cordova-plugin-firebase-messaging/www/FirebaseMessaging.js",
+      "pluginId": "cordova-plugin-firebase-messaging",
+      "merges": [
+        "cordova.plugins.firebase.messaging"
+      ]
     }
   ],
   "plugin_metadata": {
@@ -136,6 +150,8 @@
     "cordova-plugin-compat": "1.2.0",
     "cordova-plugin-browsertab": "0.2.0",
     "cordova-plugin-inappbrowser": "3.0.0",
-    "cordova-plugin-customurlscheme": "4.3.0"
+    "cordova-plugin-customurlscheme": "4.3.0",
+    "cordova-plugin-firebase-messaging": "0.13.0",
+    "cordova-plugin-firebase": "1.0.4"
   }
 }

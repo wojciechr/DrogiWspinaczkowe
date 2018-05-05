@@ -54,6 +54,14 @@ module.exports = [
         "clobbers": [
             "window.plugins.launchmyapp"
         ]
+    },
+    {
+        "id": "cordova-plugin-firebase-messaging.FirebaseMessaging",
+        "file": "plugins/cordova-plugin-firebase-messaging/www/FirebaseMessaging.js",
+        "pluginId": "cordova-plugin-firebase-messaging",
+        "merges": [
+            "cordova.plugins.firebase.messaging"
+        ]
     }
 ];
 module.exports.metadata = 
@@ -65,7 +73,9 @@ module.exports.metadata =
     "cordova-plugin-compat": "1.2.0",
     "cordova-plugin-browsertab": "0.2.0",
     "cordova-plugin-inappbrowser": "3.0.0",
-    "cordova-plugin-customurlscheme": "4.3.0"
+    "cordova-plugin-customurlscheme": "4.3.0",
+    "cordova-plugin-firebase-messaging": "0.13.0",
+    "cordova-plugin-firebase": "1.0.4"
 };
 // BOTTOM OF METADATA
 });

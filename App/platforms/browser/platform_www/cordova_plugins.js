@@ -38,6 +38,22 @@ module.exports = [
         "id": "cordova-plugin-inappbrowser.InAppBrowserProxy",
         "pluginId": "cordova-plugin-inappbrowser",
         "runs": true
+    },
+    {
+        "file": "plugins/cordova-plugin-firebase-messaging/www/FirebaseMessaging.js",
+        "id": "cordova-plugin-firebase-messaging.FirebaseMessaging",
+        "pluginId": "cordova-plugin-firebase-messaging",
+        "merges": [
+            "cordova.plugins.firebase.messaging"
+        ]
+    },
+    {
+        "file": "plugins/cordova-plugin-firebase/www/firebase-browser.js",
+        "id": "cordova-plugin-firebase.FirebasePlugin",
+        "pluginId": "cordova-plugin-firebase",
+        "clobbers": [
+            "FirebasePlugin"
+        ]
     }
 ];
 module.exports.metadata = 
@@ -49,7 +65,9 @@ module.exports.metadata =
     "cordova-plugin-compat": "1.2.0",
     "cordova-plugin-browsertab": "0.2.0",
     "cordova-plugin-inappbrowser": "3.0.0",
-    "cordova-plugin-customurlscheme": "4.3.0"
+    "cordova-plugin-customurlscheme": "4.3.0",
+    "cordova-plugin-firebase-messaging": "0.13.0",
+    "cordova-plugin-firebase": "1.0.4"
 }
 // BOTTOM OF METADATA
 });
