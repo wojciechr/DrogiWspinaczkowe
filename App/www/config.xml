@@ -47,4 +47,5 @@
         <path url="/__/auth/callback"/>
     </host>
 </universal-links>
+
 </widget>
