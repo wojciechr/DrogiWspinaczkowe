@@ -79,7 +79,7 @@ function login_facebook(){
 
 firebase.auth().signInWithRedirect(provider);
 
-firebase.auth().getRedirectResult().then(function(authData) {
+firebase.auth().getRedirectResult().then(function(result) {
   if (result.credential) {
     // Accounts successfully linked.
     var credential = result.credential;
