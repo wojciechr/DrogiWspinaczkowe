@@ -3,8 +3,108 @@
 <head>
     <meta charset="UTF-8">
     <title>Search</title>
-</head>
-<body>
+    <script>
+        function onload() {
+            setDates();
+        }
+        function setDates() {
+            document.getElementById('secondDatePicker').valueAsDate = new Date();
+            document.getElementById('firstDatePicker').valueAsDate = new Date(1900,0,2);
+        }
+        function wyszukajDrogi() {
 
+        }
+
+    </script>
+</head>
+<body onload="onload()">
+<p>data
+od
+    <input id ="firstDatePicker"type="date">
+ do
+    <input id ="secondDatePicker" type="date">
+</p>
+<p>trudnosc
+od
+    <select>
+        <option value="0">Wybierz trudnosc</option>
+        <option value="5a">5a</option>
+        <option value="5b">5b</option>
+        <option value="5c">5c</option>
+        <option value="6a">6a</option>
+        <option value="6a+">6a+</option>
+        <option value="6b">6b</option>
+        <option value="6b+">6b+</option>
+        <option value="6c">6c</option>
+        <option value="6c+">6c+</option>
+        <option value="7a">7a</option>
+        <option value="7a+">7a+</option>
+        <option value="7b">7b</option>
+        <option value="7b+">7b+</option>
+        <option value="7c">7c</option>
+        <option value="7c+">7c+</option>
+        <option value="8a">8a</option>
+        <option value="8a+">8a+</option>
+        <option value="8b">8b</option>
+        <option value="8b+">8b+</option>
+        <option value="8c">8c</option>
+        <option value="8c+">8c+</option>
+        <option value="9a">9a</option>
+        <option value="9a+">9a+</option>
+        <option value="9b">9b</option>
+        <option value="9b+">9b+</option>
+        <option value="9c">9c</option>
+        <option value="9c+">9c+</option>
+    </select>
+ do
+    <select>
+        <option value="0">Wybierz trudnosc</option>
+        <option value="5a">5a</option>
+        <option value="5b">5b</option>
+        <option value="5c">5c</option>
+        <option value="6a">6a</option>
+        <option value="6a+">6a+</option>
+        <option value="6b">6b</option>
+        <option value="6b+">6b+</option>
+        <option value="6c">6c</option>
+        <option value="6c+">6c+</option>
+        <option value="7a">7a</option>
+        <option value="7a+">7a+</option>
+        <option value="7b">7b</option>
+        <option value="7b+">7b+</option>
+        <option value="7c">7c</option>
+        <option value="7c+">7c+</option>
+        <option value="8a">8a</option>
+        <option value="8a+">8a+</option>
+        <option value="8b">8b</option>
+        <option value="8b+">8b+</option>
+        <option value="8c">8c</option>
+        <option value="8c+">8c+</option>
+        <option value="9a">9a</option>
+        <option value="9a+">9a+</option>
+        <option value="9b">9b</option>
+        <option value="9b+">9b+</option>
+        <option value="9c">9c</option>
+        <option value="9c+">9c+</option>
+    </select>
+</p>
+<p>
+    lokalizacja:
+    <input type="text" value="rejon, opcjonalnie">
+    <input type="text" value="skala, opcjonalnie">
+</p>
+<p>typ drogi <br>
+<input type="checkbox" name="typ_drogi" value="moonboard"> Moonboard
+<input type="checkbox" name="typ_drogi" value="skaly"> Skaly
+<input type="checkbox" name="typ_drogi" value="scianka"> Scianka
+</p>
+<p>
+styl przejscia
+<input type="checkbox" name="styl" value="os"> OS
+<input type="checkbox" name="styl" value="fl"> Flash
+<input type="checkbox" name="styl" value="rp"> RP
+<input type="checkbox" name="styl" value="proba"> Prboa
+</p>
+<button onclick="wyszukajDrogi()"> Wyszukaj</button>
 </body>
 </html>
