@@ -79,16 +79,10 @@ function login_facebook(){
 
 firebase.auth().signInWithRedirect(provider);
 
-firebase.auth().getRedirectResult().then(function(result) {
-  if (result.credential) {
-    // Accounts successfully linked.
-    var credential = result.credential;
-    var user = result.user;
-    // ...
-  }
+firebase.auth().getRedirectResult().then(function(authData) {
+	console.log(authData);
 }).catch(function(error) {
-  // Handle Errors here.
-  // ...
+	console.log(error);
 });
 }
 
@@ -100,7 +94,7 @@ function login_google(){
 				firebase.auth().getRedirectResult().then(function(result)  {
 					if (result.credential) {
 					  var token = result.credential.accessToken;
-					  document.getElementById('user_para').textContent = token;
+					  document.getElementById('quickstart-oauthtoken').textContent = token;
 					} else {
 					  document.getElementById('quickstart-oauthtoken').textContent = 'null';
 					}
