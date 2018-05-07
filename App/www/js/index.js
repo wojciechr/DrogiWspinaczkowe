@@ -107,9 +107,9 @@ function login_google(){
 				firebase.auth().getRedirectResult().then(function(result)  {
 					if (result.credential) {
 					  var token = result.credential.accessToken;
-					  document.getElementById('quickstart-oauthtoken').textContent = token;
+					  document.getElementById('user_div').textContent = token;
 					} else {
-					  document.getElementById('quickstart-oauthtoken').textContent = 'null';
+					  document.getElementById('user_div').textContent = 'null';
 					}
 					var user = result.user;
 				  }).catch(function(error) {
