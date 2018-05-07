@@ -16,7 +16,7 @@ myApp.controllers = {
     // Set button functionality to push 'new_task.html' page.
     Array.prototype.forEach.call(page.querySelectorAll('[component="button/new-task"]'), function(element) {
       element.onclick = function() {
-        document.querySelector('#myNavigator').pushPage('html/new_task.html');
+        document.querySelector('#myNavigator').pushPage('new_task.html');
       };
 
       element.show && element.show(); // Fix ons-fab in Safari.

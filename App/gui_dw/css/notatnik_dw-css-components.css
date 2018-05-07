@@ -1071,7 +1071,7 @@ h4, h5, h6 {
   height: 56px;
   min-width: 72px;
   width: auto;
-  line-height: 56px;
+  line-height: 48px;
 }
 .toolbar--material__center {
   font-family: 'Roboto', 'Noto', sans-serif;
@@ -1088,7 +1088,7 @@ h4, h5, h6 {
   overflow: hidden;
   text-overflow: ellipsis;
   text-align: left;
-  line-height: 56px;
+  line-height: 48px;
 }
 .toolbar--material__center:first-child {
   margin-left: 16px;

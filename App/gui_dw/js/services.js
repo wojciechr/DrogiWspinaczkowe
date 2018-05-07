@@ -47,7 +47,7 @@ myApp.services = {
       // Add functionality to push 'details_task.html' page with the current element as a parameter.
       taskItem.querySelector('.center').onclick = function() {
         document.querySelector('#myNavigator')
-          .pushPage('html/details_task.html',
+          .pushPage('details_task.html',
             {
               animation: 'lift',
               data: {
@@ -223,30 +223,23 @@ myApp.services = {
   ////////////////////////
   fixtures: [
     {
-      title: 'K2 na rowerze po ścianie bocznej.',
+      title: 'Wspinaczka 10m.',
       category: 'Trasy',
       description: 'Trasy które pokonano.',
       highlight: false,
       urgent: false
     },
     {
-      title: 'Wejście na K2 w gumiakach',
+      title: 'Wspinaczka 50m',
       category: 'Bardzo ważne',
-      description: 'W sobotę konieczne wejście na K2, a w poniedziałek na Mont Everest',
+      description: 'Trasa pokonana w 3 godziny',
       highlight: false,
       urgent: false
     },
     {
-      title: 'Przejście przez ścianę',
+      title: 'Wspinaczka 100m',
       category: 'Przejścia',
-      description: 'Udało mi się przebić głową ścianę.',
-      highlight: false,
-      urgent: false
-    },
-    {
-      title: 'Moja osobista notatka',
-      category: 'Osobiste',
-      description: 'Coś tu sobie zanotowałem.',
+      description: 'Wejście na najwyższy szczyt',
       highlight: false,
       urgent: false
     }
