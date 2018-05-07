@@ -39,7 +39,7 @@
     <engine name="windows" spec="^5.0.0" />
 		<universal-links>
     <host name="w7t22.app.goo.gl/nM9x" scheme="https" />
-    <host name="drogi-wspinaczkowe.firebaseapp.com" scheme="https">
+    <host name="drogiwspinaczkowe.firebaseapp.com" scheme="https">
         <path url="/__/auth/callback"/>
     </host>
 </universal-links>
