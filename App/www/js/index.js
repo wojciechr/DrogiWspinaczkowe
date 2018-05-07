@@ -104,23 +104,13 @@ function login_google(){
 		var provider = new firebase.auth.GoogleAuthProvider();
 		provider.addScope('https://www.googleapis.com/auth/contacts.readonly');
 			   firebase.auth().signInWithRedirect(provider);
-				firebase.auth().getRedirectResult().then(function(user)  {
-  if (user) {
-    // User is signed in.
-	document.getElementById("user_div").style.display = "block";
-	document.getElementById("login_div").style.display = "none";
-	
-	var user = firebase.auth().currentUser;
-	if(user != null){
-		
-		
-		document.getElementById("user_para").innerHTML = "Witaj : " 
-	}
-	
-  } else {
-    // No user is signed in.
-	document.getElementById("user_div").style.display = "none";
-	document.getElementById("login_div").style.display = "block";
+				firebase.auth().getRedirectResult().then(function(result)  {
+					if (result.credential) {
+					  var token = result.credential.accessToken;
+					  document.getElementById('quickstart-oauthtoken').textContent = token;
+					} else {
+					  document.getElementById('quickstart-oauthtoken').textContent = 'null';
+					}
 					var user = result.user;
 				  }).catch(function(error) {
 					var errorCode = error.code;
