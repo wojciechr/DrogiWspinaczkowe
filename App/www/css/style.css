@@ -20,6 +20,8 @@
   height: auto;
   padding: 10px;
 }
+input:required {
+    background-color: yellow;
 
 .colorgraph {
   height: 7px;
