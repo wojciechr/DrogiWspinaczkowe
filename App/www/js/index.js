@@ -43,7 +43,7 @@ function register (){
 		var userPass = document.getElementById("password_field").value;
 			
 			firebase.auth().createUserWithEmailAndPassword(userEmail, userPass).catch(function(error) {
-			console.log(error);
+			//console.log(error);
 });
 	
 }
@@ -52,7 +52,7 @@ function initApp() {
 
             firebase.auth().onAuthStateChanged(function(user) {
 
-                console.log(user);
+                //console.log(user);
 
                 if (user) {
 					document.getElementById("user_div").style.display = "block";
@@ -121,13 +121,13 @@ function login_facebook_function(){
                         document.getElementById('login_facebook').textContent = "Facebook"
                         var token = result.credential.accessToken;
                         var user = result.user;   
-                        console.log(token);
-                        console.log(user);
+                        //console.log(token);
+                        //console.log(user);
                     }).catch(function(error) {
                         var errorCode = error.code;
                         var errorMessage = error.message;      
-                        console.log(error.code);
-                        console.log(error.message);
+                        //console.log(error.code);
+                        //console.log(error.message);
                     });
                 }
 }
@@ -146,13 +146,13 @@ function login_facebook_function(){
                         document.getElementById('login_google').textContent = "Google"
                         var token = result.credential.accessToken;
                         var user = result.user;   
-                        console.log(token);
-                        console.log(user);
+                        //console.log(token);
+                        //console.log(user);
                     }).catch(function(error) {
                         var errorCode = error.code;
                         var errorMessage = error.message;      
-                        console.log(error.code);
-                        console.log(error.message);
+                        //console.log(error.code);
+                        //console.log(error.message);
                     });
                 }
             }
