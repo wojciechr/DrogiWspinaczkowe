@@ -1,81 +1,90 @@
 <!DOCTYPE html>
 <html lang="pl">
 <head>
-    <title>Drogi Wspinaczkowe Cool App</title>
-	 
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    
-    <link rel="stylesheet" type="text/css" href="css/font_awesome/css/font-awesome.min.css">
-    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
-    <link rel="stylesheet" type="text/css" href="css/w3.css">
-    <link rel="stylesheet" type="text/css" href="css/jquery.mobile-1.4.5.min.css">
-    <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Raleway">
-    <link rel="stylesheet" type="text/css" href="https://cdn.firebase.com/libs/firebaseui/2.5.1/firebaseui.css">
-    
-    <script src="js/bootstrap.js"></script>
-    <script src="js/jquery.min.js"></script>
-    <script src="js/jquery.js"></script>
-    <script src="js/bootstrap.min.js"></script>
-    <script src="js/firebase.js"></script>
-    <script src="js/firebase-auth.js"></script>
-    <script src="js/jquery-2.1.4.js"></script>
-    <script src="js/jquery.mobile-1.4.5.min.js"></script>
-    <script src="js/cordova.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/4.13.0/firebase-app.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/4.13.0/firebase-database.js"></script>
+	<title>Drogi Wspinaczkowe Cool App</title>
+
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+	<link rel="stylesheet" type="text/css" href="css/w3.css">
+	<link rel="stylesheet" type="text/css" href="css/font_awesome/css/font-awesome.min.css">
+	<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="css/jquery.mobile-1.4.5.min.css">
+	<link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Raleway">
+	<link rel="stylesheet" type="text/css" href="https://cdn.firebase.com/libs/firebaseui/2.5.1/firebaseui.css">
+
+	<script src="js/bootstrap.js"></script>
+	<script src="js/jquery.min.js"></script>
+	<script src="js/bootstrap.min.js"></script>
+	<script src="js/jquery.js"></script>
+	<script src="js/firebase.js"></script>
+	<script src="js/firebase-auth.js"></script>
+	<script src="js/jquery-2.1.4.js"></script>
+	<script src="js/jquery.mobile-1.4.5.min.js"></script>
+	<script src="js/cordova.js"></script>
+	<script src="https://www.gstatic.com/firebasejs/4.13.0/firebase-app.js"></script>
+	<script src="https://www.gstatic.com/firebasejs/4.13.0/firebase-database.js"></script>
 <style>
-	nav.navbar {
-      position: sticky;
-      top: 0px; }
+nav.navbar {
+	position: sticky;
+	top: 0px;
+}
 
-	.btn.focus, .btn:focus, .btn:hover{
-		color: #00ff27;
-		text-decoration: none;
-		background-color: #a7a7a7;
-	}
+.btn.focus, .btn:focus, .btn:hover{
+	color: #00ff27;
+	text-decoration: none;
+	background-color: #a7a7a7;
+}
 
-	.navbar-inverse .navbar-nav .open .dropdown-menu > li > a {
-		color: #72b77f;
-	}
+.navbar-inverse .navbar-nav .open .dropdown-menu > li > a {
+	color: #72b77f;
+}
+
+#myBtn {
+	display: none;
+	position: fixed;
+	bottom: 20px;
+	right: 15px;
+	z-index: 99;
+	font-size: 10px;
+	border: none;
+	outline: none;
+	background-color: red;
+	color: white;
+	cursor: pointer;
+	padding: 6px;
+	border-radius: 10px;
+}
+
+#myBtn:hover {
+	background-color: green;
+}
+
+.footerDW {
+	color: #fff;
+	background-color: #222222;
+	padding-top: 1px;
+	padding-bottom: 15px;
+	font-size: 10px;
+	text-align: center;
+}
 	
-	#myBtn {
-      display: none;
-      position: fixed;
-      bottom: 20px;
-      right: 15px;
-      z-index: 99;
-      font-size: 10px;
-      border: none;
-      outline: none;
-      background-color: red;
-      color: white;
-      cursor: pointer;
-      padding: 6px;
-      border-radius: 10px;}
-
-	#myBtn:hover {
-      background-color: green;}
-
-	.footerDW {
-      color: #fff;
-      background-color: #222222;
-      padding-top: 1px;
-      padding-bottom: 15px;
-      font-size: 10px;
-		text-align: center;
-      }
-      
-	.footerDW div i {
-      padding: 0 6px 0 6px;
-		cursor: pointer;
-      }
-		
-	.w3-opacity .w3-hover-opacity:hover{
-		color: #00d500;
-		opacity: inherit;
-		}
+.footerDW div i {
+	padding: 0 6px 0 6px;
+	cursor: pointer;
+}
+	
+.w3-opacity .w3-hover-opacity:hover{
+	color: #00d500;
+	opacity: inherit;
+}
+	
+.w3-card, .w3-card-2 {
+	box-shadow: inherit;
+	background-color: #f0e68c80;
+	border-radius: 10px;
+}
 
 </style>
 </head>
@@ -133,10 +142,7 @@
   
 <div class="container">
   <h3>Drogi wspinaczkowe</h3>
-  <p>Aplikacja do zapisywania dróg wspinaczkowych, które się przeszło lub które próbowało się przejść. Użytkownik będzie miał w każdej chwili dostęp do swoich dotychczasowych osiągnięć. Będzie mógł przeglądać drogi które przeszedł (lub próbował) oraz modyfikować je (na przykład styl: podjęta (nieudana) próba -> RP)..</p>
-  <h4>Opis</h4>
-  <p>Aplikacja do zapisywania dróg wspinaczkowych, które się przeszło lub które próbowało się przejść. Użytkownik będzie miał w każdej chwili dostęp do swoich dotychczasowych osiągnięć. Będzie mógł przeglądać drogi które przeszedł (lub próbował) oraz modyfikować je (na przykład styl: podjęta (nieudana) próba -> RP)..</p>
-  
+  <p>Aplikacja do zapisywania dróg wspinaczkowych, które się przeszło lub które próbowało się przejść. Użytkownik będzie miał w każdej chwili dostęp do swoich dotychczasowych osiągnięć. Będzie mógł przeglądać drogi które przeszedł (lub próbował) oraz modyfikować je (na przykład styl: podjęta (nieudana) próba -> RP)..</p>  
   <div class="w3-row-padding w3-grayscale" style="margin-top:0; filter: inherit;">
     <div class="w3-col l3 m6 w3-margin-bottom">
       <div class="w3-card">

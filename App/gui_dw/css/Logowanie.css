@@ -131,15 +131,6 @@ input[type=submit]:hover {
 	clear: both;
 }
 
-/* vertical line */
-.vl_soc {
-	position: absolute;
-	left: 50%;
-	transform: translate(-50%);
-	border: 2px solid #ddd;
-	height: 175px;
-}
-
 /* text inside the vertical line */
 .vl-innertext_soc {
 	position: absolute;
@@ -169,11 +160,6 @@ input[type=submit]:hover {
 	.col_soc {
 		width: 100%;
 		margin-top: 0;
-	}
-
-	/* hide the vertical line */
-	.vl_soc {
-		display: none;
 	}
 
 	/* show the hidden text on small screens */
