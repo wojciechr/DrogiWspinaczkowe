@@ -7,7 +7,7 @@ const config = {
     messagingSenderId: "81802368109"
   };
   firebase.initializeApp(config);
-
+var database = firebase.database();
 window.fbAsyncInit = function() {
                    FB.init ({
                       appId      : '2065286753691545',
