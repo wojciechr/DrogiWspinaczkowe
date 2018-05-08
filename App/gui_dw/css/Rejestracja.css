@@ -1,6 +1,8 @@
 nav.navbar {
 	position: sticky;
-	top: 0px; }
+	top: 0px;
+	z-index: 1;
+}
 
 #myBtn {
 	display: none;
@@ -39,7 +41,7 @@ nav.navbar {
 /* Rejestracja multiforma */
 * {box-sizing: border-box;}
 
-body {background-color: #f1f1f1;}
+body {}
 
 #regForm {
 	background-color: #ffffff;
@@ -54,20 +56,34 @@ body {background-color: #f1f1f1;}
 
 h4 {
 	text-align: center;
-	padding-bottom: 30px; }
+	padding-bottom: 30px;
+	line-height: 1.1;
+	font-weight: 400;
+}
+
+h5 {
+	text-align: center;
+	padding-bottom: 15px;
+	line-height: 1.5;
+	font-weight: 400;
+}
 
 input {
 	padding: 10px;
 	width: 100%;
 	font-size: 17px;
 	font-family: Raleway;
-	border: 1px solid #aaaaaa;
-	border-radius: 5px;
+	border: 1px solid #d1d1d1;
+	border-radius: 10px;
 	}
 
 /* Mark input boxes that gets an error on validation: */
 input.invalid {
 	background-color: #ffdddd;}
+	
+input:hover {
+	box-shadow: inset 0 0px 10px -3px #0009;
+}
 
 /* Hide all steps by default: */
 .tab {
@@ -90,7 +106,9 @@ input.invalid {
 	cursor: pointer; }
 
 .dalejbutton:hover {
-	opacity: 0.8;}
+	opacity: 0.8;
+	box-shadow: 0px 0px 10px 0px #222222;
+}
 
 #prevBtn {
 	background-color: #bbbbbb;}

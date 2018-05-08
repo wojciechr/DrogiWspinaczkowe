@@ -1,6 +1,8 @@
 nav.navbar {
 	position: sticky;
-	top: 0px; }
+	top: 0px;
+	z-index: 1;
+}
 
 #myBtn {
 	display: none;
@@ -43,16 +45,9 @@ body {
 
 a:focus, a:hover {
 	color: #fff;
-}
-
-a:focus, a:hover {
+	box-shadow: 0px 0px 10px 0px #222222;
 	text-decoration: inherit;
 	opacity: 1;
-}
-
-* {
-	box-sizing: border-box;
-	a 
 }
 
 .container_soc_all {
@@ -62,9 +57,9 @@ a:focus, a:hover {
 
 /* style the container */
 .container_soc {
-	position: relative;
+	position: inherit;
 	border-radius: 5px;
-	background-color: #f2f2f2;
+	background-color: #fff;
 	padding: 20px 0 30px 0;
 } 
 
@@ -75,11 +70,10 @@ input, .btn_soc {
 	border: none;
 	border-radius: 5px;
 	margin: 5px 0;
-	opacity: 0.85;
 	display: inline-block;
 	font-size: 17px;
 	line-height: 20px;
-	text-decoration: none; /* remove underline from anchors */
+	text-decoration: none;
 }
 
 h5 {
@@ -104,7 +98,7 @@ h5 {
 	color: white;
 }
 
-/* style the submit button */
+/* przyciski stylizacja */
 input[type=submit] {
 	background-color: #4CAF50;
 	color: white;
@@ -113,7 +107,27 @@ input[type=submit] {
 
 input[type=submit]:hover {
 	background-color: #45a049;
+	box-shadow: 0px 0px 10px 0px #222222;
 }
+
+input[type=text] {
+	border: solid 1px #d1d1d1;
+	border-radius: 10px;
+}
+
+input[type=text]:hover {
+	box-shadow: inset 0 0px 10px -3px #0009;
+}
+
+input[type=password] {
+	border: solid 1px #d1d1d1;
+	border-radius: 10px;
+}
+
+input[type=password]:hover {
+	box-shadow: inset 0 0px 10px -3px #0009;
+}
+
 
 /* Two-column layout */
 .col_soc {
@@ -129,17 +143,6 @@ input[type=submit]:hover {
 	content: "";
 	display: table;
 	clear: both;
-}
-
-/* text inside the vertical line */
-.vl-innertext_soc {
-	position: absolute;
-	top: 50%;
-	transform: translate(-50%, -50%);
-	background-color: #f1f1f1;
-	border: 1px solid #ccc;
-	border-radius: 50%;
-	padding: 8px 10px;
 }
 
 /* hide some text on medium and large screens */

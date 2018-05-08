@@ -29,6 +29,7 @@
 nav.navbar {
 	position: sticky;
 	top: 0px;
+	z-index: 1;
 }
 
 .btn.focus, .btn:focus, .btn:hover{
@@ -124,15 +125,16 @@ nav.navbar {
 		  <ul class="nav navbar-nav">
 				<li class="active"><a href="#">Menu główne</a></li>
 				<li class="dropdown">
-				  <a class="dropdown-toggle" data-toggle="dropdown" href="#">Menu dróg wspinaczkowych <span class="caret"></span></a>
+				  <a class="dropdown-toggle" data-toggle="dropdown" href="#"><span style="padding-right: 10px" class="glyphicon glyphicon-th-list"></span>Menu dróg wspinaczkowych<span class="caret"></span></a>
 				  <ul class="menudroga dropdown-menu">
-					 <li><a href="#">Dodaj drogę</a></li>
-					 <li><a href="#">Przeglądaj wszystkie drogi</a></li>
-					 <li><a href="#">Przeglądaj swoje drogi</a></li>
-					 <li><a href="#">Piramida przejść</a></li>
+					 <li><a href="#"><span style="padding-right: 10px" class="glyphicon glyphicon-road"></span>Dodaj drogę</a></li>
+					 <li><a href="#"><span style="padding-right: 10px" class="glyphicon glyphicon-search"></span>Przeglądaj wszystkie drogi</a></li>
+					 <li><a href="#"><span style="padding-right: 10px" class="glyphicon glyphicon-zoom-in"></span>Przeglądaj swoje drogi</a></li>
+					 <li><a href="#"><span style="padding-right: 10px" class="glyphicon glyphicon-picture"></span>Piramida przejść</a></li>
 				  </ul>
 				</li>
-				<li><a href="html/notatnik.html">Notatnik - Drogi wspinaczkowe</a></li>
+				<li><a href="html/notatnik.html"><span style="padding-right: 10px" class="glyphicon glyphicon-ok"></span>Planowanie</a></li>
+				<li><a href="#"><span style="padding-right: 10px" class="glyphicon glyphicon-wrench"></span>Konfiguracja</a></li>
 				<li><a href="#">Inne</a></li>
 		  </ul>
 		</div>
