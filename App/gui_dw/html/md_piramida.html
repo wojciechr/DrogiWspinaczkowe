@@ -1,39 +1,59 @@
 <!DOCTYPE html>
 <html lang="pl">
 <head>
-	<title>Drogi Wspinaczkowe - Logowanie</title>
+	<title>Drogi Wspinaczkowe - Przegladaj swoje drogi</title>
 
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 
-	<link rel="stylesheet" type="text/css" href="../css/font_awesome/css/font-awesome.min.css">
 	<link rel="stylesheet" type="text/css" href="../css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="../css/font_awesome/css/font-awesome.min.css">
+	<link rel="stylesheet" type="text/css" href="../css/bootstrap.css">
 	<link rel="stylesheet" type="text/css" href="../css/w3.css">
 	<link rel="stylesheet" type="text/css" href="../css/jquery.mobile-1.4.5.min.css">
 	<link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Raleway">
 	<link rel="stylesheet" type="text/css" href="https://cdn.firebase.com/libs/firebaseui/2.5.1/firebaseui.css">
-	<link rel="stylesheet" type="text/css" href="../css/piramida.css">
+	<link rel="stylesheet" type="text/css" href="../css/md_piramida.css">
 
-	<script src="../js/bootstrap.js"></script>
 	<script src="../js/jquery.min.js"></script>
-	<script src="../js/jquery.js"></script>
 	<script src="../js/bootstrap.min.js"></script>
-	<script src="../js/firebase.js"></script>
-	<script src="../js/firebase-auth.js"></script>
+	<script src="../js/bootstrap.js"></script>
+	<script src="../js/jquery.js"></script>
 	<script src="../js/jquery-2.1.4.js"></script>
 	<script src="../js/jquery.mobile-1.4.5.min.js"></script>
-	<script src="../js/cordova.js"></script>
+	<script src="../js/angular.min.js"></script>
 	<script src="https://www.gstatic.com/firebasejs/4.13.0/firebase-app.js"></script>
 	<script src="https://www.gstatic.com/firebasejs/4.13.0/firebase-database.js"></script>
 <style>
+
 </style>
 </head>
 
 <body style="background-color: rgb(50, 50, 50);">
 
-<div>piramida</div>
+<!-- Konfiguracja -->
+<div id="konfiguracja" class="blockall" style="display:block;">
+	<div class="content w3-animate-top">
+      <header class="space_hefo"> 
+			<div class="przycisk-space">
+				<a href="" style="float: none;">
+					<button class="btn btn-xs" onclick="window.history.back()" style="float:none;" type="button"><span style="float:none;" class="glyphicon glyphicon-chevron-left"></span>
+					</button>
+				</a>
+			</div>
+			<div style="margin: 10px;"><h3>Piramida</h3></div>
+      </header>	
+<!-- NAG ************************* -->
 
+		<div class="content_opt">
+			<h5>Piramida przejsc</h5>
+			<div class="contenet_one_opt" ng-app="">
+			</div>	
+		</div>
+
+  </div>
+</div>
 
 </body>
 </html>
