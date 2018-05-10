@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+	<title>Drogi Wspinaczkowe - Przegladaj swoje drogi</title>
+
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+	<link rel="stylesheet" type="text/css" href="../css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="../css/font_awesome/css/font-awesome.min.css">
+	<link rel="stylesheet" type="text/css" href="../css/bootstrap.css">
+	<link rel="stylesheet" type="text/css" href="../css/w3.css">
+	<link rel="stylesheet" type="text/css" href="../css/jquery.mobile-1.4.5.min.css">
+	<link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Raleway">
+	<link rel="stylesheet" type="text/css" href="https://cdn.firebase.com/libs/firebaseui/2.5.1/firebaseui.css">
+	<link rel="stylesheet" type="text/css" href="../css/md_prze_swo_drogi.css">
+
+	<script src="../js/jquery.min.js"></script>
+	<script src="../js/bootstrap.min.js"></script>
+	<script src="../js/bootstrap.js"></script>
+	<script src="../js/jquery.js"></script>
+	<script src="../js/jquery-2.1.4.js"></script>
+	<script src="../js/jquery.mobile-1.4.5.min.js"></script>
+	<script src="../js/angular.min.js"></script>
+	<script src="https://www.gstatic.com/firebasejs/4.13.0/firebase-app.js"></script>
+	<script src="https://www.gstatic.com/firebasejs/4.13.0/firebase-database.js"></script>
+<style>
+
+</style>
+</head>
+
+<body style="background-color: rgb(50, 50, 50);">
+
+<!-- Konfiguracja -->
+<div id="konfiguracja" class="blockall" style="display:block;">
+	<div class="content w3-animate-top">
+      <header class="space_hefo"> 
+			<div class="przycisk-space">
+				<a href="" style="float: none;">
+					<button class="btn btn-xs" onclick="window.history.back()" style="float:none;" type="button"><span style="float:none;" class="glyphicon glyphicon-chevron-left"></span>
+					</button>
+				</a>
+			</div>
+			<div style="margin: 10px;"><h3>Przeglądaj swoje drogi</h3></div>
+      </header>	
+		
+		<div class="content_opt">
+			<h5>zzz:</h5>
+			<div class="contenet_one_opt" ng-app="">
+				<div class="przycisk-cont"><label><input type="checkbox" value="">Skala</label></div>
+				<div class="przycisk-cont"><label><input type="checkbox" value="">Scianka</label></div>
+				<div class="przycisk-cont"><label><input type="checkbox" value="">moonboarad</label></div>
+				<div class="przycisk-cont"><label><input type="checkbox" value="" disabled>Option 3</label></div>
+			</div>
+
+		
+		</div>
+
+		<div class="content_opt">
+			<h5>www:</h5>
+			<div class="contenet_one_opt" ng-app="">
+				<div class="przycisk-cont"><label><input type="checkbox" value="">Red point</label></div>
+				<div class="przycisk-cont"><label><input type="checkbox" value="">Top rope</label></div>
+				<div class="przycisk-cont"><label><input type="checkbox" value="">On Sight</label></div>
+				<div class="przycisk-cont"><label><input type="checkbox" value="">Flash</label></div>
+				<div class="przycisk-cont"><label><input type="checkbox" value="">Nieudana proba</label></div>
+				<div class="przycisk-cont"><label><input type="checkbox" value="" disabled>Option 3</label></div>
+			</div>
+
+			<form action="/action_page.php"
+			oninput="x.value=parseInt(a.value)+parseInt(b.value)">
+			<input type="number" id="b" name="b" value="50"> <output name="x" for="a b">wynik</output>
+			</form>
+			
+			<p><input required="" name="People" placeholder="How many people" class="input" type="number"></p>
+		  
+		</div>
+		
+  </div>
+</div>
+
+
+
+</body>
+</html>

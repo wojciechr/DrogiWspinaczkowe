@@ -1,3 +1,8 @@
+body, html {
+	height: 100%;
+	position: relative;
+}
+
 nav.navbar {
 	position: sticky;
 	top: 0px;
@@ -24,20 +29,16 @@ nav.navbar {
 	background-color: green;
 	}
 
-.footerDW {
-	color: #fff;
-	background-color: #222222;
-	padding-top: 1px;
-	padding-bottom: 15px;
-	font-size: 10px;
-	text-align: center;
-	}
+/* konfiguracja menu  glowne*/
+.navbar-inverse .navbar-nav > .active > a {
+	color: rgb(137, 172, 255);
+	background-color: #1b1b1b;
+}
+
+.navbar-inverse .navbar-nav > .active > a:hover {
+	color: white;
+}
 	
-.footerDW div i {
-	padding: 0 6px 0 6px;
-	cursor: pointer;
-	}
-		 
 /* Rejestracja multiforma */
 * {box-sizing: border-box;}
 

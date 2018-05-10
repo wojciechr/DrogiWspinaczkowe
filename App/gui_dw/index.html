@@ -24,48 +24,79 @@
 	<script src="js/popper.min.js"></script>
 	
 <style>
+	body, html {
+		width: 100%;
+		margin: 0;
+		padding: 0;
+	}
+	
+	p {margin: 0; padding: 0;}
+
 	#DWsplash{
 		background-color: rgba(0, 0, 0, 1);
 		padding: 0;
 		margin: 0;
-		border-radius: 15px;
-		border: groove 3px #787878;
+		border-radius: 0px;
 	}
-
-	.SP_container{
-		position: relative;
-		text-align: center;
-		margin: 0;
-		padding: 0;
+	
+	.w3-animate-zoom {
+		 animation: animatezoom 0.6s;
+		 height: 100%;
 	}
 
 	.SP_content{
-		color: white;
-		position: absolute;
+		position: relative;
+		height: 100%;
+		margin: 0;
+		padding: 0;
 		text-align: center;
+		color: white;
+	}
+
+	.carousel {
+		position: absolute;
+		height: 100%;
 	}
 	
+	.img_dwsplash {
+		height: 100%;
+	}
+
 	.GW_button{
+		position: absolute;
 		display: inline-block;
-		position: inherit;
-		bottom: 52px;
-		background-color: #8f8f8f80;
-		color: #bcbcbc;
+		left: 0;
+		bottom: 47.5%;
+		width: 100%;
+		color: #fff;
 		border-radius: 10px;
+		border: 1px solid #68686866;
+		background-color: rgba(116, 116, 116, 0.3);
 	}
 	
 	.btn.focus, .btn:focus, .btn:hover {
-		color: #fff;
 		text-decoration: none;
-		background-color: #00800099;
+		color: #fff;
+		background-color: rgba(19, 113, 0, 0.36);
 	}
-	
 
 	.carousel-inner {
 		position: absolute;
 		width: 100%;
 		overflow: hidden;
-		bottom: 88px;
+		bottom: 25px;
+	}
+	
+	.carousel-indicators {
+		position: absolute;
+		bottom: 1%;
+		z-index: 15;
+		padding: 0;
+		margin: 0;
+		list-style: none;
+		width: 100%;
+		left: 0;
+		text-align: unset;
 	}
 
 </style>
@@ -77,7 +108,7 @@ $(document).ready(function(){
 
 window.onload=timeout;
 function timeout(){
-window.setTimeout("redirect()",10000)}
+window.setTimeout("redirect()",25000)}
 
 function redirect(){
 window.location="homeDW.html"
@@ -87,57 +118,71 @@ return}
 </head>
 
 <!--<body onload="splash(3000)">-->
-<body onload="timeout();">
+<body onload="timeout();" style="background-color: rgb(50, 50, 50);">
 <div id="DWsplash" class="w3-modal" style="display: block; color: white;">
 	<div class="w3-animate-zoom">
 		<div class="w3-container w3-black w3-display-container">		
 		</div>
-		<div class="SP_container">		
 			<div class="SP_content">
-<!-- KARUZELA -->
-	<div id="myCarousel" class="carousel slide text-center" data-ride="carousel">
-	 <!-- Indicators -->
-		<ol class="carousel-indicators">
-			<li data-target="#myCarousel" data-slide-to="0" class="active"></li>
-			<li data-target="#myCarousel" data-slide-to="1"></li>
-			<li data-target="#myCarousel" data-slide-to="2"></li>
-			<li data-target="#myCarousel" data-slide-to="3"></li>
-			<li data-target="#myCarousel" data-slide-to="4"></li>
-		</ol>
-		<img class="SP_img" src="img/Rock-Climbing2.jpg" style="width:100%">
-		<button type="button" class="GW_button btn btn-outline-success" onClick="redirect();">Zobacz jak działa</button>
-		<!-- Wrapper for slides -->
-		<div class="carousel-inner" role="listbox">
-			<div class="item active">
-			  <h4>Aplikacja do zapisywania dróg wspinaczkowych, które się przeszło lub które próbowało się przejść.<br><span>Użytkownik będzie miał w każdej chwili dostęp do swoich dotychczasowych osiągnięć.</span></h4>
-			</div>
-			<div class="item">
-			  <h4>Użytkownik:<br><span>Będzie mógł przeglądać drogi które przeszedł (lub próbował) oraz modyfikować je (na przykład styl: podjęta (nieudana) próba -> RP)</span></h4>
-			</div>
-			<div class="item">
-			  <h4>Podziały według różnych kategorii:<br><span>gdzie dana droga się znajduje: moonboard (https://www.moonboard.com) / ścianka / skały</span></h4>
-			</div>
-			<div class="item">
-			  <h4>Podziały według różnych kategorii:<br><span>styl przejścia (posortowane od najtrudniejszego: OS / FL / RP / podjęta próba (nieudane))</span></h4>
-			</div>
-			<div class="item">
-			  <h4>Podziały według różnych kategorii:<br><span>trudność (trzy skale do wyboru: Kurtyki/francuska/USA)</span></h4>
-			</div>
+			<!-- KARUZELA -->
+			<div id="myCarousel" class="carousel slide text-center" data-ride="carousel">
 
-		</div>
-		<!-- Left and right controls -->
-		<a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
-			<span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
-			<span class="sr-only">Previous</span>
-		</a>
-		<a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
-			<span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
-			<span class="sr-only">Next</span>
-		</a>
-	</div>
-<!-- KARUZELA KONIEC -->
+
+
+				<p class="img_dwsplash"><img class="SP_img" src="img/Rock-Climbing.jpg" style="width:100%"></p>
+
+
+
+				<button type="button" class="GW_button btn btn-outline-success" onClick="redirect();">Sprawdź jak działa</button>
+				
+				<!-- kontrolki slidera lewa prawa -->
+				<a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
+					<span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+					<span class="sr-only">Previous</span>
+				</a>
+				<a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
+					<span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+					<span class="sr-only">Next</span>
+				</a>
+
+
+				<!-- Karuzela -->
+				<div class="carousel-inner" role="listbox">
+					<div class="item active">
+						<h4 style="color:yellow">Aplikacja uruchomi się za 20 sekund<span></span></h4>
+					</div>
+					<div class="item">
+						<h4>Aplikacja do zapisywania dróg wspinaczkowych, które się przeszło lub które próbowało się przejść.<br><span>Użytkownik będzie miał w każdej chwili dostęp do swoich dotychczasowych osiągnięć.</span></h4>
+					</div>
+					<div class="item">
+					  <h4>Użytkownik:<br><span>Będzie mógł przeglądać drogi które przeszedł (lub próbował) oraz modyfikować je (na przykład styl: podjęta (nieudana) próba -> RP)</span></h4>
+					</div>
+					<div class="item">
+					  <h4>Podziały według różnych kategorii:<br><span>gdzie dana droga się znajduje: moonboard (https://www.moonboard.com) / ścianka / skały</span></h4>
+					</div>
+					<div class="item">
+					  <h4>Podziały według różnych kategorii:<br><span>styl przejścia (posortowane od najtrudniejszego: OS / FL / RP / podjęta próba (nieudane))</span></h4>
+					</div>
+					<div class="item">
+					  <h4>Podziały według różnych kategorii:<br><span>trudność (trzy skale do wyboru: Kurtyki/francuska/USA)</span></h4>
+					</div>
+				</div>
+
+
+				<!-- kropki -->
+				<ol class="carousel-indicators">
+					<li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+					<li data-target="#myCarousel" data-slide-to="1"></li>
+					<li data-target="#myCarousel" data-slide-to="2"></li>
+					<li data-target="#myCarousel" data-slide-to="3"></li>
+					<li data-target="#myCarousel" data-slide-to="4"></li>
+					<li data-target="#myCarousel" data-slide-to="5"></li>
+				</ol>
+
+
 			</div>
-		</div>
+			<!-- KARUZELA KONIEC -->
+			</div>
 	</div>
 </div>
 <script>
