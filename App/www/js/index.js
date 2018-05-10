@@ -128,8 +128,8 @@ function login_facebook_function(){
                     }).catch(function(error) {
                         var errorCode = error.code;
                         var errorMessage = error.message;      
-                        console.log(error.code);
-                        console.log(error.message);
+                      //  console.log(error.code);
+                      //  console.log(error.message);
                     });
                 }
 }
@@ -153,8 +153,8 @@ function login_google_function() {
                     }).catch(function(error) {
                         var errorCode = error.code;
                         var errorMessage = error.message;      
-                        console.log(error.code);
-                        console.log(error.message);
+                     //   console.log(error.code);
+                      //  console.log(error.message);
                     });
                 }
             }
