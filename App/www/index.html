@@ -14,7 +14,6 @@
 		<script src="js/jquery-2.1.4.js"></script>
 		<script src="js/jquery.mobile-1.4.5.min.js"></script>
 		<script src="js/bootstrap.min.js"></script>
-		<script src="cordova.js"></script>
 		<link rel="stylesheet" type="text/css" href="css/style.css">
 		<link rel="stylesheet" href="css/jquery.mobile-1.4.5.min.css" />
 		<link href="css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
@@ -25,8 +24,6 @@
 	     <div class="container">
 		    <h3 class="form-signin-heading"><center>Logowanie</center></h3>
 			  <hr class="colorgraph"><br>
-			  
-			  <br>
 			  <div id="login_div">
 			  <input type="email" class="form-control" name="E-mail" placeholder="E-mail" required="" id="email_field" />     
 			  <br>
@@ -39,12 +36,14 @@
 			  <p id="user_para"> <h3> Witaj</h3></p>
 			  <button onclick="logout()" class="btn btn-lg btn-primary btn-block">Wylogowanie</button>
 			  </div>
+			  <div><center><b><span id="sign_in_status">Jesteś niezalogowany</span></b></center></div>
 
 		    <h3 class="form-signin-heading"><center>Lub</center></h3>
 			  <hr class="colorgraph">
       <div class="row">
         <div class="col-xs-6 col-sm-6 col-md-6">
           <button id="login_facebook" class="btn btn-lg btn-primary btn-block">Facebook</button>
+		  
         </div>
         <div class="col-xs-6 col-sm-6 col-md-6">
           <button id="login_google" class="btn btn-lg btn-primary btn-block">Google</button>

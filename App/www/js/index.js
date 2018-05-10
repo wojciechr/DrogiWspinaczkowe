@@ -8,21 +8,16 @@ const config = {
   };
   firebase.initializeApp(config);
 
-window.fbAsyncInit = function() {
-                   FB.init ({
-                      appId      : '2065286753691545',
-                      xfbml      : true,
-                      version    : 'v2.12'
-                   });
-                };
-             
+
+
 (function(d, s, id) {
-                   var js, fjs = d.getElementsByTagName(s)[0];
-                   if (d.getElementById(id)) {return;}
-                   js = d.createElement(s); js.id = id;
-                   js.src = "//connect.facebook.net/en_US/sdk.js";
-                   fjs.parentNode.insertBefore(js, fjs);
-                } (document, 'script', 'facebook-jssdk'));  
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = 'https://connect.facebook.net/pl_PL/sdk.js#xfbml=1&version=v3.0&appId=2065286753691545&autoLogAppEvents=1';
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+
   
 function login(){
 		var userEmail = document.getElementById("email_field").value;
@@ -43,7 +38,7 @@ function register (){
 		var userPass = document.getElementById("password_field").value;
 			
 			firebase.auth().createUserWithEmailAndPassword(userEmail, userPass).catch(function(error) {
-			//console.log(error);
+			console.log(error);
 });
 	
 }
@@ -52,7 +47,7 @@ function initApp() {
 
             firebase.auth().onAuthStateChanged(function(user) {
 
-                //console.log(user);
+                console.log(user);
 
                 if (user) {
 					document.getElementById("user_div").style.display = "block";
@@ -73,7 +68,9 @@ function initApp() {
                 var isAnonymous = user.isAnonymous;
                 var uid = user.uid;
                 var providerData = user.providerData;
-
+				
+				document.getElementById('sign_in_status').textContent = 'Poprawnie zalogowałeś się';
+				
                 var display = {
                     uid:user.uid,
                     displayName:user.displayName,
@@ -86,7 +83,7 @@ function initApp() {
                 };
 
                 } else {
-					
+						//document.getElementById('sign_in_status').textContent = 'Zostałeś poprawnie wylogowany';
 						document.getElementById("user_div").style.display = "none";
 						document.getElementById("login_div").style.display = "block";
 
@@ -102,6 +99,7 @@ function initApp() {
 function logout(){
 	firebase.auth().signOut().then(function() {
 	  // Sign-out successful.
+	  document.getElementById('sign_in_status').textContent = 'Zostałeś poprawnie wylogowany';
 	}).catch(function(error) {
 	  // An error happened.
 	});
@@ -109,6 +107,7 @@ function logout(){
 }
 function login_facebook_function(){
 	    var provider = new firebase.auth.FacebookAuthProvider();
+		provider.addScope('email');
 	
                 if (firebase.auth().currentUser) {
                 
@@ -117,22 +116,25 @@ function login_facebook_function(){
 
                 
                 } else {
-                    firebase.auth().signInWithRedirect(provider).then(function(result) {
+                    firebase.auth().signInWithRedirect(provider).then(function() {
+						return firebase.auth().getRedirectResult();
                         document.getElementById('login_facebook').textContent = "Facebook"
+						}).then(function(result) {
                         var token = result.credential.accessToken;
                         var user = result.user;   
-                        //console.log(token);
-                        //console.log(user);
+						var profile = result.user.public_profile;
+                        console.log(token);
+                        console.log(user);
                     }).catch(function(error) {
                         var errorCode = error.code;
                         var errorMessage = error.message;      
-                        //console.log(error.code);
-                        //console.log(error.message);
+                        console.log(error.code);
+                        console.log(error.message);
                     });
                 }
 }
 
-            function login_google_function() {
+function login_google_function() {
                 var provider = new firebase.auth.GoogleAuthProvider();
                 // alert("Google signin");
                 if (firebase.auth().currentUser) {
@@ -146,13 +148,13 @@ function login_facebook_function(){
                         document.getElementById('login_google').textContent = "Google"
                         var token = result.credential.accessToken;
                         var user = result.user;   
-                        //console.log(token);
-                        //console.log(user);
+                        console.log(token);
+                        console.log(user);
                     }).catch(function(error) {
                         var errorCode = error.code;
                         var errorMessage = error.message;      
-                        //console.log(error.code);
-                        //console.log(error.message);
+                        console.log(error.code);
+                        console.log(error.message);
                     });
                 }
             }
