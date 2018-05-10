@@ -39,15 +39,27 @@ nav.navbar {
 	z-index: 1;
 }
 
+/* konfiguracja menu  glowne*/
+.navbar-inverse .navbar-nav > .active > a {
+	color: rgb(137, 172, 255);
+	background-color: #1b1b1b;
+}
+
+.navbar-inverse .navbar-nav > .active > a:hover {
+	color: white;
+}
+
+.navbar-inverse .navbar-nav .open .dropdown-menu > li > a {
+	color: #72b77f;
+}
+
+.navbar {margin-bottom: 10px;}
+
 .btn {color:rgb(100, 100, 100)}
 .btn:hover{
 	color: #00ff27;
 	text-decoration: none;
 	background-color: rgb(168, 168, 168);
-}
-
-.navbar-inverse .navbar-nav .open .dropdown-menu > li > a {
-	color: #72b77f;
 }
 
 #myBtn {
@@ -70,15 +82,6 @@ nav.navbar {
 	background-color: green;
 }
 
-/* konfiguracja menu  glowne*/
-.navbar-inverse .navbar-nav > .active > a {
-	color: rgb(137, 172, 255);
-	background-color: #1b1b1b;
-}
-
-.navbar-inverse .navbar-nav > .active > a:hover {
-	color: white;
-}
 
 .w3-section, .w3-code {
 	margin: 6px 0 6px 0 !important;
@@ -92,14 +95,22 @@ nav.navbar {
 	
 .w3-card, .w3-card-2 {
 	box-shadow: inherit;
-	background-color: rgb(78, 78, 78);
 	border-radius: 10px;
 	border-radius: 10px;
 	color: white;
 }
 
+.container {
+	padding: 0px 10px 10px 10px;
+	margin-right: auto;
+	margin-left: auto;
+}
+
 .kontekst_DW {
-	
+	border: 1px solid gray;
+	border-radius: 10px;
+	padding: 10px;
+	text-align: justify;
 }
 
 /* konfiguracja stopki */
@@ -194,11 +205,11 @@ nav.navbar {
 		<h3>Drogi wspinaczkowe</h3>
 		<p>Aplikacja do zapisywania dróg wspinaczkowych, które się przeszło lub które próbowało się przejść. Użytkownik będzie miał w każdej chwili dostęp do swoich dotychczasowych osiągnięć. Będzie mógł przeglądać drogi które przeszedł (lub próbował) oraz modyfikować je (na przykład styl: podjęta (nieudana) próba -> RP)..
 		</p>  
-		<div class="w3-row-padding w3-grayscale" style="margin-top:0; filter: inherit;">
-			<div class="w3-col l3 m6 w3-margin-bottom">
+		<div class="">
+			<div class="">
 				<div class="w3-card">
 				  <img src="../" alt="">
-				  <div class="w3-container">
+				  <div class="">
 				  <h3></h3>
 					<p>er<br>TEST<br>TEST<br>TEST<br>TEST<br>TEST<br>TEST<br>TEST<br>TEST<br>TEST<br>TEST<br>TEST<br>TESTABCDEFGH
 					</p>
