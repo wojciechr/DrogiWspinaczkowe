@@ -38,7 +38,7 @@ function register (){
 		var userPass = document.getElementById("password_field").value;
 			
 			firebase.auth().createUserWithEmailAndPassword(userEmail, userPass).catch(function(error) {
-			//console.log(error);
+			console.log(error);
 });
 	
 }
@@ -94,31 +94,35 @@ function logout(){
 	
 }
 function login_facebook_function(){
-	    var provider = new firebase.auth.FacebookAuthProvider();
-
-	
-                if (firebase.auth().currentUser) {
-                
-                firebase.auth().signOut();
-                document.getElementById('login_facebook').textContent = "Facebook"
-
-                
-                } else {
-                    firebase.auth().signInWithRedirect(provider).then(function(result) {
-                        document.getElementById('login_facebook').textContent = "Facebook"
-                        var token = result.credential.accessToken;
-                        var user = result.user;   
-						var profile = result.user.public_profile;
-                       // console.log(token);
-                       // console.log(user);
-                    }).catch(function(error) {
-                        var errorCode = error.code;
-                        var errorMessage = error.message;      
-                       // console.log(error.code);
-                       // console.log(error.message);
-                    });
-                }
+var provider = new firebase.auth.FacebookAuthProvider();
+  firebase.auth().signInWithPopup(provider).then(function (result) {
+    // This gives you a Facebook Access Token. You can use it to access the Facebook API.
+    var token = result.credential.accessToken;
+    user = result;
+    // The signed-in user info.
+    alert(user);
+    // ...
+    if (user != null) {
+        user.providerData.forEach(function (profile) {
+        alert("Sign-in provider: "+profile.providerId);
+        alert("  Provider-specific UID: "+profile.uid);
+        alert("  Name: "+profile.displayName);
+        alert("  Email: "+profile.email);
+        alert("  Photo URL: "+profile.photoURL);
+        });
+    }
+  }).catch(function (error) {
+    // Handle Errors here.
+    var errorCode = error.code;
+    var errorMessage = error.message;
+    // The email of the user's account used.
+    var email = error.email;
+    // The firebase.auth.AuthCredential type that was used.
+    var credential = error.credential;
+    // ...
+  });
 }
+
 
 function login_google_function() {
                 var provider = new firebase.auth.GoogleAuthProvider();
@@ -134,13 +138,13 @@ function login_google_function() {
                         document.getElementById('login_google').textContent = "Google"
                         var token = result.credential.accessToken;
                         var user = result.user;   
-                       // console.log(token);
-                        //console.log(user);
+                        console.log(token);
+                        console.log(user);
                     }).catch(function(error) {
                         var errorCode = error.code;
                         var errorMessage = error.message;      
-                       // console.log(error.code);
-                        //console.log(error.message);
+                        console.log(error.code);
+                        console.log(error.message);
                     });
                 }
             }
