@@ -38,7 +38,7 @@ function register (){
 		var userPass = document.getElementById("password_field").value;
 			
 			firebase.auth().createUserWithEmailAndPassword(userEmail, userPass).catch(function(error) {
-		//	console.log(error);
+			console.log(error);
 });
 	
 }
@@ -47,40 +47,28 @@ function initApp() {
 
             firebase.auth().onAuthStateChanged(function(user) {
 
-              //  console.log(user);
+                //console.log(user);
 
                 if (user) {
 					document.getElementById("user_div").style.display = "block";
 					document.getElementById("login_div").style.display = "none";
 					
 						var user = firebase.auth().currentUser;
-						if(user != null){
+						 var displayName = firebase.auth().currentUser;
+
+						if(user != null ){
 							
 							var email_id=user.email;
+							var display_id=user.displayName;
 							
-							document.getElementById("user_para").innerHTML = "Witaj : " + user.email
+							document.getElementById("user_para").innerHTML = "Witaj : " + user.email +user.displayName
 						}							
                 // User is signed in.
-                var displayName = user.displayName;
-                var email = user.email;
-                var emailVerified = user.emailVerified;
-                var photoURL = user.photoURL;
-                var isAnonymous = user.isAnonymous;
-                var uid = user.uid;
-                var providerData = user.providerData;
+               
 				
 				document.getElementById('sign_in_status').textContent = 'Poprawnie zalogowałeś się';
 				
-                var display = {
-                    uid:user.uid,
-                    displayName:user.displayName,
-                    photoURL:user.photoURL,
-                    email:user.email,
-                    emailVerified:user.emailVerified,
-                    phoneNumber : user.phoneNumber,
-                    isAnonymous:user.isAnonymous,
-                    refreshToken:user.refreshToken
-                };
+
 
                 } else {
 						//document.getElementById('sign_in_status').textContent = 'Zostałeś poprawnie wylogowany';
@@ -107,7 +95,7 @@ function logout(){
 }
 function login_facebook_function(){
 	    var provider = new firebase.auth.FacebookAuthProvider();
-		provider.addScope('email');
+
 	
                 if (firebase.auth().currentUser) {
                 
@@ -116,20 +104,18 @@ function login_facebook_function(){
 
                 
                 } else {
-                    firebase.auth().signInWithRedirect(provider).then(function() {
-						return firebase.auth().getRedirectResult();
+                    firebase.auth().signInWithRedirect(provider).then(function(result) {
                         document.getElementById('login_facebook').textContent = "Facebook"
-						}).then(function(result) {
                         var token = result.credential.accessToken;
                         var user = result.user;   
 						var profile = result.user.public_profile;
-                     //   console.log(token);
-                      //  console.log(user);
+                        console.log(token);
+                        console.log(user);
                     }).catch(function(error) {
                         var errorCode = error.code;
                         var errorMessage = error.message;      
-                      //  console.log(error.code);
-                      //  console.log(error.message);
+                        console.log(error.code);
+                        console.log(error.message);
                     });
                 }
 }
@@ -148,13 +134,13 @@ function login_google_function() {
                         document.getElementById('login_google').textContent = "Google"
                         var token = result.credential.accessToken;
                         var user = result.user;   
-                      //  console.log(token);
-                      //  console.log(user);
+                        console.log(token);
+                        console.log(user);
                     }).catch(function(error) {
                         var errorCode = error.code;
                         var errorMessage = error.message;      
-                     //   console.log(error.code);
-                      //  console.log(error.message);
+                        console.log(error.code);
+                        console.log(error.message);
                     });
                 }
             }
