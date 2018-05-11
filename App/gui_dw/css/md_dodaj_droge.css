@@ -1,3 +1,4 @@
+/* data: 11052018 0507 */
 body, html {font-family: -apple-system, 'Helvetica Neue', 'Helvetica', 'Arial', 'Lucida Grande', sans-serif;}
 
 body, html {
@@ -60,14 +61,14 @@ label {
 .content {
 	position: relative;
 	height: 100%;
-
+	
 	
 	padding: 0 0 1px 0;
 	outline: 0;
 
 	background-color: #fff;
 	box-sizing: inherit;
-	box-shadow: rgba(0, 0, 0, 1) 0px 5px 10px 0px, rgba(0, 0, 0, 1) 0px 5px 20px 0px;
+	box-shadow: rgb(0, 0, 0) 0px 0px 10px;
 }
 
 .content_opt {
@@ -84,10 +85,10 @@ label {
 .przycisk-space {
 	display: block;
 	float: right;
-	padding: 10px 10px;
-	background-color: rgb(0, 0, 0)
-	color: black;
+	padding: 14px 10px;
 }
+
+
 
 .przycisk-cont {
 
@@ -95,7 +96,7 @@ label {
 
 .space_hefo {
 	padding-left: 15px;
-	background-color: rgb(0, 0, 0);
+	background-color: rgb(40, 40, 40);
 	overflow: auto;
 
 	color: white;

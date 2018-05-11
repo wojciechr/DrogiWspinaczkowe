@@ -1,3 +1,4 @@
+/* data: 11052018 0507 */
 body, html {
 	height: 100%;
 	position: relative;
@@ -7,6 +8,7 @@ nav.navbar {
 	position: sticky;
 	top: 0px;
 	z-index: 1;
+	box-shadow: rgb(0, 0, 0) 0px 0px 10px;
 }
 
 #myBtn {
