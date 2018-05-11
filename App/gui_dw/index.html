@@ -11,8 +11,10 @@
 	<link rel="stylesheet" type="text/css" href="css/index_carousel.css">
 	<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
 	<link rel="stylesheet" type="text/css" href="css/font_awesome/css/font-awesome.min.css">
+	<link rel="stylesheet" href="sansation_light_macroman/stylesheet.css" type="text/css" charset="utf-8" />
 	<link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Montserrat">
 	<link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Lato">
+	
 
 	<script src="js/jquery.min.js"></script>
 	<script src="js/bootstrap.min.js"></script>
@@ -24,79 +26,84 @@
 	<script src="js/popper.min.js"></script>
 	
 <style>
-	body, html {
-		width: 100%;
-		margin: 0;
-		padding: 0;
-	}
-	
-	p {margin: 0; padding: 0;}
+body, html {
+	width: 100%;
+	margin: 0;
+	padding: 0;
+}
 
-	#DWsplash{
-		background-color: rgba(0, 0, 0, 1);
-		padding: 0;
-		margin: 0;
-		border-radius: 0px;
-	}
-	
-	.w3-animate-zoom {
-		 animation: animatezoom 0.6s;
-		 height: 100%;
-	}
+p {margin: 0; padding: 0;}
 
-	.SP_content{
-		position: relative;
-		height: 100%;
-		margin: 0;
-		padding: 0;
-		text-align: center;
-		color: white;
-	}
+@font-face {
+ font-family: sensation_light;
+ src: url(Sansation-Light-webfont.woff);
+}
 
-	.carousel {
-		position: absolute;
-		height: 100%;
-	}
-	
-	.img_dwsplash {
-		height: 100%;
-	}
+#DWsplash{
+	background-color: rgba(0, 0, 0, 1);
+	padding: 0;
+	margin: 0;
+	border-radius: 0px;
+}
 
-	.GW_button{
-		position: absolute;
-		display: inline-block;
-		left: 0;
-		bottom: 47.5%;
-		width: 100%;
-		color: #fff;
-		border-radius: 10px;
-		background-color: rgba(116, 116, 116, 0.3);
-	}
-	
-	.btn.focus, .btn:focus, .btn:hover {
-		text-decoration: none;
-		color: #fff;
-		background-color: rgba(19, 113, 0, 0.36);
-	}
+.w3-animate-zoom {
+	 animation: animatezoom 0.6s;
+	 height: 100%;
+}
 
-	.carousel-inner {
-		position: absolute;
-		width: 100%;
-		overflow: hidden;
-		bottom: 25px;
-	}
-	
-	.carousel-indicators {
-		position: absolute;
-		bottom: 1%;
-		z-index: 15;
-		padding: 0;
-		margin: 0;
-		list-style: none;
-		width: 100%;
-		left: 0;
-		text-align: unset;
-	}
+.SP_content{
+	position: relative;
+	height: 100%;
+	margin: 0;
+	padding: 0;
+	text-align: center;
+	color: white;
+}
+
+.carousel {
+	position: absolute;
+	height: 100%;
+}
+
+.img_dwsplash {
+	height: 100%;
+}
+
+.GW_button{
+	position: absolute;
+	display: inline-block;
+	left: 0;
+	bottom: 47.5%;
+	width: 100%;
+	color: #fff;
+	border-radius: 10px;
+	background-color: rgba(116, 116, 116, 0.3);
+}
+
+.btn.focus, .btn:focus, .btn:hover {
+	text-decoration: none;
+	color: #fff;
+	background-color: rgba(19, 113, 0, 0.36);
+}
+
+.carousel-inner {
+	position: absolute;
+	width: 100%;
+	overflow: hidden;
+	bottom: 25px;
+}
+
+.carousel-indicators {
+	position: absolute;
+	bottom: 1%;
+	z-index: 15;
+	padding: 0;
+	margin: 0;
+	list-style: none;
+	width: 100%;
+	left: 0;
+	text-align: unset;
+}
 
 </style>
 <script type="text/javascript">
@@ -107,7 +114,7 @@ $(document).ready(function(){
 
 window.onload=timeout;
 function timeout(){
-window.setTimeout("redirect()",25000)}
+window.setTimeout("redirect()",45000)}
 
 function redirect(){
 window.location="homeDW.html"
@@ -148,7 +155,7 @@ return}
 				<!-- Karuzela -->
 				<div class="carousel-inner" role="listbox">
 					<div class="item active">
-						<h4 style="color:yellow">Aplikacja uruchomi się za 20 sekund<span></span></h4>
+						<h4 style="color:yellow">Aplikacja uruchomi się za 45 sekund<span></span></h4>
 					</div>
 					<div class="item">
 						<h4>Aplikacja do zapisywania dróg wspinaczkowych, które się przeszło lub które próbowało się przejść.<br><span>Użytkownik będzie miał w każdej chwili dostęp do swoich dotychczasowych osiągnięć.</span></h4>

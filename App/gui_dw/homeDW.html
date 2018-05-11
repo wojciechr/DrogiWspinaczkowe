@@ -31,7 +31,10 @@ body, html {
 	height: 100%;
 	position: relative;
 	color: white;
+	font-family: segoe UI, sans-serif;
 }
+
+h3 {text-align: center; margin: 10px 0;}
 
 nav.navbar {
 	position: sticky;
@@ -105,7 +108,7 @@ nav.navbar {
 	padding: 0px 10px 10px 10px;
 	margin-right: auto;
 	margin-left: auto;
-	height: 100%;
+	height: 75%;
 }
 
 .kontekst_DW {
@@ -168,20 +171,21 @@ nav.navbar {
         </div>
 		  
         <!-- powrót na Menu -->
-        <div style="float:none; box-sizing: border-box; padding: 0; margin:0px 13px 0px 0px; line-height: normal; max-width: 50%; width: 10%; text-align: right; line-height: 48px;">
-        <a href="homeDW.html" style="float: none;">
-            <button style="float:none;" type="button" class="btn btn-xs"><span style="float:none;" class="glyphicon glyphicon-chevron-left"></span></button>
-        </a>
-        </div>
+		<div style="float:none; box-sizing: border-box; padding: 0; margin:0px 13px 0px 0px; line-height: normal; max-width: 50%; width: 10%; text-align: right; line-height: 48px;">
+			<a href="homeDW.html" style="float: none;">
+				<button style="float:none;" type="button" class="btn btn-xs"><span style="float:none;" class="glyphicon glyphicon-chevron-left"></span></button>
+			</a>
+		</div>
 		</div>
 		<!-- Menu -->
 		<div class="collapse navbar-collapse" id="myNavbar">
-		  <ul class="nav navbar-nav navbar-right">
-		  <li><a href="html/Rejestracja.html"><span style="padding-right: 10px" class="glyphicon glyphicon-user"></span>Zarejestruj</a></li>
-		  <li><a href="html/Logowanie.html"><span style="padding-right: 10px" class="glyphicon glyphicon-log-in"></span>Zaloguj</a></li>
-		  <hr style="margin: 2% auto;width: 92%;border-top: 1px groove;color: #7b7a7a;" >
-		  </ul>
-		  <ul class="nav navbar-nav">
+			<ul class="nav navbar-nav navbar-right">
+				<li><a href="html/Rejestracja.html"><span style="padding-right: 10px" class="glyphicon glyphicon-user"></span>Zarejestruj</a></li>
+				<li><a href="html/Logowanie.html"><span style="padding-right: 10px" class="glyphicon glyphicon-log-in"></span>Zaloguj</a></li>
+				<hr style="margin: 0 auto;width: 92%;border-top: 1px solid;color: rgb(0, 0, 0);">
+				<hr style="margin: 0 auto;width: 92%;border-top: 1px solid;color: rgb(56, 56, 56);">
+			</ul>
+			<ul class="nav navbar-nav">
 				<!--Menu glowne wylaczone. Niepotrzebne na glownej stronie.-->
 				<li class="active" style="display: none;"><a href="#"><span style="padding-right: 10px;" class="glyphicon glyphicon-menu-hamburger"></span>Menu główne</a></li>
 				<li class="dropdown">
@@ -205,15 +209,15 @@ nav.navbar {
 <!--kontener-->
 <div class="container">
 	<div class="kontekst_DW">
-		<h3>Drogi wspinaczkowe</h3>
-		<p>Aplikacja do zapisywania dróg wspinaczkowych, które się przeszło lub które próbowało się przejść. Użytkownik będzie miał w każdej chwili dostęp do swoich dotychczasowych osiągnięć. Będzie mógł przeglądać drogi które przeszedł (lub próbował) oraz modyfikować je (na przykład styl: podjęta (nieudana) próba -> RP)..
+		<h3 style="color: rgb(64, 182, 51);">Drogi wspinaczkowe</h3>
+		<p style="font-family: segoe UI, sans-serif; text-align: center; color: rgb(128, 171, 123);">Aplikacja do zapisywania dróg wspinaczkowych, które się przeszło lub które próbowało się przejść. Użytkownik będzie miał w każdej chwili dostęp do swoich dotychczasowych osiągnięć. Będzie mógł przeglądać drogi które przeszedł (lub próbował) oraz modyfikować je (na przykład styl: podjęta (nieudana) próba -> RP)..
 		</p>  
 		<div class="">
 			<div class="">
 				<div class="w3-card">
 				  <img src="../" alt="">
 				  <div style="text-align: center;"> <!--ZEGAREK-->
-				  <iframe src="html/zegarek.html" align="middle" scrolling="no" frameborder="0" height="200px" width="200px" style="position: sticky;bottom: 90px;left: 0;opacity: 0.2;"></iframe>
+				  <iframe src="html/zegarek.html" align="middle" scrolling="no" frameborder="0" height="200px" width="200px" style="opacity: 0.7;"></iframe>
 				  </div><!--ZEGAREK Koniec-->
 				</div>
 			</div>
