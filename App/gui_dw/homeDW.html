@@ -44,18 +44,7 @@ nav.navbar {
 }
 
 /* konfiguracja menu  glowne*/
-.navbar-inverse .navbar-nav > .active > a {
-	color: rgb(137, 172, 255);
-	background-color: #1b1b1b;
-}
 
-.navbar-inverse .navbar-nav > .active > a:hover {
-	color: white;
-}
-
-.navbar-inverse .navbar-nav .open .dropdown-menu > li > a {
-	color: #72b77f;
-}
 
 .navbar {margin-bottom: 10px;}
 
@@ -152,30 +141,29 @@ nav.navbar {
 </style>
 </head>
 <body style="background-color: rgb(50, 50, 50);">
+
+<!-- Animacja menu Accordeon -->
+<div id="konfiguracja" class="" style="display:block;">
+	<div class="content w3-animate-bottom">
+
 <nav class="navbar navbar-inverse">
 	<div class="container-fluid">
 		<div class="navbar-header" style="display: flex;">
-        <div style="float:none; box-sizing: border-box; background-clip: padding-box; padding: 0; margin: 0; max-width: 50%; width: 50px; text-align: left; line-height: normal;">
-        <button style="float:none;" type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-        </button>
-        </div>
-		  
-        <!-- Logo drogi wsp. -->
-        <div style="float:none; box-sizing: border-box; background-clip: padding-box; padding: 0; margin-left: auto; margin-right: auto; min-width: 200px; text-align: center; line-height: 50px;">
-        <a href="index.html">
-            <img style="float:none; margin: 0;max-width: 200px;" src="img/DW_logo.gif" alt="Drogi Wspinaczkowe">
-        </a>
-        </div>
-		  
-        <!-- powrót na Menu -->
-		<div style="float:none; box-sizing: border-box; padding: 0; margin:0px 13px 0px 0px; line-height: normal; max-width: 50%; width: 10%; text-align: right; line-height: 48px;">
-			<a href="homeDW.html" style="float: none;">
-				<button style="float:none;" type="button" class="btn btn-xs"><span style="float:none;" class="glyphicon glyphicon-chevron-left"></span></button>
-			</a>
-		</div>
+			<div style="float:none; box-sizing: border-box; background-clip: padding-box; padding: 0; margin: 0; max-width: 50%; width: 50px; text-align: left; line-height: normal;">
+				<button style="float:none;" type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+				</button>
+			</div>
+
+			<!-- Logo drogi wsp. -->
+			<div style="float:none; box-sizing: border-box; background-clip: padding-box; padding: 0; margin-left: auto; margin-right: auto; min-width: 200px; text-align: center; line-height: 50px;">
+				<a href="index.html">
+					<img style="float:none; margin: 0;max-width: 200px;" src="img/DW_logo.gif" alt="Drogi Wspinaczkowe">
+				</a>
+			</div>
+			<div style="width: 50px; height: 50px;"></div> <!-- div - do centrowania obrazka -->
 		</div>
 		<!-- Menu -->
 		<div class="collapse navbar-collapse" id="myNavbar">
@@ -209,8 +197,8 @@ nav.navbar {
 <!--kontener-->
 <div class="container">
 	<div class="kontekst_DW">
-		<h3 style="color: rgb(64, 182, 51);">Drogi wspinaczkowe</h3>
-		<p style="font-family: segoe UI, sans-serif; text-align: center; color: rgb(128, 171, 123);">Aplikacja do zapisywania dróg wspinaczkowych, które się przeszło lub które próbowało się przejść. Użytkownik będzie miał w każdej chwili dostęp do swoich dotychczasowych osiągnięć. Będzie mógł przeglądać drogi które przeszedł (lub próbował) oraz modyfikować je (na przykład styl: podjęta (nieudana) próba -> RP)..
+		<h3 style="font-family: Lucida Sans Unicode; color: rgb(92, 165, 84); letter-spacing: 2px;">Drogi wspinaczkowe</h3>
+		<p style="font-family: segoe UI, sans-serif, Arial; text-align: center; color: rgb(137, 165, 134);">Aplikacja do zapisywania dróg wspinaczkowych, które się przeszło lub które próbowało się przejść. Użytkownik będzie miał w każdej chwili dostęp do swoich dotychczasowych osiągnięć. Będzie mógł przeglądać drogi które przeszedł (lub próbował) oraz modyfikować je (na przykład styl: podjęta (nieudana) próba -> RP)..
 		</p>  
 		<div class="">
 			<div class="">
@@ -226,6 +214,10 @@ nav.navbar {
 	
 </div> <!--container-->
 
+	</div> <!-- Koniec - Animacja menu Accordeon -->
+</div> <!-- Koniec - Animacja menu Accordeon -->
+
+
 <footer class="footerDW">
     <div class="w3-xlarge w3-section">
         <i class="fa fa-facebook-official w3-hover-opacity"></i>
@@ -238,6 +230,7 @@ nav.navbar {
     <span class="txt-footer">Opracowanie:<br> Szymon, Tomasz, Marcin i Wojciech
 	 </span>
 </footer>
+
 
 <!-- Przycisk skrola -->
 <button onclick="topFunction()" id="myBtn" title="Powrót do góry">Do góry</button>

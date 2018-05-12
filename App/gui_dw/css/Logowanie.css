@@ -1,7 +1,8 @@
-/* data: 11052018 0507 */
+/* data: 12052018 0135 */
 body, html {
 	height: 100%;
 	position: relative;
+	font-family: segoe UI, sans-serif, Arial
 }
 
 nav.navbar {
@@ -31,7 +32,7 @@ nav.navbar {
 	background-color: green;
 	}
 
-/* konfiguracja menu  glowne*/
+/* konfiguracja: "menu glowne" - niebieski */
 .navbar-inverse .navbar-nav > .active > a {
 	color: rgb(137, 172, 255);
 	background-color: #1b1b1b;
@@ -39,20 +40,29 @@ nav.navbar {
 
 .navbar-inverse .navbar-nav > .active > a:hover {
 	color: white;
+} /* konfiguracja: "menu glowne" - niebieski - koniec*/
+
+/* Przycis Back to menu */
+.box_back_btn {
+	box-sizing: border-box;
+	padding: 0;
+	margin: auto 12px auto 14px;
 }
 
-/* Logowanie social */
-body {
-	font-family: Arial, Helvetica, sans-serif;
+.styl_back_btn {
+	color: rgb(90, 90, 90);
+	padding: 1px 5px;
+	font-size: 12px;
+	border-radius: 3px;
 }
 
-a:focus, a:hover {
-	color: #fff;
-	box-shadow: 0px 0px 10px 0px #222222;
-	text-decoration: inherit;
-	opacity: 1;
+.styl_back_btn:hover {
+	color: rgb(6, 255, 0);
+	background-color: rgb(218, 218, 218);
 }
+/* Przycis Back to menu - koniec */
 
+/* Logowanie social - start */
 .container_soc_all {
 	margin-left: 10%;
 	margin-right: 10%;
@@ -130,6 +140,13 @@ input[type=password] {
 input[type=password]:hover {
 	box-shadow: inset 0 0px 10px -3px #0009;
 }
+/* przyciski social - hover */
+a:focus, a:hover {
+	color: #fff;
+	box-shadow: 0px 0px 10px 0px #222222;
+	text-decoration: inherit;
+	opacity: 1;
+} /* przyciski stylizacja - koniec*/
 
 
 /* Two-column layout */
@@ -169,7 +186,7 @@ input[type=password]:hover {
 	}
 
 	/* show the hidden text on small screens */
-	.hide-md-lg_soc {
+.hide-md-lg_soc {
 		display: block;
 		text-align: center;
 	}

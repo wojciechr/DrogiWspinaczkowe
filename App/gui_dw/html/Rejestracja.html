@@ -31,6 +31,12 @@
 </head>
 
 <body style="background-color: rgb(50, 50, 50);">
+
+<!-- Animacja menu Accordeon -->
+<div id="konfiguracja" class="" style="display:block;">
+	<div class="content w3-animate-bottom">
+
+<!-- nawigacja -->
 <nav class="navbar navbar-inverse">
 	<div class="container-fluid">
 		<div class="navbar-header" style="display: flex;">
@@ -41,24 +47,25 @@
 				<span class="icon-bar"></span>
 		  </button>
 		  </div>
+		  
 		  <!-- Logo drogi wsp. -->
 		  <div style="float:none; box-sizing: border-box; background-clip: padding-box; padding: 0; margin-left: auto; margin-right: auto; min-width: 200px; text-align: center; line-height: 50px;">
 		  <a href="../index.html">
 				<img style="float:none; margin: 0;max-width: 200px;" src="../img/DW_logo.gif" alt="Drogi Wspinaczkowe">
 		  </a>
 		  </div>
-		  <!-- powrót na Menu -->
-		  <div style="float:none; box-sizing: border-box; padding: 0; margin:0px 13px 0px 0px; line-height: normal; max-width: 50%; width: 10%; text-align: right; line-height: 48px;">
-		  <a href="../homeDW.html" style="float: none;">
-				<button style="float:none;" type="button" class="btn btn-xs"><span style="float:none;" class="glyphicon glyphicon-chevron-left"></span></button>
-		  </a>
+		  
+		  <!-- przycisk back -->
+		  <div class="box_back_btn">
+			<button onclick="window.history.back()" type="button" class="btn btn-xs styl_back_btn"><span class="glyphicon glyphicon-chevron-left"></span></button>
 		  </div>
 		</div>
 		<!-- Menu -->
 		<div class="collapse navbar-collapse" id="myNavbar">
 		  <ul class="nav navbar-nav navbar-right">
 		  <li><a href="../html/Logowanie.html"><span style="padding-right: 10px" class="glyphicon glyphicon-log-in"></span>Zaloguj</a></li>
-		  <hr style="margin: 2% auto;width: 92%;border-top: 1px groove;color: #7b7a7a;" >
+				<hr style="margin: 0 auto;width: 92%;border-top: 1px solid;color: rgb(0, 0, 0);">
+				<hr style="margin: 0 auto;width: 92%;border-top: 1px solid;color: rgb(56, 56, 56);">
 		  </ul>
 		  <ul class="nav navbar-nav">
 				<li class="active"><a href="../homeDW.html"><span style="padding-right: 10px" class="glyphicon glyphicon-menu-hamburger"></span>Menu główne</a></li>
@@ -103,6 +110,9 @@
 		<span class="step"></span>
 	</div>
 </form>
+
+	</div> <!-- Koniec - Animacja menu Accordeon -->
+</div> <!-- Koniec - Animacja menu Accordeon -->
 
 <script>
 var currentTab = 0; // Current tab is set to be the first tab (0)

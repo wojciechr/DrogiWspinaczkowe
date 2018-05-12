@@ -31,6 +31,12 @@
 </head>
 
 <body style="background-color: rgb(50, 50, 50);">
+
+<!-- Animacja menu Accordeon -->
+<div id="konfiguracja" class="" style="display:block;">
+	<div class="content w3-animate-bottom">
+
+<!-- nawigacja -->
 <nav class="navbar navbar-inverse">
 	<div class="container-fluid">
 		<div class="navbar-header" style="display: flex;">
@@ -49,18 +55,17 @@
 		  </a>
 		  </div>
 		  
-		  <!-- powrót na Menu -->
-		  <div style="float:none; box-sizing: border-box; padding: 0; margin:0px 13px 0px 0px; line-height: normal; max-width: 50%; width: 10%; text-align: right; line-height: 48px;">
-		  <a href="../homeDW.html" style="float: none;">
-				<button style="float:none;" type="button" class="btn btn-xs"><span style="float:none;" class="glyphicon glyphicon-chevron-left"></span></button>
-		  </a>
+		  <!-- przycisk back -->
+		  <div class="box_back_btn">
+			<button onclick="window.history.back()" type="button" class="btn btn-xs styl_back_btn"><span class="glyphicon glyphicon-chevron-left"></span></button>
 		  </div>
 		</div>
 		<!-- Menu -->
 		<div class="collapse navbar-collapse" id="myNavbar">
 		  <ul class="nav navbar-nav navbar-right">
 		  <li><a href="../html/Rejestracja.html"><span style="padding-right: 10px" class="glyphicon glyphicon-user"></span>Zarejestruj</a></li>
-		  <hr style="margin: 2% auto;width: 92%;border-top: 1px groove;color: #7b7a7a;" >
+				<hr style="margin: 0 auto;width: 92%;border-top: 1px solid;color: rgb(0, 0, 0);">
+				<hr style="margin: 0 auto;width: 92%;border-top: 1px solid;color: rgb(56, 56, 56);">
 		  </ul>
 		  <ul class="nav navbar-nav">
 				<li class="active"><a href="../homeDW.html"><span style="padding-right: 10px" class="glyphicon glyphicon-menu-hamburger"></span>Menu główne</a></li>
@@ -79,7 +84,6 @@
 
 			<div class="col_soc">
 			  <a href="#" class="fb btn_soc"><i class="fa fa-facebook fa-fw"></i> Zaloguj do Facebook</a>
-			  <a href="#" class="twitter btn_soc"><i class="fa fa-twitter fa-fw"></i> Zaloguj do Twitter</a>
 			  <a href="#" class="google btn_soc"><i class="fa fa-google fa-fw"></i> Zaloguj do Google+</a>
 			</div>
 
@@ -100,15 +104,14 @@
 	<div class="bottom-container_soc">
 	  <div class="row_soc">
 		 <div class="col_soc">
-			<a href="#" style="color:white" class="btn_soc">Zaloguj</a>
-		 </div>
-		 <div class="col_soc">
-			<a href="#" style="color:white" class="btn_soc">Zapomniałeś hasła?</a>
+			<a href="#" style="color:white" class="style_soc">Zapomniałeś hasła?</a>
 		 </div>
 	  </div>
 	</div>
-</div>
+</div> <!-- Koniec - Logowanie social -->
 
+	</div> <!-- Koniec - Animacja menu Accordeon -->
+</div> <!-- Koniec - Animacja menu Accordeon -->
 
 <!-- Przycisk skrola -->
 <button onclick="topFunction()" id="myBtn" title="Powrót do góry">Do góry</button>

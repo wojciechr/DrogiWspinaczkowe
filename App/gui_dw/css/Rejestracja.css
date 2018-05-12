@@ -1,7 +1,8 @@
-/* data: 11052018 0507 */
+/* data: 12052018 0135 */
 body, html {
 	height: 100%;
 	position: relative;
+	font-family: segoe UI, sans-serif, Arial
 }
 
 nav.navbar {
@@ -31,7 +32,7 @@ nav.navbar {
 	background-color: green;
 	}
 
-/* konfiguracja menu  glowne*/
+/* konfiguracja: "menu glowne" - niebieski */
 .navbar-inverse .navbar-nav > .active > a {
 	color: rgb(137, 172, 255);
 	background-color: #1b1b1b;
@@ -39,12 +40,30 @@ nav.navbar {
 
 .navbar-inverse .navbar-nav > .active > a:hover {
 	color: white;
+} /* konfiguracja: "menu glowne" - niebieski - koniec */
+
+/* Przycis Back to menu */
+.box_back_btn {
+	box-sizing: border-box;
+	padding: 0;
+	margin: auto 12px auto 14px;
 }
+
+.styl_back_btn {
+	color: rgb(90, 90, 90);
+	padding: 1px 5px;
+	font-size: 12px;
+	border-radius: 3px;
+}
+
+.styl_back_btn:hover {
+	color: rgb(6, 255, 0);
+	background-color: rgb(218, 218, 218);
+}
+/* Przycis Back to menu - koniec */
 	
 /* Rejestracja multiforma */
 * {box-sizing: border-box;}
-
-body {}
 
 #regForm {
 	background-color: #ffffff;
@@ -93,11 +112,6 @@ input:hover {
 	display: none;}
 	
 /* przycisk powrotu do menu */
-.btn.focus, .btn:focus, .btn:hover{
-	color: #00ff27;
-	text-decoration: none;
-	background-color: #a7a7a7; }
-
 .dalejbutton {
 	background-color: #4CAF50;
 	color: #ffffff;
