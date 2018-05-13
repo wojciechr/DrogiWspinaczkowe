@@ -70,14 +70,13 @@ p {margin: 0; padding: 0;}
 }
 
 .GW_button{
-	position: absolute;
+	position: unset;
 	display: inline-block;
-	left: 0;
-	bottom: 47.5%;
-	width: 100%;
 	color: #fff;
 	border-radius: 10px;
 	background-color: rgba(116, 116, 116, 0.3);
+	padding-left: 20%;
+	padding-right: 20%;
 }
 
 .btn.focus, .btn:focus, .btn:hover {
@@ -105,6 +104,111 @@ p {margin: 0; padding: 0;}
 	text-align: unset;
 }
 
+
+
+
+
+/* ------- button spin start -------------------------- */
+@import "bourbon";
+
+*, *:after, *:before {
+  box-sizing: border-box;
+}
+
+.wrap{  
+  position: relative;
+  width: 80px;
+  height: 80px;
+  margin: 20px auto 30px auto;
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+.clicker{
+  background-color: white;
+  outline: none;  
+  font-weight: 600;
+	  position:absolute;
+  cursor: pointer;
+  padding: 0;
+	  border: none;
+	  height: 64px;
+	  width: 64px;
+  left: 8px;
+  top: 8px;
+	  border-radius: 100px;
+	  z-index: 2;
+	color: green;
+}
+
+.clicker:active{
+	  transform: translate(0, 1px);
+  height: 63px;
+	  box-shadow: 0px 1px 0 0 rgb(190,190,190) inset;
+}
+
+.circle{
+	  position: relative;
+  border-radius:40px;
+	  width: 80px;
+	  height: 80px;
+	  z-index: 1;
+}
+
+.circle.third{
+  border-radius: 0;
+}
+
+.clicker.faster:hover + .circle, .clicker.faster:active + .circle {
+	  animation: rotator linear .4s infinite;
+}
+
+.clicker.fast:hover + .circle, .clicker.fast:active + .circle {
+	  animation: rotator linear .5s infinite;
+}
+
+.clicker:hover + .circle, .clicker:active + .circle {
+	  animation: rotator linear .8s infinite;
+}
+
+@keyframes rotator{
+	  from{ transform: rotate(0deg); }
+	  to{ transform: rotate(360deg); }
+}
+
+		
+.angled {
+			background-image: linear-gradient(45deg, 
+                white 0%,
+                white 30%,
+                rgb(2, 152, 0) 30%,
+								rgb(47, 235, 20) 70%, 
+                white 70%, 
+                white 100%);
+		}
+
+.angled.second{
+  			background-image: linear-gradient( 
+                white 0%,
+                white 30%,
+                rgb(250,160,120) 30%,
+								rgb(250,160,120) 70%, 
+                white 70%, 
+                white 100%);
+}
+
+.angled.third{
+			background-image: linear-gradient(45deg, 
+                white 0%,
+                white 30%,
+                rgb(130,230,135) 30%,
+								rgb(130,230,135) 70%, 
+                white 70%, 
+                white 100%);
+}
+/* ----------------- button spin koniec --------------------- */
+
 </style>
 <script type="text/javascript">
 
@@ -114,7 +218,7 @@ $(document).ready(function(){
 
 window.onload=timeout;
 function timeout(){
-window.setTimeout("redirect()",45000)}
+window.setTimeout("redirect()",4500000)}
 
 function redirect(){
 window.location="homeDW.html"
@@ -137,9 +241,17 @@ return}
 
 				<p class="img_dwsplash"><img class="SP_img" src="img/Rock-Climbing.jpg" style="width:100%"></p>
 
-<iframe src="html/zegarek.html" align="middle" scrolling="no" frameborder="0" height="200px" width="200px" style="position: sticky;bottom: 90px;left: 0;opacity: 0.2;"></iframe>
+<!-- zegarek 
+<div style="position: absolute; top: 57%; width: 100%; opacity: 0.2;"><iframe src="html/zegarek.html" align="middle" scrolling="no" frameborder="0" height="200px" width="200px"></iframe></div> -->
+<!-- przycisk spin -->
+<div style="position: absolute; top: 38.5%; width: 100%; opacity: 0.7;">
+	<div class="wrap">	
+		<button onClick="redirect();" href="#" class="clicker">Kliknij</button>
+		<div class="circle angled"></div>
+	</div>
+</div>
+<!--<div style="position: absolute; top: 47.5%; width: 100%; opacity: 1;"><button type="button" class="GW_button btn btn-outline-success" onClick="redirect();">Sprawdź jak działa</button></div>-->
 
-				<button type="button" class="GW_button btn btn-outline-success" onClick="redirect();">Sprawdź jak działa</button>
 				
 				<!-- kontrolki slidera lewa prawa -->
 				<a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
