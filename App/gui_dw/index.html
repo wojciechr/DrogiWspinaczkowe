@@ -120,6 +120,8 @@ p {margin: 0; padding: 0;}
   width: 80px;
   height: 80px;
   margin: 20px auto 30px auto;
+  box-shadow: 0px 0px 10px 0px rgb(0, 0, 0);
+border-radius: 50%;
   &:last-child {
     margin-bottom: 0;
   }
@@ -139,7 +141,7 @@ p {margin: 0; padding: 0;}
   top: 8px;
 	  border-radius: 100px;
 	  z-index: 2;
-	color: green;
+	color: black;
 }
 
 .clicker:active{
@@ -179,33 +181,33 @@ p {margin: 0; padding: 0;}
 
 		
 .angled {
-			background-image: linear-gradient(45deg, 
-                white 0%,
-                white 30%,
-                rgb(2, 152, 0) 30%,
-								rgb(47, 235, 20) 70%, 
-                white 70%, 
-                white 100%);
-		}
+	background-image: linear-gradient(45deg, 
+		white 0%,
+		white 30%,
+		rgb(1, 54, 0) 30%,
+				rgb(24, 192, 0) 70%, 
+		white 70%, 
+		white 100%);
+	}
 
 .angled.second{
-  			background-image: linear-gradient( 
-                white 0%,
-                white 30%,
-                rgb(250,160,120) 30%,
-								rgb(250,160,120) 70%, 
-                white 70%, 
-                white 100%);
+	background-image: linear-gradient( 
+		white 0%,
+		white 30%,
+		rgb(250,160,120) 30%,
+				rgb(250,160,120) 70%, 
+		white 70%, 
+		white 100%);
 }
 
 .angled.third{
-			background-image: linear-gradient(45deg, 
-                white 0%,
-                white 30%,
-                rgb(130,230,135) 30%,
-								rgb(130,230,135) 70%, 
-                white 70%, 
-                white 100%);
+background-image: linear-gradient(45deg, 
+		white 0%,
+		white 30%,
+		rgb(130,230,135) 30%,
+				rgb(130,230,135) 70%, 
+		white 70%, 
+		white 100%);
 }
 /* ----------------- button spin koniec --------------------- */
 
@@ -218,7 +220,7 @@ $(document).ready(function(){
 
 window.onload=timeout;
 function timeout(){
-window.setTimeout("redirect()",4500000)}
+window.setTimeout("redirect()",4509900)}
 
 function redirect(){
 window.location="homeDW.html"
@@ -244,11 +246,11 @@ return}
 <!-- zegarek 
 <div style="position: absolute; top: 57%; width: 100%; opacity: 0.2;"><iframe src="html/zegarek.html" align="middle" scrolling="no" frameborder="0" height="200px" width="200px"></iframe></div> -->
 
-<!-- Opis Drogi Wspinaczkowe -->
-<div style="position: absolute; top: 4%; width: 100%; opacity: 0.5; font-size: 25px; text-shadow: 0px 0px 20px black, 0 0 15px #039300, 0 0 10px white;">Drogi Wspinaczkowe<br>App na +5</div>
+<!-- Opis Drogi Wspinaczkowe 
+<div style="position: absolute; top: 0%; width: 100%; opacity: 0.5; font-size: 25px; text-shadow: 0px 0px 20px black, 0 0 15px #039300, 0 0 10px white, -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black; color:rgb(9, 158, 0);text-align: left;">Drogi<br>Wspinaczkowe<br>+5</div>  -->
 
 <!-- przycisk spin -->
-<div style="position: absolute; top: 40.5%; width: 100%; opacity: 0.7;">
+<div style="position: absolute; top: 40.5%; width: 100%; opacity: 0.6;">
 	<div class="wrap">	
 		<button onClick="redirect();" href="#" class="clicker">Wejdź</button>
 		<div class="circle angled"></div>
@@ -271,7 +273,7 @@ return}
 				<!-- Karuzela -->
 				<div class="carousel-inner" role="listbox">
 					<div class="item active">
-						<h4 style="color:yellow">Aplikacja uruchomi się za 45 sekund<span></span></h4>
+						<h4 style="color: rgb(188, 185, 0);">Aplikacja uruchomi się w ciągu 45 sekund<br><br><br><br><span></span></h4>
 					</div>
 					<div class="item">
 						<h4>Aplikacja do zapisywania dróg wspinaczkowych, które się przeszło lub które próbowało się przejść.<br><span>Użytkownik będzie miał w każdej chwili dostęp do swoich dotychczasowych osiągnięć.</span></h4>
@@ -280,13 +282,13 @@ return}
 					  <h4>Użytkownik:<br><span>Będzie mógł przeglądać drogi które przeszedł (lub próbował) oraz modyfikować je (na przykład styl: podjęta (nieudana) próba -> RP)</span></h4>
 					</div>
 					<div class="item">
-					  <h4>Podziały według różnych kategorii:<br><span>gdzie dana droga się znajduje: moonboard (https://www.moonboard.com) / ścianka / skały</span></h4>
+					  <h4>Podziały według różnych kategorii:<br><span>gdzie dana droga się znajduje: moonboard (https://www.moonboard.com) / ścianka / skały<br><br></span></h4>
 					</div>
 					<div class="item">
-					  <h4>Podziały według różnych kategorii:<br><span>styl przejścia (posortowane od najtrudniejszego: OS / FL / RP / podjęta próba (nieudane))</span></h4>
+					  <h4>Podziały według różnych kategorii:<br><span>styl przejścia (posortowane od najtrudniejszego: OS / FL / RP / podjęta próba (nieudane))<br><br></span></h4>
 					</div>
 					<div class="item">
-					  <h4>Podziały według różnych kategorii:<br><span>trudność (trzy skale do wyboru: Kurtyki/francuska/USA)</span></h4>
+					  <h4>Podziały według różnych kategorii:<br><span>trudność (trzy skale do wyboru: Kurtyki/francuska/USA)<br><br><br></span></h4>
 					</div>
 				</div>
 

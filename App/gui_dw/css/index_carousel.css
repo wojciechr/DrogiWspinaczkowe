@@ -31,16 +31,17 @@ h4 {
 	background-color: #f4511e;
 }
 .item h4 {
-	font-size: 15px;
+	font-size: 13px;
 	line-height: 1.375em;
 	font-weight: 400;
 	font-style: normal;
 	margin: 0px 0 25px;
 	padding: 0 30px 15px;
+	color: rgba(255, 255, 255, 0.8);
 }
 .item span {
 	font-style: italic;
-	color: #afffb0;
+	color: rgba(185, 185, 185, 0.7);
 }
 
 .slide {
