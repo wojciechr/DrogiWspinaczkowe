@@ -62,27 +62,47 @@ function logout(){
 	
 }
 function login_facebook_function(){
-                var provider = new firebase.auth.FacebookAuthProvider();
-                // alert("Facebook signin");
-                if (firebase.auth().currentUser) {
-                // [START signout]
-                firebase.auth().signOut();
-				document.getElementById('login_facebook').textContent = "Facebook"
+if (!firebase.auth().currentUser) {
 
-                 //[END signout]
-                } else {
-                    firebase.auth().signInWithRedirect(provider).then(function(result) {
-						document.getElementById('login_facebook').textContent = "Facebook"
-                        var token = result.credential.accessToken;
-                        var user = result.user;         
-                       // console.log(token)
-                       // console.log(user)
-                    }).catch(function(error) {
-                       // console.log(error.code);
-                       // console.log(error.message);
-                    });
-                }
+    var provider = new firebase.auth.FacebookAuthProvider();
+
+    provider.addScope('user_birthday');
+
+    firebase.auth().signInWithPopup(provider).then(function(result) {
+      var token = result.credential.accessToken;
+
+      var userFace = result.user;
+      var uidFace = userFace['providerData'][0]['uid']
+      console.log(uidFace)
+      var emailFace = result.user['providerData'][0]['email']
+      console.log(emailFace)
+      localStorage.setItem('userId', uidFace)
+      localStorage.setItem('userEmail', emailFace)
+
+    }).catch(function(error) {
+      var errorCode = error.code;
+      var errorMessage = error.message;
+      var email = error.email;
+      var credential = error.credential;
+
+      if (errorCode === 'auth/account-exists-with-different-credential') {
+        alert('You have already signed up with a different auth provider for that email.');
+        // If you are using multiple auth providers on your app you should handle linking
+        // the user's accounts here.
+      } else {
+        console.error(error);
+      }
+
+    });
+
+  } else {
+
+    firebase.auth().signOut();
+
+  }
+
 }
+
 
 
 function login_google_function() {
