@@ -17,8 +17,8 @@ const config = {
       version    : 'v2.12'
     });
     FB.AppEvents.logPageView();   
-      
- };
+     
+  };
 
 (function(d, s, id) {
   var js, fjs = d.getElementsByTagName(s)[0];
@@ -68,7 +68,7 @@ if (!firebase.auth().currentUser) {
 
     provider.addScope('user_birthday');
 
-    firebase.auth().signInWithPopup(provider).then(function(result) {
+    firebase.auth().signInWithRedirect(provider).then(function(result) {
       var token = result.credential.accessToken;
 
       var userFace = result.user;
