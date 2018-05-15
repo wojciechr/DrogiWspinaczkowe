@@ -17,8 +17,8 @@ const config = {
       version    : 'v2.12'
     });
     FB.AppEvents.logPageView();   
--      
--  };
+      
+ };
 
 (function(d, s, id) {
   var js, fjs = d.getElementsByTagName(s)[0];
