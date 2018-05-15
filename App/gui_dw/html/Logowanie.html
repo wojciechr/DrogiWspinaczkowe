@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="pl">
 <head>
-	<title>Logowanie data: 10052018 2221</title>
+	<title>Logowanie</title>
 
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
@@ -11,10 +11,10 @@
 	<link rel="stylesheet" type="text/css" href="../css/bootstrap.min.css">
 	<link rel="stylesheet" type="text/css" href="../css/w3.css">
 	<link rel="stylesheet" type="text/css" href="../css/jquery.mobile-1.4.5.min.css">
-	<link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Raleway">
-	<link rel="stylesheet" type="text/css" href="https://cdn.firebase.com/libs/firebaseui/2.5.1/firebaseui.css">
 	<link rel="stylesheet" type="text/css" href="../css/Logowanie.css">
-
+	<!--<link rel="stylesheet" type="text/css" href="https://cdn.firebase.com/libs/firebaseui/2.5.1/firebaseui.css">
+	-->
+	
 	<script src="../js/bootstrap.js"></script>
 	<script src="../js/jquery.min.js"></script>
 	<script src="../js/jquery.js"></script>
@@ -24,8 +24,9 @@
 	<script src="../js/jquery-2.1.4.js"></script>
 	<script src="../js/jquery.mobile-1.4.5.min.js"></script>
 	<script src="../js/cordova.js"></script>
-	<script src="https://www.gstatic.com/firebasejs/4.13.0/firebase-app.js"></script>
+	<!--<script src="https://www.gstatic.com/firebasejs/4.13.0/firebase-app.js"></script>
 	<script src="https://www.gstatic.com/firebasejs/4.13.0/firebase-database.js"></script>
+	-->
 <style>
 </style>
 </head>
@@ -33,82 +34,83 @@
 <body style="background-color: rgb(50, 50, 50);">
 
 <!-- Animacja menu Accordeon -->
-<div id="konfiguracja" class="" style="display:block;">
+<div id="" class="" style="display:block;">
 	<div class="content w3-animate-bottom">
 
-<!-- nawigacja -->
-<nav class="navbar navbar-inverse">
+<!-- Belka Menu -->
+<nav class="navbar navbar-inverse" style="background-color: rgb(35, 35, 35);">
 	<div class="container-fluid">
-		<div class="navbar-header" style="display: flex;">
-		  <div style="float:none; box-sizing: border-box; background-clip: padding-box; padding: 0; margin: 0; max-width: 50%; width: 50px; text-align: left; line-height: normal;">
-		  <button style="float:none;" type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
-				<span class="icon-bar"></span>
-				<span class="icon-bar"></span>
-				<span class="icon-bar"></span>
-		  </button>
-		  </div>
+	
+		<!-- Nawigacja belka menu -->
+		<div class="navbar-header" style="display: flex; padding: 0; margin:0;">
+
+			<!-- Przycisk Menu rozwijanego -->
+			<div style="float:none; box-sizing: border-box; background-clip: padding-box; padding: 0; margin: 0; max-width: 50%; width: 50px; text-align: left; line-height: normal;">
+				<button style="float:none;" type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+				</button>
+			</div>
 		  
-		  <!-- Logo drogi wsp. -->
-		  <div style="float:none; box-sizing: border-box; background-clip: padding-box; padding: 0; margin-left: auto; margin-right: auto; min-width: 200px; text-align: center; line-height: 50px;">
-		  <a href="../index.html">
-				<img style="float:none; margin: 0;max-width: 200px;" src="../img/DW_logo.gif" alt="Drogi Wspinaczkowe">
-		  </a>
-		  </div>
+			<!-- Logo drogi wsp. -->
+			<div style="box-sizing: border-box; background-clip: padding-box; padding: 0; margin-left: auto; margin-right: auto; min-width: 200px; text-align: center; line-height: 50px;">
+				Logowanie
+			</div>
 		  
-		  <!-- przycisk back -->
-		  <div class="box_back_btn">
+			<!-- przycisk back -->
+			<div class="box_back_btn">
 			<button onclick="window.history.back()" type="button" class="btn btn-xs styl_back_btn"><span class="glyphicon glyphicon-chevron-left"></span></button>
-		  </div>
+			</div>
 		</div>
-		<!-- Menu -->
+		
+		<!-- Menu rozwijane -->
 		<div class="collapse navbar-collapse" id="myNavbar">
-		  <ul class="nav navbar-nav navbar-right">
-		  <li><a href="../html/Rejestracja.html"><span style="padding-right: 10px" class="glyphicon glyphicon-user"></span>Zarejestruj</a></li>
+			<ul class="nav navbar-nav navbar-right">
+				<li><a href="../html/Rejestracja.html"><span style="padding-right: 10px" class="glyphicon glyphicon-user"></span>Zarejestruj</a></li>
 				<hr style="margin: 0 auto;width: 92%;border-top: 1px solid;color: rgb(0, 0, 0);">
 				<hr style="margin: 0 auto;width: 92%;border-top: 1px solid;color: rgb(56, 56, 56);">
-		  </ul>
-		  <ul class="nav navbar-nav">
+			</ul>
+			<ul class="nav navbar-nav">
 				<li class="active"><a href="../homeDW.html"><span style="padding-right: 10px" class="glyphicon glyphicon-menu-hamburger"></span>Menu główne</a></li>
-		  </ul>
-		</div>
-		<!-- koniec menu -->
+			</ul>
+		</div> <!-- koniec menu rozwijane  -->
+		
   </div>
 </nav>
 
 <!-- Logowanie social -->
 <div class="container_soc_all">
 	<div class="container_soc">
-	  <form action="/action_page.php">
-		 <div class="row_soc">
-			<h5 style="text-align:center">Zaloguj się przez social media</h5>
+		<form action="/action_page.php">
+			<div class="row_soc">
+				<h5>Zaloguj się przez social media</h5>
 
-			<div class="col_soc">
-			  <a href="#" class="fb btn_soc"><i class="fa fa-facebook fa-fw"></i> Zaloguj do Facebook</a>
-			  <a href="#" class="google btn_soc"><i class="fa fa-google fa-fw"></i> Zaloguj do Google+</a>
+				<div class="col_soc">
+				  <a href="#" class="fb btn_soc"><i class="fa fa-facebook fa-fw"></i> Zaloguj do Facebook</a>
+				  <a href="#" class="google btn_soc"><i class="fa fa-google fa-fw"></i> Zaloguj do Google+</a>
+				</div>
+
+				<div class="col_soc">
+				  <div class="hide-md-lg_soc">
+					 <h5>Zaloguj się tradycyjnie:</h5>
+				  </div>
+
+				  <input type="text" name="nazwa użytkownika" placeholder="nazwa użytkownika" required>
+				  <input type="password" name="hasło" placeholder="hasło" required>
+				  <input type="submit" value="Login">
+				</div>
+
 			</div>
-
-			<div class="col_soc">
-			  <div class="hide-md-lg_soc">
-				 <h5>Zaloguj się tradycyjnie:</h5>
-			  </div>
-
-			  <input type="text" name="username" placeholder="Username" required>
-			  <input type="password" name="password" placeholder="Password" required>
-			  <input type="submit" value="Login">
-			</div>
-			
-		 </div>
-	  </form>
+		</form>
 	</div>
 
 	<div class="bottom-container_soc">
-	  <div class="row_soc">
-		 <div class="col_soc">
+		<div class="col_soc">
 			<a href="#" style="color:white" class="style_soc">Zapomniałeś hasła?</a>
-		 </div>
-	  </div>
+		</div>
 	</div>
-</div> <!-- Koniec - Logowanie social -->
+</div>
 
 	</div> <!-- Koniec - Animacja menu Accordeon -->
 </div> <!-- Koniec - Animacja menu Accordeon -->

@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="pl">
 <head>
-	<title>Rejestracja data: 10052018 2221</title>
+	<title>Rejestracja</title>
 
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
@@ -11,10 +11,10 @@
 	<link rel="stylesheet" type="text/css" href="../css/bootstrap.min.css">
 	<link rel="stylesheet" type="text/css" href="../css/w3.css">
 	<link rel="stylesheet" type="text/css" href="../css/jquery.mobile-1.4.5.min.css">
-	<link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Raleway">
-	<link rel="stylesheet" type="text/css" href="https://cdn.firebase.com/libs/firebaseui/2.5.1/firebaseui.css">
 	<link rel="stylesheet" type="text/css" href="../css/Rejestracja.css">
-
+	<!--<link rel="stylesheet" type="text/css" href="https://cdn.firebase.com/libs/firebaseui/2.5.1/firebaseui.css">
+	-->
+	
 	<script src="../js/bootstrap.js"></script>
 	<script src="../js/jquery.min.js"></script>
 	<script src="../js/jquery.js"></script>
@@ -24,8 +24,9 @@
 	<script src="../js/jquery-2.1.4.js"></script>
 	<script src="../js/jquery.mobile-1.4.5.min.js"></script>
 	<script src="../js/cordova.js"></script>
-	<script src="https://www.gstatic.com/firebasejs/4.13.0/firebase-app.js"></script>
+	<!--<script src="https://www.gstatic.com/firebasejs/4.13.0/firebase-app.js"></script>
 	<script src="https://www.gstatic.com/firebasejs/4.13.0/firebase-database.js"></script>
+	-->
 <style>
 </style>
 </head>
@@ -33,83 +34,102 @@
 <body style="background-color: rgb(50, 50, 50);">
 
 <!-- Animacja menu Accordeon -->
-<div id="konfiguracja" class="" style="display:block;">
+<div id="" class="" style="display:block;">
 	<div class="content w3-animate-bottom">
 
-<!-- nawigacja -->
-<nav class="navbar navbar-inverse">
+<!-- Belka Menu -->
+<nav class="navbar navbar-inverse" style="background-color: rgb(35, 35, 35);">
 	<div class="container-fluid">
-		<div class="navbar-header" style="display: flex;">
-		  <div style="float:none; box-sizing: border-box; background-clip: padding-box; padding: 0; margin: 0; max-width: 50%; width: 50px; text-align: left; line-height: normal;">
-		  <button style="float:none;" type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
-				<span class="icon-bar"></span>
-				<span class="icon-bar"></span>
-				<span class="icon-bar"></span>
-		  </button>
-		  </div>
+	
+		<!-- Nawigacja belka menu -->
+		<div class="navbar-header" style="display: flex; padding: 0; margin:0;">
+		
+			<!-- Przycisk Menu rozwijanego -->
+			<div style="float:none; box-sizing: border-box; background-clip: padding-box; padding: 0; margin: 0; max-width: 50%; width: 50px; text-align: left; line-height: normal;">
+				<button style="float:none;" type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+				</button>
+			</div>
 		  
-		  <!-- Logo drogi wsp. -->
-		  <div style="float:none; box-sizing: border-box; background-clip: padding-box; padding: 0; margin-left: auto; margin-right: auto; min-width: 200px; text-align: center; line-height: 50px;">
-		  <a href="../index.html">
-				<img style="float:none; margin: 0;max-width: 200px;" src="../img/DW_logo.gif" alt="Drogi Wspinaczkowe">
-		  </a>
-		  </div>
+			<!-- Logo drogi wsp. -->
+			<div style="box-sizing: border-box; background-clip: padding-box; padding: 0; margin-left: auto; margin-right: auto; min-width: 200px; text-align: center; line-height: 50px;">
+				Rejestracja
+			</div>
 		  
-		  <!-- przycisk back -->
-		  <div class="box_back_btn">
+			<!-- przycisk back -->
+			<div class="box_back_btn">
 			<button onclick="window.history.back()" type="button" class="btn btn-xs styl_back_btn"><span class="glyphicon glyphicon-chevron-left"></span></button>
-		  </div>
+			</div>
 		</div>
-		<!-- Menu -->
+		
+		<!-- Menu rozwijane -->
 		<div class="collapse navbar-collapse" id="myNavbar">
-		  <ul class="nav navbar-nav navbar-right">
-		  <li><a href="../html/Logowanie.html"><span style="padding-right: 10px" class="glyphicon glyphicon-log-in"></span>Zaloguj</a></li>
+			<ul class="nav navbar-nav navbar-right">
+				<li><a href="../html/Logowanie.html"><span style="padding-right: 10px" class="glyphicon glyphicon-log-in"></span>Zaloguj</a></li>
 				<hr style="margin: 0 auto;width: 92%;border-top: 1px solid;color: rgb(0, 0, 0);">
 				<hr style="margin: 0 auto;width: 92%;border-top: 1px solid;color: rgb(56, 56, 56);">
-		  </ul>
-		  <ul class="nav navbar-nav">
+			</ul>
+			<ul class="nav navbar-nav">
 				<li class="active"><a href="../homeDW.html"><span style="padding-right: 10px" class="glyphicon glyphicon-menu-hamburger"></span>Menu główne</a></li>
-		  </ul>
-		</div>
-		<!-- koniec menu -->
+			</ul>
+		</div> <!-- koniec menu rozwijane  -->
+		
   </div>
 </nav>
 
-<!-- Multiforma -->
-<form id="regForm" action="/action_page.php">
-	<h5>Rejestracja wieloetapowa:</h5>
-	<!-- One "tab" for each step in the form: -->
-	<div class="tab">Imię / Nazwisko:
-	 <p><input placeholder="Imię..." oninput="this.className = ''" name="fname"></p>
-	 <p><input placeholder="Nazwisko..." oninput="this.className = ''" name="lname"></p>
+<!-- Rejestracja -->
+<div class="container_soc_all">
+	<div class="container_soc">
+		
+		<form id="regForm" action="/action_page.php">
+			<h5>Wypełnij poniższe formularze:</h5>
+			<!-- One "tab" for each step in the form: -->
+			<div class="tab">
+				<p class="opis_input">Imię:</p>
+				<p><input placeholder="Imię..." oninput="this.className = ''" name="fname"></p>
+				<p class="opis_input">Nazwisko:</p>
+				<p><input placeholder="Nazwisko..." oninput="this.className = ''" name="lname"></p>
+			</div>
+			<div class="tab">
+				<p class="opis_input">Adres e-mail:</p>
+				<p><input placeholder="E-mail..." oninput="this.className = ''" name="email"></p>
+				<p class="opis_input">Telefon:</p>
+				<p><input placeholder="Telefon..." oninput="this.className = ''" name="phone"></p>
+			</div>
+			<div class="tab">
+				<p class="opis_input">Dzień:</p>
+				<p><input placeholder="dd" oninput="this.className = ''" name="dd"></p>
+				<p class="opis_input">Miesiąc:</p>
+				<p><input placeholder="mm" oninput="this.className = ''" name="nn"></p>
+				<p class="opis_input">Rok:</p>
+				<p><input placeholder="yyyy" oninput="this.className = ''" name="yyyy"></p>
+			</div>
+			<div class="tab">
+				<p class="opis_input">Podaj Login:</p>
+				<p><input placeholder="Nazwa użytkownika..." oninput="this.className = ''" name="uname"></p>
+				<p class="opis_input">Wpisz hasło:</p>
+				<p><input placeholder="Hasło..." oninput="this.className = ''" name="pword" type="password"></p>
+			</div>
+			<div>
+				<div class="cont_prev_next_btn">
+					<button class="dalejbutton" style="margin-right: 13px;" type="button" id="prevBtn" onclick="nextPrev(-1)">Poprzednia</button>
+					<button class="dalejbutton" type="button" id="nextBtn" onclick="nextPrev(1)">Następna</button>
+				</div>
+			</div>
+
+			<!-- Kropki kolejnych akcji: -->
+			<div style="text-align:center;margin-top:40px;">
+				<span class="step"></span>
+				<span class="step"></span>
+				<span class="step"></span>
+				<span class="step"></span>
+			</div>
+		</form>
+		
 	</div>
-	<div class="tab">Podaj mail i telefon:
-	 <p><input placeholder="E-mail..." oninput="this.className = ''" name="email"></p>
-	 <p><input placeholder="Telefon..." oninput="this.className = ''" name="phone"></p>
-	</div>
-	<div class="tab">Data urodzenia:
-	 <p><input placeholder="dd" oninput="this.className = ''" name="dd"></p>
-	 <p><input placeholder="mm" oninput="this.className = ''" name="nn"></p>
-	 <p><input placeholder="yyyy" oninput="this.className = ''" name="yyyy"></p>
-	</div>
-	<div class="tab">Podaj Login:
-	 <p><input placeholder="Nazwa użytkownika..." oninput="this.className = ''" name="uname"></p>
-	 <p><input placeholder="Hasło..." oninput="this.className = ''" name="pword" type="password"></p>
-	</div>
-	<div>
-		<div style="text-align: center;">
-			<button class="dalejbutton" style="margin-right: 13px;" type="button" id="prevBtn" onclick="nextPrev(-1)">Poprzednia</button>
-			<button class="dalejbutton" type="button" id="nextBtn" onclick="nextPrev(1)">Następna</button>
-		</div>
-	</div>
-	<!-- Koło kolejnych akcji: -->
-	<div style="text-align:center;margin-top:40px;">
-		<span class="step"></span>
-		<span class="step"></span>
-		<span class="step"></span>
-		<span class="step"></span>
-	</div>
-</form>
+</div>
 
 	</div> <!-- Koniec - Animacja menu Accordeon -->
 </div> <!-- Koniec - Animacja menu Accordeon -->
