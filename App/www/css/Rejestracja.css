@@ -3,12 +3,13 @@ body, html {
 	height: 100%;
 	position: relative;
 	font-family: segoe UI, sans-serif, Arial;
-	color: #d1d1d1;
+	color: #dbdbdb;
 	font-weight: 400;
 }
 
 nav.navbar {
 	position: sticky;
+	margin: 0 0 15px 0px;
 	top: 0px;
 	z-index: 1;
 	box-shadow: rgb(0, 0, 0) 0px 0px 10px;
@@ -27,8 +28,8 @@ nav.navbar {
 /* Przycis Back to menu */
 .box_back_btn {
 	box-sizing: border-box;
-	padding: 0;
-	margin: auto 0px auto 15px;
+	padding: 0 0 0 26px;
+	margin: auto 0px;
 }
 
 .styl_back_btn {
@@ -67,7 +68,7 @@ nav.navbar {
 
 h5 {
 	text-align: center;
-	padding-bottom: 15px;
+	margin: 15px 0 5px;
 	line-height: 1.5;
 	font-weight: 400;
 	font-size: 15px;

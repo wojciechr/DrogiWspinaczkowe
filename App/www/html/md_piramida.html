@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+	<title>Piramida przejść</title>
+
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+	<link rel="stylesheet" type="text/css" href="../css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="../css/font_awesome/css/font-awesome.min.css">
+	<link rel="stylesheet" type="text/css" href="../css/bootstrap.css">
+	<link rel="stylesheet" type="text/css" href="../css/w3.css">
+	<link rel="stylesheet" type="text/css" href="../css/jquery.mobile-1.4.5.min.css">
+	<link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Raleway">
+	<link rel="stylesheet" type="text/css" href="https://cdn.firebase.com/libs/firebaseui/2.5.1/firebaseui.css">
+	<link rel="stylesheet" type="text/css" href="../css/md_konfiguracja.css">
+
+	<script src="../js/Chart.bundle.js"></script>
+	<script src="../js/Chart.bundle.min.js"></script>
+	<script src="../js/jquery.min.js"></script>
+	<script src="../js/bootstrap.min.js"></script>
+	<script src="../js/bootstrap.js"></script>
+	<script src="../js/jquery.js"></script>
+	<script src="../js/jquery-2.1.4.js"></script>
+	<script src="../js/jquery.mobile-1.4.5.min.js"></script>
+	<script src="../js/angular.min.js"></script>
+	<script src="https://www.gstatic.com/firebasejs/4.13.0/firebase-app.js"></script>
+	<script src="https://www.gstatic.com/firebasejs/4.13.0/firebase-database.js"></script>
+<style>
+
+</style>
+</head>
+
+<body style="background-color: rgb(50, 50, 50);">
+
+<!-- Animacja menu Accordeon -->
+<div id="" class="content_all" style="display:block;">
+	<div class="content w3-animate-top">
+
+		<!-- Header -->
+      <header style="display: flex; height: 52px; padding: 0 15px; margin: 0 0 15px 0; background-color: rgb(35, 35, 35); box-shadow: rgba(0, 0, 0, 1) 0px 0px 10px 0px; border: 1px solid rgb(1,1,1);">
+		
+			<!-- lewy box 
+			<div style="box-sizing: border-box; width: 2px; height: 50px; "></div>-->
+			
+			<!-- Logo -->
+			<div style="box-sizing: border-box; background-clip: padding-box; padding: 0; margin: auto;">
+				<h4 style="margin: 0; font-variant: small-caps;">Piramida</h4>
+			</div>
+			
+			<!-- przycisk Back -->
+			<div style="margin: auto 0; padding: 0 0 0 15px;">
+				<a href="">
+					<button class="btn btn-xs" onclick="window.history.back()" type="button"><span class="glyphicon glyphicon-chevron-left"></span></button>
+				</a>
+			</div>
+      </header>
+
+<!-- CONTENT ************************* -->
+		<div class="content_opt">
+        <canvas id="myChart" width="400" height="400"></canvas>
+		</div>
+
+	</div> <!-- Koniec - Animacja menu Accordeon -->
+</div> <!-- Koniec - Animacja menu Accordeon -->
+
+<script>
+	var barOptions_stacked = {
+		 tooltips: {
+			  enabled: false
+		 },
+		 hover :{
+			  animationDuration:0
+		 },
+		 scales: {
+			  xAxes: [{
+					ticks: {
+						 beginAtZero:true,
+						 fontFamily: "'Open Sans Bold', sans-serif",
+						 fontSize:11
+					},
+					scaleLabel:{
+						 display:false
+					},
+					gridLines: {
+					},
+					stacked: true
+			  }],
+			  yAxes: [{
+					gridLines: {
+						 display:false,
+						 color: "#fff",
+						 zeroLineColor: "#fff",
+						 zeroLineWidth: 0
+					},
+					ticks: {
+						 fontFamily: "'Open Sans Bold', sans-serif",
+						 fontSize:11
+					},
+					stacked: true
+			  }]
+		 },
+		 legend:{
+			  display:false
+		 },
+
+		 animation: {
+			  onComplete: function () {
+					var chartInstance = this.chart;
+					var ctx = chartInstance.ctx;
+					ctx.textAlign = "left";
+					ctx.font = "9px Open Sans";
+					ctx.fillStyle = "#fff";
+
+					Chart.helpers.each(this.data.datasets.forEach(function (dataset, i) {
+						 var meta = chartInstance.controller.getDatasetMeta(i);
+						 Chart.helpers.each(meta.data.forEach(function (bar, index) {
+							  data = dataset.data[index];
+							  /*
+					if(i==0){
+									ctx.fillText(data, 50, bar._model.y+4);
+							  } else {
+									ctx.fillText(data, bar._model.x-25, bar._model.y+4);
+							  }
+					*/
+						 }),this)
+					}),this);
+			  }
+		 },
+		 pointLabelFontFamily : "Quadon Extra Bold",
+		 scaleFontFamily : "Quadon Extra Bold",
+	};
+
+	var ctx = document.getElementById("myChart");
+	var myChart = new Chart(ctx, {
+		 type: 'horizontalBar',
+		 data: {
+			  labels: ["9c", "9b+", "9b", "9a+", "9a", "8c+", "8c"],
+
+			  datasets: [{
+					data: [1, 3, 18, 35, 95, 119, 105],
+					backgroundColor: "rgba(63,103,126,1)",
+					hoverBackgroundColor: "rgba(50,90,100,1)"
+			  },{
+					data: [0, 0, 0, 1, 2, 1, 1],
+					backgroundColor: "rgba(163,103,126,1)",
+					hoverBackgroundColor: "rgba(140,85,100,1)"
+			  },{
+					data: [0, 0, 0, 0, 3, 18, 58],
+					backgroundColor: "rgba(63,203,226,1)",
+					hoverBackgroundColor: "rgba(46,185,235,1)"
+			  }]
+		 },
+
+		 options: barOptions_stacked,
+	});
+</script>
+
+
+</body>
+</html>
