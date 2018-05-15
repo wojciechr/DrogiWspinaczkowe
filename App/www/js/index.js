@@ -9,7 +9,7 @@ const config = {
   firebase.initializeApp(config);
 
 
-  window.fbAsyncInit = function() {
+ /* window.fbAsyncInit = function() {
     FB.init({
       appId      : '2065286753691545',
       cookie     : true,
@@ -26,7 +26,7 @@ const config = {
   js = d.createElement(s); js.id = id;
   js.src = 'https://connect.facebook.net/pl_PL/sdk.js#xfbml=1&version=v3.0&appId=2065286753691545&autoLogAppEvents=1';
   fjs.parentNode.insertBefore(js, fjs);
-}(document, 'script', 'facebook-jssdk'));
+}(document, 'script', 'facebook-jssdk'));*/
 
 function login(){
 		var userEmail = document.getElementById("email_field").value;
