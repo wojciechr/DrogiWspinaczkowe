@@ -61,8 +61,7 @@ function logout(){
 	});
 	facebookConnectPlugin.logout(function(){
                         console.log("FB LOGOUT SUCCESS");
-						$( "#loggedas" ).html('Niezalogowany');
-						$( "#loggedashome" ).html('Niezalogowanyer');
+						 document.getElementById('sign_in_status').textContent = 'Zostałeś poprawnie wylogowany';
                     },function(){
                         console.log("FB LOGOUT FAIL");
                     }); 
