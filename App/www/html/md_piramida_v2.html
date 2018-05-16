@@ -60,7 +60,7 @@
       </header>
 
 <!-- CONTENT *************************           ************* -->
-		<div class="content_opt_piramida">
+		<div class="content_opt_piramida;">
 			<div id="chart-container" style="text-align: center;">wykres</div>
 		</div>             
          
@@ -73,13 +73,13 @@ FusionCharts.ready(function () {
     var revenueChart = new FusionCharts({
         type: 'stackedbar2d',
         renderAt: 'chart-container',
-        width: '350',
+        width: '360',
         height: '550',
         dataFormat: 'json',
         dataSource: {
             "chart": {
                 "caption": "Bla bla bla",
-                "subCaption": "Tomek Romanowicz",
+                "subCaption": "Tomasz Romanowicz",
                 "xAxisname": "Skala Y",
                 "yAxisName": "Skala X",
                 "numberPrefix": "",
@@ -90,7 +90,7 @@ FusionCharts.ready(function () {
                 "usePlotGradientColor": "0",
                 "plotBorderAlpha": "10",
                 "legendBorderAlpha": "0",
-                "legendShadow": "0",
+                "legendShadow": "1",
                 "valueFontColor": "#ffffff",                
                 "showXAxisLine": "1",
                 "xAxisLineColor": "#999999",
