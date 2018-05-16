@@ -59,7 +59,13 @@ function logout(){
 	}).catch(function(error) {
 	  // An error happened.
 	});
-	
+	facebookConnectPlugin.logout(function(){
+                        console.log("FB LOGOUT SUCCESS");
+						$( "#loggedas" ).html('Niezalogowany');
+						$( "#loggedashome" ).html('Niezalogowanyer');
+                    },function(){
+                        console.log("FB LOGOUT FAIL");
+                    }); 
 }
 function login_facebook_function(){
 facebookConnectPlugin.getLoginStatus(
