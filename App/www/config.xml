@@ -1,16 +1,16 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-    <widget xmlns   = "http://www.w3.org/ns/widgets"
+	<widget xmlns   = "http://www.w3.org/ns/widgets"
         xmlns:gap   = "http://phonegap.com/ns/1.0"
 		id          = "myfirstapp"
         version     = "1.0.0" >
 
-    <name>Drogi wspinaczkowe</name>
-    <description>Drogi wspinaczkowe mobile app</description>
-    <author href="NN" email="NA">
-	...
-	</author>
-	<platform name="android" />
-	
+	<name>Drogi wspinaczkowe</name>
+	<description>Drogi wspinaczkowe mobile app</description>
+	<author href="NN" email="NA"> ... </author>
+	<platform name="android">
+		<icon src="climbing.png" density="ldpi" />
+	</platform>
+
 	<plugin name="cordova-plugin-device" spec="2.0.1" />
 	<plugin name="cordova-plugin-dialogs" spec="2.0.1" />
 

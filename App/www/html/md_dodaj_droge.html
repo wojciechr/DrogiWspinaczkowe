@@ -53,7 +53,7 @@
 			<div style="box-sizing: border-box; width: 2px; height: 50px; "></div>-->
 			
 			<!-- Logo -->
-			<div style="box-sizing: border-box; background-clip: padding-box; padding: 0; margin: auto;">
+			<div style="box-sizing: border-box; background-clip: padding-box; padding: 0 0 0 39px; margin: auto;">
 				<h4 style="margin: 0; font-variant: small-caps;">Dodaj drogę</h4>
 			</div>
 			
@@ -67,20 +67,31 @@
 
 <!-- CONTENT ************************* -->
 		<div class="content_opt">
-			<h4>typ drogi <br></h4>
-			<input type="radio" name="typ_drogi" value="moonboard"> Moonboard<br>
-			<input type="radio" name="typ_drogi" value="skaly"> Skaly<br>
-			<input type="radio" name="typ_drogi" value="scianka"> Scianka <br>
-			<h4>styl przejscia</h4>
-			<input type="radio" name="styl" value="os"> OS<br>
-			<input type="radio" name="styl" value="fl"> Flash<br>
-			<input type="radio" name="styl" value="rp"> RP <br>
-			<input type="radio" name="styl" value="proba"> Prboa <br>
-			<h4>nazwa</h4>
-			<input type="text" name="nazwa_drogi" value=""> nazwa drogi<br>
-			<input type="text" name="nazwa_skaly" value=""> nazwa skaly<br>
-			<input type="text" name="nazwa_rejonu" value=""> nazwa rejonu<br>
-			<h4>trudnosc</h4>
+			<div style="width: 45%; float: left;">
+				<h5 style="text-align: center;">typ drogi</h5>
+				<div style="padding: 0px 0px 40px 15px; border: 1px solid #696969; border-radius: 5px; margin: 0 0px 0px 0px;">
+					<input type="radio" name="typ_drogi" value="moonboard"> Moonboard<br>
+					<input type="radio" name="typ_drogi" value="skaly"> Skaly<br>
+					<input type="radio" name="typ_drogi" value="scianka"> Scianka <br>				
+				</div>
+			</div>
+			<div style="width: 45%; float: right;">
+				<h5 style="text-align: center;">styl przejscia</h5>
+				<div style="padding: 0px 0px 13px 15px; border: 1px solid #696969; border-radius: 5px; margin: 0 0px 0px 0px;">
+					<input type="radio" name="styl" value="os"> OS<br>
+					<input type="radio" name="styl" value="fl"> Flash<br>
+					<input type="radio" name="styl" value="rp"> RP <br>
+					<input type="radio" name="styl" value="proba"> Próba <br>			
+				</div>
+			</div>
+			<div style="clear: both">
+				<h5>nazwa</h5>
+				<p><input type="text" name="nazwa_drogi" value=""> nazwa drogi</p>
+				<p><input type="text" name="nazwa_skaly" value=""> nazwa skaly</p>
+				<p><input type="text" name="nazwa_rejonu" value=""> nazwa rejonu</p>			
+			</div>
+
+			<h5>trudnosc</h5>
 			<select>
 				 <option value="0">Wybierz trudnosc</option>
 				 <option value="5a">5a</option>
@@ -112,7 +123,7 @@
 				 <option value="9c+">9c+</option>
 			</select>
 			<br>
-			<h4> data</h4>
+			<h5> data</h5>
 			<input type="date" id="datePicker" autocomplete="on" >
 			<br>
 			<br>
