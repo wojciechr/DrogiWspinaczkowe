@@ -24,27 +24,27 @@ function login_google() {
     provider.setCustomParameters({'login_hint': 'user@example.com'});
 
     firebase.auth().signInWithRedirect(provider);
-
-    firebase.auth().getRedirectResult().then(function (result) {
-        if (result.credential) {
-            // This gives you a Google Access Token. You can use it to access the Google API.
-            var token = result.credential.accessToken;
-            // ...
-        }
-        // The signed-in user info.
-        var user = result.user;
-        var b = document.getElementById('login_google');
-        b.style.color = 'red';
-    }).catch(function (error) {
-        // Handle Errors here.
-        var errorCode = error.code;
-        var errorMessage = error.message;
-        // The email of the user's account used.
-        var email = error.email;
-        // The firebase.auth.AuthCredential type that was used.
-        var credential = error.credential;
-        // ...
-    });
+    //
+    // firebase.auth().getRedirectResult().then(function (result) {
+    //     if (result.credential) {
+    //         // This gives you a Google Access Token. You can use it to access the Google API.
+    //         var token = result.credential.accessToken;
+    //         // ...
+    //     }
+    //     // The signed-in user info.
+    //     var user = result.user;
+    //     var b = document.getElementById('login_google');
+    //     b.style.color = 'red';
+    // }).catch(function (error) {
+    //     // Handle Errors here.
+    //     var errorCode = error.code;
+    //     var errorMessage = error.message;
+    //     // The email of the user's account used.
+    //     var email = error.email;
+    //     // The firebase.auth.AuthCredential type that was used.
+    //     var credential = error.credential;
+    //     // ...
+    // });
 
 
 }
@@ -55,7 +55,7 @@ function initApp() {
     firebase.auth().onAuthStateChanged(function (user) {
 
         //console.log(user);
-        var user = firebase.auth().currentUser;
+        // var user = firebase.auth().currentUser;
 
         if (user) {
 
