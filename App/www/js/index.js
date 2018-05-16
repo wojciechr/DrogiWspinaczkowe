@@ -9,11 +9,7 @@ const config = {
   firebase.initializeApp(config);
 
 
-<<<<<<< HEAD
  /*window.fbAsyncInit = function() {
-=======
- /* window.fbAsyncInit = function() {
->>>>>>> 069d906f2c95f3ef5f126c38cb999c79cd9d8572
     FB.init({
       appId      : '2065286753691545',
       cookie     : true,
@@ -100,11 +96,7 @@ facebookConnectPlugin.getLoginStatus(
 		 console.log(JSON.stringify(error));
 		 });
 	
-<<<<<<< HEAD
 	
-=======
-	});
->>>>>>> 069d906f2c95f3ef5f126c38cb999c79cd9d8572
 
 }
 
