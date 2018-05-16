@@ -62,44 +62,41 @@ function logout(){
 	
 }
 function login_facebook_function(){
-if (!firebase.auth().currentUser) {
-
-    var provider = new firebase.auth.FacebookAuthProvider();
-
-    provider.addScope('user_birthday');
-
-    firebase.auth().signInWithRedirect(provider).then(function(result) {
-      var token = result.credential.accessToken;
-
-      var userFace = result.user;
-      var uidFace = userFace['providerData'][0]['uid']
-      console.log(uidFace)
-      var emailFace = result.user['providerData'][0]['email']
-      console.log(emailFace)
-      localStorage.setItem('userId', uidFace)
-      localStorage.setItem('userEmail', emailFace)
-
-    }).catch(function(error) {
-      var errorCode = error.code;
-      var errorMessage = error.message;
-      var email = error.email;
-      var credential = error.credential;
-
-      if (errorCode === 'auth/account-exists-with-different-credential') {
-        alert('You have already signed up with a different auth provider for that email.');
-        // If you are using multiple auth providers on your app you should handle linking
-        // the user's accounts here.
-      } else {
-        console.error(error);
-      }
-
-    });
-
-  } else {
-
-    firebase.auth().signOut();
-
-  }
+facebookConnectPlugin.getLoginStatus(
+            function (status) {
+                console.log("current status: " + JSON.stringify(status));
+            },
+            function (error) {
+                console.log("Something went wrong: " + JSON.stringify(error));
+            }
+	 );
+	 
+	facebookConnectPlugin.login(["email"],function(result){
+			console.log("logowanie:");
+			 console.log("RESULT:" + JSON.stringify(result));
+			  console.log("RESULT2:" + JSON.stringify(result.authResponse));
+			  console.log("RESULT3:" + JSON.stringify(result.authResponse.accessToken));
+			  
+				firebase.auth().signInWithCredential(firebase.auth.FacebookAuthProvider.credential(result.authResponse.accessToken))
+					.then((success) => {
+						console.log("success: " + JSON.stringify(success)); 
+				   })
+				  
+		//calling api after login success
+		 facebookConnectPlugin.api("/me?fields=email,name,picture",["public_profile","email"]
+		 ,function(userData){
+			 //API success callback
+			 console.log(JSON.stringify(userData));
+		  },function(error){
+			 //API error callback
+			 console.log(JSON.stringify(error));
+		  });
+	   },function(error){
+		  //authenication error callback
+		 console.log(JSON.stringify(error));
+		 });
+	
+	});
 
 }
 
