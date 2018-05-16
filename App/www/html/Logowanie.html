@@ -14,19 +14,19 @@
 	<link rel="stylesheet" type="text/css" href="../css/Logowanie.css">
 	<!--<link rel="stylesheet" type="text/css" href="https://cdn.firebase.com/libs/firebaseui/2.5.1/firebaseui.css">
 	-->
-	
+	<script src="js/index.js"></script>	 
 	<script src="../js/bootstrap.js"></script>
 	<script src="../js/jquery.min.js"></script>
 	<script src="../js/jquery.js"></script>
 	<script src="../js/bootstrap.min.js"></script>
-	<script src="../js/firebase.js"></script>
-	<script src="../js/firebase-auth.js"></script>
+	<script src="js/firebase.js"></script>
+	<script src="js/firebase-app.js"></script>
+	<script src="js/firebase-auth.js"></script>
+	<script src="js/firebase-database.js"></script>
 	<script src="../js/jquery-2.1.4.js"></script>
 	<script src="../js/jquery.mobile-1.4.5.min.js"></script>
 	<script src="../js/cordova.js"></script>
-	<!--<script src="https://www.gstatic.com/firebasejs/4.13.0/firebase-app.js"></script>
-	<script src="https://www.gstatic.com/firebasejs/4.13.0/firebase-database.js"></script>
-	-->
+
 <style>
 </style>
 </head>
@@ -92,13 +92,19 @@
 				</div>
 
 				<div class="col_soc">
-				  <div class="hide-md-lg_soc">
-					 <h5>Zaloguj się tradycyjnie:</h5>
-				  </div>
-
-				  <input type="text" name="nazwa użytkownika" placeholder="nazwa użytkownika" required>
-				  <input type="password" name="hasło" placeholder="hasło" required>
-				  <input type="submit" value="Login">
+			  <div id="login_div">
+			  <input type="email" class="form-control" name="E-mail" placeholder="E-mail" required="" id="email_field" />     
+			  <br>
+			  <input type="password" class="form-control" name="Password" placeholder="Hasło" required="" id="password_field"/>  
+			  <br>
+			<button onclick="login();" class="btn btn-lg btn-primary btn-block">Logowanie</button>
+			<button onclick="register()" class="btn btn-lg btn-primary btn-block">Rejestracja</button>
+			  </div>
+			  <div id="user_div">
+			  <p id="user_para"> <h3> Witaj</h3></p>
+			  <button onclick="logout()" class="btn btn-lg btn-primary btn-block">Wylogowanie</button>
+			  </div>
+			  <div><center><b><span id="sign_in_status">Jesteś niezalogowany</span></b></center></div>
 				</div>
 
 			</div>
