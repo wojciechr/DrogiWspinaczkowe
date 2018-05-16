@@ -1,4 +1,4 @@
-const config = {
+/*var config = {
     apiKey: "AIzaSyA-ejZDxLBfqxuqcsakiY31p6iXt4cJc8M",
     authDomain: "drogi-wspinaczkowe.firebaseapp.com",
     databaseURL: "https://drogi-wspinaczkowe.firebaseio.com",
@@ -6,7 +6,7 @@ const config = {
     storageBucket: "drogi-wspinaczkowe.appspot.com",
     messagingSenderId: "81802368109"
   };
-  firebase.initializeApp(config);
+  firebase.initializeApp(config);*/
 
 
  /*window.fbAsyncInit = function() {
@@ -59,12 +59,6 @@ function logout(){
 	}).catch(function(error) {
 	  // An error happened.
 	});
-	facebookConnectPlugin.logout(function(){
-                        console.log("FB LOGOUT SUCCESS");
-						 document.getElementById('sign_in_status').textContent = 'Zostałeś poprawnie wylogowany';
-                    },function(){
-                        console.log("FB LOGOUT FAIL");
-                    }); 
 }
 function login_facebook_function(){
 facebookConnectPlugin.getLoginStatus(
@@ -184,11 +178,9 @@ function initApp() {
 
             });
 
-            document.getElementById('login_google').addEventListener('click',login_google_function, false);
-			document.getElementById('login_facebook').addEventListener('click',login_facebook_function, false);
+           // document.getElementById('login_google').addEventListener('click',login_google_function, false);
+			//document.getElementById('login_facebook').addEventListener('click',login_facebook_function, false);
 
         }
-window.onload = function() {
-  initApp();
-  };
+
 
