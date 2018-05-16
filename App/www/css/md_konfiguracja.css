@@ -50,6 +50,12 @@ h5 {font-size: 15px; font-weight: 400;}
 	background-color: rgb(65, 65, 65);
 }
 
+.contenet_opt_piramida {
+	margin: 0;
+	padding: 0;
+	border-radius: 20px;
+}
+
 .contenet_one_opt {
 	margin: 0 0 5px 0;
 }

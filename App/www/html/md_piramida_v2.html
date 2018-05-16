@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+	<title>Piramida przejść v2</title>
+
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+	<link rel="stylesheet" type="text/css" href="../css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="../css/font_awesome/css/font-awesome.min.css">
+	<link rel="stylesheet" type="text/css" href="../css/bootstrap.css">
+	<link rel="stylesheet" type="text/css" href="../css/w3.css">
+	<link rel="stylesheet" type="text/css" href="../css/jquery.mobile-1.4.5.min.css">
+	<link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Raleway">
+	<link rel="stylesheet" type="text/css" href="https://cdn.firebase.com/libs/firebaseui/2.5.1/firebaseui.css">
+	<link rel="stylesheet" type="text/css" href="../css/md_konfiguracja.css">
+
+	<script src="../js/fusioncharts.js"></script>
+	<script src="../js/fusioncharts.charts.js"></script>
+	<script src="../js/Chart.bundle.js"></script>
+	<script src="../js/Chart.bundle.min.js"></script>
+	<script src="../js/jquery.min.js"></script>
+	<script src="../js/bootstrap.min.js"></script>
+	<script src="../js/bootstrap.js"></script>
+	<script src="../js/jquery.js"></script>
+	<script src="../js/jquery-2.1.4.js"></script>
+	<script src="../js/jquery.mobile-1.4.5.min.js"></script>
+	<script src="../js/angular.min.js"></script>
+	<script src="https://www.gstatic.com/firebasejs/4.13.0/firebase-app.js"></script>
+	<script src="https://www.gstatic.com/firebasejs/4.13.0/firebase-database.js"></script>
+<style>
+
+</style>
+</head>
+
+<body style="background-color: rgb(50, 50, 50);">
+
+<!-- Animacja menu Accordeon -->
+<div id="" class="content_all" style="display:block;">
+	<div class="content w3-animate-top">
+
+		<!-- Header -->
+      <header style="display: flex; height: 52px; padding: 0 15px; margin: 0 0 15px 0; background-color: rgb(35, 35, 35); box-shadow: rgba(0, 0, 0, 1) 0px 0px 10px 0px; border: 1px solid rgb(1,1,1);">
+		
+			<!-- lewy box 
+			<div style="box-sizing: border-box; width: 2px; height: 50px; "></div>-->
+			
+			<!-- Logo -->
+			<div style="box-sizing: border-box; background-clip: padding-box; padding: 0; margin: auto;">
+				<h4 style="margin: 0; font-variant: small-caps;">Piramida v2</h4>
+			</div>
+			
+			<!-- przycisk Back -->
+			<div style="margin: auto 0; padding: 0 0 0 15px;">
+				<a href="">
+					<button class="btn btn-xs" onclick="window.history.back()" type="button"><span class="glyphicon glyphicon-chevron-left"></span></button>
+				</a>
+			</div>
+      </header>
+
+<!-- CONTENT *************************           ************* -->
+		<div class="content_opt_piramida">
+			<div id="chart-container" style="text-align: center;">wykres</div>
+		</div>             
+         
+
+	</div> <!-- Koniec - Animacja menu Accordeon -->
+</div> <!-- Koniec - Animacja menu Accordeon -->
+
+<script>
+FusionCharts.ready(function () {
+    var revenueChart = new FusionCharts({
+        type: 'stackedbar2d',
+        renderAt: 'chart-container',
+        width: '350',
+        height: '550',
+        dataFormat: 'json',
+        dataSource: {
+            "chart": {
+                "caption": "Bla bla bla",
+                "subCaption": "Tomek Romanowicz",
+                "xAxisname": "Skala Y",
+                "yAxisName": "Skala X",
+                "numberPrefix": "",
+                "paletteColors": "#0075c2,#1aaf5d,#fc0000",
+                "bgColor": "#ffffff",
+                "borderAlpha": "20",
+                "showCanvasBorder": "0",
+                "usePlotGradientColor": "0",
+                "plotBorderAlpha": "10",
+                "legendBorderAlpha": "0",
+                "legendShadow": "0",
+                "valueFontColor": "#ffffff",                
+                "showXAxisLine": "1",
+                "xAxisLineColor": "#999999",
+                "divlineColor": "#999999",               
+                "divLineIsDashed": "1",
+                "showAlternateVGridColor": "0",
+                "subcaptionFontBold": "0",
+                "subcaptionFontSize": "10",
+                "showHoverEffect":"1",
+                
+            },
+            "categories": [
+                {
+                    "category": [
+                        {
+                            "label": "9c"
+                        },
+                        {
+                            "label": "9b+"
+                        },
+                        {
+                            "label": "9b"
+                        },
+                        {
+                            "label": "9a+"
+                        },
+                        {
+                            "label": "9a"
+                        },
+                        {
+                            "label": "8c+"
+                        },
+                        {
+                            "label": "8c"
+                        },
+                        {
+                            "label": "8b+"
+                        },
+                        {
+                            "label": "8b"
+                        }
+                    ]
+                }
+            ],
+            "dataset": [
+                {
+                    "seriesname": "Kategoria 1",
+                    "data": [
+                        {
+                            "value": "121"
+                        },
+                        {
+                            "value": "135"
+                        },
+                        {
+                            "value": "123"
+                        },
+                        {
+                            "value": "74"
+                        },
+                        {
+                            "value": "678"
+                        },
+                        {
+                            "value": "1244"
+                        },
+                        {
+                            "value": "99"
+                        },
+                        {
+                            "value": "654"
+                        },
+                        {
+                            "value": "678"
+                        }
+                    ]
+                },
+                {
+                    "seriesname": "Kategoria 2",
+                    "data": [
+                        {
+                            "value": "1314"
+                        },
+                        {
+                            "value": "1548"
+                        },
+                        {
+                            "value": "983"
+                        },
+                        {
+                            "value": "1318"
+                        },
+                        {
+                            "value": "145"
+                        },
+                        {
+                            "value": "876"
+                        },
+                        {
+                            "value": "344"
+                        },
+                        {
+                            "value": "1222"
+                        },
+                        {
+                            "value": "122"
+                        }
+                    ]
+                },
+                {
+                    "seriesname": "Kategoria 3",
+                    "data": [
+                        {
+                            "value": "223"
+                        },
+                        {
+                            "value": "490"
+                        },
+                        {
+                            "value": "987"
+                        },
+                        {
+                            "value": "334"
+                        },
+                        {
+                            "value": "667"
+                        },
+                        {
+                            "value": "556"
+                        },
+                        {
+                            "value": "700"
+                        },
+                        {
+                            "value": "1288"
+                        },
+                        {
+                            "value": "399"
+                        }
+                    ]
+                }
+            ]
+        }
+    }).render();    
+});
+</script>
+
+</body>
+</html>

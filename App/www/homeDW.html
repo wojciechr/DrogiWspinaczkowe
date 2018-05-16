@@ -12,7 +12,11 @@
 	<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
 	<link rel="stylesheet" type="text/css" href="css/jquery.mobile-1.4.5.min.css">
 
-	
+	<script src="js/fusioncharts.js"></script>
+	<script src="js/fusioncharts.charts.js"></script>
+
+	<script src="js/Chart.bundle.js"></script>
+	<script src="js/Chart.bundle.min.js"></script>
 	<script src="js/bootstrap.js"></script>
 	<script src="js/jquery.min.js"></script>
 	<script src="js/bootstrap.min.js"></script>
@@ -48,6 +52,11 @@ nav.navbar {
 
 .navbar {
 	margin-bottom: 15px;
+}
+
+/* kolor pod menu "drog wspinaczkowych" */
+.navbar-inverse .navbar-nav .open .dropdown-menu > li > a {
+	color: #6bcf60;
 }
 
 .btn {color:rgb(100, 100, 100)}
@@ -192,9 +201,10 @@ nav.navbar {
 				  <a class="dropdown-toggle" data-toggle="dropdown" href="#"><span style="padding-right: 10px" class="glyphicon glyphicon-th-list"></span>Menu dróg wspinaczkowych<span class="caret"></span></a>
 				  <ul class="menudroga dropdown-menu">
 					 <li><a href="html/md_dodaj_droge.html"><span style="padding-right: 10px" class="glyphicon glyphicon-road"></span>Dodaj drogę</a></li>
-					 <li><a href="html/md_prze_wsz_drogi.html"><span style="padding-right: 10px" class="glyphicon glyphicon-search"></span>Przeglądaj wszystkie drogi</a></li>
+					 <li><a href="html/md_wyszukaj_wsz_drogi.html"><span style="padding-right: 10px" class="glyphicon glyphicon-search"></span>Wyszukaj wszystkie drogi</a></li>
 					 <li><a href="html/md_prze_swo_drogi.html"><span style="padding-right: 10px" class="glyphicon glyphicon-zoom-in"></span>Przeglądaj swoje drogi</a></li>
 					 <li><a href="html/md_piramida.html"><span style="padding-right: 10px" class="glyphicon glyphicon-picture"></span>Piramida przejść</a></li>
+					 <li><a href="html/md_piramida_v2.html"><span style="padding-right: 10px" class="glyphicon glyphicon-picture"></span>Piramida przejść v2</a></li>
 				  </ul>
 				</li>
 				<li><a href="html/notatnik.html"><span style="padding-right: 10px" class="glyphicon glyphicon-ok"></span>Planowanie</a></li>
@@ -238,7 +248,7 @@ nav.navbar {
     </div>
 	 <hr class="hr-footer">
     <p class="txt-footer">Konstrukcja autorska: Szymon, Tomasz, Marcin i Wojciech</p>
-	 <p class="txt-footer">Utworzono: &#174; 2018r. v. 1.5</p>
+	 <p class="txt-footer">Utworzono: &#174; 2018r. v. 1.8</p>
 </footer>
 
 
