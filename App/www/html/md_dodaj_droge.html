@@ -26,17 +26,6 @@
 	<script src="https://www.gstatic.com/firebasejs/4.13.0/firebase-app.js"></script>
 	<script src="https://www.gstatic.com/firebasejs/4.13.0/firebase-database.js"></script>
 <style>
-	<script>
-		function dodajDroge() {
-			console.log("dodaj");
-		}
-		function onload() {
-			setCurrentDate();
-	}
-		function setCurrentDate() {
-			document.getElementById('datePicker').valueAsDate = new Date();
-	}
-	</script>
 </style>
 </head>
 
@@ -70,18 +59,18 @@
 			<div style="width: 45%; float: left;">
 				<h5 style="text-align: center;">Typ drogi</h5>
 				<div style="padding: 0px 0px 40px 15px; border: 1px solid #696969; border-radius: 5px; margin: 0 0px 0px 0px;">
-					<input type="radio" name="typ_drogi" value="moonboard"> Moonboard<br>
-					<input type="radio" name="typ_drogi" value="skaly"> Skaly<br>
-					<input type="radio" name="typ_drogi" value="scianka"> Scianka <br>				
+					<input type="radio" name="typ_drogi" value="Moonboard" id="moonboard_field"> Moonboard<br>
+					<input type="radio" name="typ_drogi" value="Skały" id="skaly_field"> Skaly<br>
+					<input type="radio" name="typ_drogi" value="Ścianka" id="scianka_field"> Scianka <br>				
 				</div>
 			</div>
 			<div style="width: 45%; float: right;">
 				<h5 style="text-align: center;">Styl przejścia</h5>
 				<div style="padding: 0px 0px 13px 15px; border: 1px solid #696969; border-radius: 5px; margin: 0 0px 0px 0px;">
-					<input type="radio" name="styl" value="os"> OS<br>
-					<input type="radio" name="styl" value="fl"> Flash<br>
-					<input type="radio" name="styl" value="rp"> RP <br>
-					<input type="radio" name="styl" value="proba"> Próba <br>			
+					<input type="radio" name="styl" value="OS" id="os_field"> OS<br>
+					<input type="radio" name="styl" value="Flash" id="flash_field"> Flash<br>
+					<input type="radio" name="styl" value="RP" id="pr_field"> RP <br>
+					<input type="radio" name="styl" value="Proba" id="proba_field"> Próba <br>			
 				</div>
 			</div>
 			<div style="clear: both">
@@ -132,6 +121,8 @@
 		</div>
 	</div> <!-- Koniec - Animacja menu Accordeon -->
 </div> <!-- Koniec - Animacja menu Accordeon -->
+
+<script src="../js/dodajDroge.js"></script>
 
 </body>
 </html>
