@@ -27,18 +27,6 @@
 	<script src="https://www.gstatic.com/firebasejs/4.13.0/firebase-database.js"></script>
 	
 <style>
-	<script>
-		function onload() {
-		setDates();
-		}
-		function setDates() {
-			document.getElementById('secondDatePicker').valueAsDate = new Date();
-			document.getElementById('firstDatePicker').valueAsDate = new Date(1900,0,2);
-		}
-		function wyszukajDrogi() {
-		}
-
-	</script>
 </style>
 </head>
 
@@ -68,95 +56,101 @@
       </header>
 
 <!-- CONTENT ************************* -->
-	<div class="content_opt">
-		<p>data<br>
-			od <input id ="firstDatePicker"type="date">
-			do <input id ="secondDatePicker" type="date">
-		</p>
-		<p>trudnosc<br>
-		od <select>
-				<option value="0">Wybierz trudnosc</option>
-				<option value="5a">5a</option>
-				<option value="5b">5b</option>
-				<option value="5c">5c</option>
-				<option value="6a">6a</option>
-				<option value="6a+">6a+</option>
-				<option value="6b">6b</option>
-				<option value="6b+">6b+</option>
-				<option value="6c">6c</option>
-				<option value="6c+">6c+</option>
-				<option value="7a">7a</option>
-				<option value="7a+">7a+</option>
-				<option value="7b">7b</option>
-				<option value="7b+">7b+</option>
-				<option value="7c">7c</option>
-				<option value="7c+">7c+</option>
-				<option value="8a">8a</option>
-				<option value="8a+">8a+</option>
-				<option value="8b">8b</option>
-				<option value="8b+">8b+</option>
-				<option value="8c">8c</option>
-				<option value="8c+">8c+</option>
-				<option value="9a">9a</option>
-				<option value="9a+">9a+</option>
-				<option value="9b">9b</option>
-				<option value="9b+">9b+</option>
-				<option value="9c">9c</option>
-				<option value="9c+">9c+</option>
-			</select> <br>
-		 do <select>
-				<option value="0">Wybierz trudnosc</option>
-				<option value="5a">5a</option>
-				<option value="5b">5b</option>
-				<option value="5c">5c</option>
-				<option value="6a">6a</option>
-				<option value="6a+">6a+</option>
-				<option value="6b">6b</option>
-				<option value="6b+">6b+</option>
-				<option value="6c">6c</option>
-				<option value="6c+">6c+</option>
-				<option value="7a">7a</option>
-				<option value="7a+">7a+</option>
-				<option value="7b">7b</option>
-				<option value="7b+">7b+</option>
-				<option value="7c">7c</option>
-				<option value="7c+">7c+</option>
-				<option value="8a">8a</option>
-				<option value="8a+">8a+</option>
-				<option value="8b">8b</option>
-				<option value="8b+">8b+</option>
-				<option value="8c">8c</option>
-				<option value="8c+">8c+</option>
-				<option value="9a">9a</option>
-				<option value="9a+">9a+</option>
-				<option value="9b">9b</option>
-				<option value="9b+">9b+</option>
-				<option value="9c">9c</option>
-				<option value="9c+">9c+</option>
+	<div class="content_opt">		
+		<p>
+		<h3>Data</h3>
+		<h5>Od</h5>
+		<input class="form-control" id="firstDatePicker"type="date">
+		<h5>Do</h5>
+		<input class="form-control" id="secondDatePicker" type="date">
+		</p>		
+		<p>
+		<h3>Trudność</h3>		
+		<h5>Od</h5>
+		<select class="form-control" id="trudnoscOd_field">
+			<option value="5a">5a</option>
+			<option value="5b">5b</option>
+			<option value="5c">5c</option>
+			<option value="6a">6a</option>
+			<option value="6a+">6a+</option>
+			<option value="6b">6b</option>
+			<option value="6b+">6b+</option>
+			<option value="6c">6c</option>
+			<option value="6c+">6c+</option>
+			<option value="7a">7a</option>
+			<option value="7a+">7a+</option>
+			<option value="7b">7b</option>
+			<option value="7b+">7b+</option>
+			<option value="7c">7c</option>
+			<option value="7c+">7c+</option>
+			<option value="8a">8a</option>
+			<option value="8a+">8a+</option>
+			<option value="8b">8b</option>
+			<option value="8b+">8b+</option>
+			<option value="8c">8c</option>
+			<option value="8c+">8c+</option>
+			<option value="9a">9a</option>
+			<option value="9a+">9a+</option>
+			<option value="9b">9b</option>
+			<option value="9b+">9b+</option>
+			<option value="9c">9c</option>
+			<option value="9c+">9c+</option>
+			</select>
+		 <h5>Do</h5> 
+		 <select class="form-control" id="trudnoscDo_field">
+			<option value="5a">5a</option>
+			<option value="5b">5b</option>
+			<option value="5c">5c</option>
+			<option value="6a">6a</option>
+			<option value="6a+">6a+</option>
+			<option value="6b">6b</option>
+			<option value="6b+">6b+</option>
+			<option value="6c">6c</option>
+			<option value="6c+">6c+</option>
+			<option value="7a">7a</option>
+			<option value="7a+">7a+</option>
+			<option value="7b">7b</option>
+			<option value="7b+">7b+</option>
+			<option value="7c">7c</option>
+			<option value="7c+">7c+</option>
+			<option value="8a">8a</option>
+			<option value="8a+">8a+</option>
+			<option value="8b">8b</option>
+			<option value="8b+">8b+</option>
+			<option value="8c">8c</option>
+			<option value="8c+">8c+</option>
+			<option value="9a">9a</option>
+			<option value="9a+">9a+</option>
+			<option value="9b">9b</option>
+			<option value="9b+">9b+</option>
+			<option value="9c">9c</option>
+			<option value="9c+">9c+</option>
 			</select>
 		</p>
 		<p>
-		lokalizacja: <br>
-			<input type="text" value="rejon, opcjonalnie">
-			<input type="text" value="skala, opcjonalnie">
-		</p>
-		<p>typ drogi: <br>
-		<input type="checkbox" name="typ_drogi" value="moonboard"> Moonboard <br>
-		<input type="checkbox" name="typ_drogi" value="skaly"> Skaly <br>
-		<input type="checkbox" name="typ_drogi" value="scianka"> Scianka <br>
+		<h3>Lokalizacja:</h3>	
+		<h5>Rejon</h5> 		
+		<input class="form-control" type="text" value="opcjonalnie">
+		<h5>Skala</h5> 
+		<input class="form-control" type="text" value="opcjonalnie">
 		</p>
 		<p>
-		styl przejscia: <br>
-		<input type="checkbox" name="styl" value="os"> OS <br>
-		<input type="checkbox" name="styl" value="fl"> Flash <br>
-		<input type="checkbox" name="styl" value="rp"> RP <br>
-		<input type="checkbox" name="styl" value="proba"> Prboa <br>
+		<h3>Typ drogi:</h3>
+		<input type="checkbox" name="typ_drogi" value="moonboard" id="moonboard_field"> Moonboard <br>
+		<input type="checkbox" name="typ_drogi" value="skaly" id="skaly_field"> Skaly <br>
+		<input type="checkbox" name="typ_drogi" value="scianka" id="scianka_field"> Scianka <br>
 		</p>
-		<button onclick="wyszukajDrogi()"> Wyszukaj</button>
+		<p>
+		<h3>Styl przejścia:</h3>
+		<input type="checkbox" name="styl" value="os" id="os_field"> OS <br>
+		<input type="checkbox" name="styl" value="fl" id="flash_field"> Flash <br>
+		<input type="checkbox" name="styl" value="rp" id="pr_field"> RP <br>
+		<input type="checkbox" name="styl" value="proba" id="proba_field"> Próba <br>
+		</p>
+		<button class="btn btn-lg btn-primary btn-block" onclick="wyszukajDrogi()"> Wyszukaj</button>
 	</div>
-
 	</div> <!-- Koniec - Animacja menu Accordeon -->
 </div> <!-- Koniec - Animacja menu Accordeon -->
-
+ <script src="../js/wyszukajDrogi.js"></script>
 </body>
 </html>
