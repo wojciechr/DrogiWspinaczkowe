@@ -1,4 +1,4 @@
-/*var config = {
+/*const config = {
     apiKey: "AIzaSyA-ejZDxLBfqxuqcsakiY31p6iXt4cJc8M",
     authDomain: "drogi-wspinaczkowe.firebaseapp.com",
     databaseURL: "https://drogi-wspinaczkowe.firebaseio.com",
@@ -127,9 +127,8 @@ function login_google_function() {
             }
 			
 			
-function initApp() {
 
-            firebase.auth().onAuthStateChanged(function(user) {
+firebase.auth().onAuthStateChanged(function(user) {
 
                 //console.log(user);
 
@@ -142,8 +141,9 @@ function initApp() {
                 var isAnonymous = user.isAnonymous;
                 var uid = user.uid;
                 var providerData = user.providerData;
-					document.getElementById("user_div").style.display = "block";
+					
 					document.getElementById("login_div").style.display = "none";
+					document.getElementById("user_div").style.display = "block";
 
                 
 						var user = firebase.auth().currentUser;
@@ -178,9 +178,9 @@ function initApp() {
 
             });
 
-           // document.getElementById('login_google').addEventListener('click',login_google_function, false);
-			//document.getElementById('login_facebook').addEventListener('click',login_facebook_function, false);
+            document.getElementById('login_google').addEventListener('click',login_google_function, false);
+			document.getElementById('login_facebook').addEventListener('click',login_facebook_function, false);
 
-        }
+     
 
 
