@@ -6,7 +6,6 @@
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<script src="../js/index.js"></script>	 
 	<script src="../js/bootstrap.js"></script>
 	<script src="../js/jquery.min.js"></script>
 	<script src="../js/jquery.js"></script>
@@ -15,15 +14,6 @@
 	<script src="https://www.gstatic.com/firebasejs/5.0.1/firebase-app.js"></script>
 	<script src="https://www.gstatic.com/firebasejs/5.0.1/firebase-auth.js"></script>
 	<script src="https://www.gstatic.com/firebasejs/5.0.1/firebase-database.js"></script>
-	<script>var config = {
-    apiKey: "AIzaSyA-ejZDxLBfqxuqcsakiY31p6iXt4cJc8M",
-    authDomain: "drogi-wspinaczkowe.firebaseapp.com",
-    databaseURL: "https://drogi-wspinaczkowe.firebaseio.com",
-    projectId: "drogi-wspinaczkowe",
-    storageBucket: "drogi-wspinaczkowe.appspot.com",
-    messagingSenderId: "81802368109"
-  };
-  firebase.initializeApp(config);</script>
 	<script src="../js/jquery-2.1.4.js"></script>
 	<script src="../js/jquery.mobile-1.4.5.min.js"></script>
 	<script src="../js/cordova.js"></script>
@@ -89,18 +79,9 @@
 </nav>
 
 <!-- Logowanie social -->
-<div class="container_soc_all">
-	<div class="container_soc">
-		<form action="/action_page.php">
-			
-				<h5>Zaloguj się przez social media</h5>
-
-				<div class="col_soc">
-				  <a href="#" class="fb btn_soc"><i class="fa fa-facebook fa-fw"></i> Zaloguj do Facebook</a>
-				  <a href="#" class="google btn_soc"><i class="fa fa-google fa-fw"></i> Zaloguj do Google+</a>
-				</div>
-
-				<div class="col_soc">
+	     <div class="container">
+		    <h3 class="form-signin-heading"><center>Logowanie</center></h3>
+			  <hr class="colorgraph"><br>
 			  <div id="login_div">
 			  <input type="email" class="form-control" name="E-mail" placeholder="E-mail" required="" id="email_field" />     
 			  <br>
@@ -114,25 +95,41 @@
 			  <button onclick="logout()" class="btn btn-lg btn-primary btn-block">Wylogowanie</button>
 			  </div>
 			  <div><center><b><span id="sign_in_status">Jesteś niezalogowany</span></b></center></div>
-				</div>
 
-			
-		</form>
-	</div>
+		    <h3 class="form-signin-heading"><center>Lub</center></h3>
+			  <hr class="colorgraph">
+      <div class="row">
+	  
+        <div class="col-xs-6 col-sm-6 col-md-6">
+          <button id="login_facebook" class="btn btn-lg btn-primary btn-block">Facebook</button>
+		  
+        </div>
+        <div class="col-xs-6 col-sm-6 col-md-6">
+          <button id="login_google" class="btn btn-lg btn-primary btn-block">Google</button>
+        </div>
+      </div>
+	  <a href="#" style="color:white" class="style_soc">Zapomniałeś hasła?</a>
+	  </div>
 
-	<div class="bottom-container_soc">
-		<div class="col_soc">
-			<a href="#" style="color:white" class="style_soc">Zapomniałeś hasła?</a>
-		</div>
-	</div>
-</div>
 
 	</div> <!-- Koniec - Animacja menu Accordeon -->
 </div> <!-- Koniec - Animacja menu Accordeon -->
 
 <!-- Przycisk skrola -->
 <button onclick="topFunction()" id="myBtn" title="Powrót do góry">Do góry</button>
+<script>var config = {
+    apiKey: "AIzaSyA-ejZDxLBfqxuqcsakiY31p6iXt4cJc8M",
+    authDomain: "drogi-wspinaczkowe.firebaseapp.com",
+    databaseURL: "https://drogi-wspinaczkowe.firebaseio.com",
+    projectId: "drogi-wspinaczkowe",
+    storageBucket: "drogi-wspinaczkowe.appspot.com",
+    messagingSenderId: "81802368109"
+  };
+  firebase.initializeApp(config);</script>
+  <script src="../js/index.js"></script>	 
 <script>
+
+
 // Po skrolu 25
 window.onscroll = function() {scrollFunction()};
 
