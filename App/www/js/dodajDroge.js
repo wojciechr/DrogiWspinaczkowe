@@ -10,7 +10,12 @@ const config = {
   
 function dodajDroge(){	
 	var firebaseRef = firebase.database().ref();
-	var db = firebase.database().ref().child("Users");	
+	//-----
+	//sprawdzenie czy użytkownik jest zalogowany, jeśli tak to jaki? jeśli nie to brak dodawania drogi
+	var userName = "User1";
+	//----	
+	var userPath = "Users/" + userName;
+	var db = firebase.database().ref().child(userPath);	
 	var lastChild = db.orderByKey().limitToLast(1);
 		
 	lastChild.once("value", snap => {		
