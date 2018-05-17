@@ -26,17 +26,6 @@
 	<script src="https://www.gstatic.com/firebasejs/4.13.0/firebase-app.js"></script>
 	<script src="https://www.gstatic.com/firebasejs/4.13.0/firebase-database.js"></script>
 <style>
-	<script>
-		function dodajDroge() {
-			console.log("dodaj");
-		}
-		function onload() {
-			setCurrentDate();
-	}
-		function setCurrentDate() {
-			document.getElementById('datePicker').valueAsDate = new Date();
-	}
-	</script>
 </style>
 </head>
 
@@ -68,32 +57,33 @@
 <!-- CONTENT ************************* -->
 		<div class="content_opt">
 			<div style="width: 45%; float: left;">
-				<h5 style="text-align: center;">typ drogi</h5>
+				<h5 style="text-align: center;">Typ drogi</h5>
 				<div style="padding: 0px 0px 40px 15px; border: 1px solid #696969; border-radius: 5px; margin: 0 0px 0px 0px;">
-					<input type="radio" name="typ_drogi" value="moonboard"> Moonboard<br>
-					<input type="radio" name="typ_drogi" value="skaly"> Skaly<br>
-					<input type="radio" name="typ_drogi" value="scianka"> Scianka <br>				
+					<input type="radio" name="typ_drogi" value="Moonboard" id="moonboard_field"> Moonboard<br>
+					<input type="radio" name="typ_drogi" value="Skały" id="skaly_field"> Skaly<br>
+					<input type="radio" name="typ_drogi" value="Ścianka" id="scianka_field"> Scianka <br>				
 				</div>
 			</div>
 			<div style="width: 45%; float: right;">
-				<h5 style="text-align: center;">styl przejscia</h5>
+				<h5 style="text-align: center;">Styl przejścia</h5>
 				<div style="padding: 0px 0px 13px 15px; border: 1px solid #696969; border-radius: 5px; margin: 0 0px 0px 0px;">
-					<input type="radio" name="styl" value="os"> OS<br>
-					<input type="radio" name="styl" value="fl"> Flash<br>
-					<input type="radio" name="styl" value="rp"> RP <br>
-					<input type="radio" name="styl" value="proba"> Próba <br>			
+					<input type="radio" name="styl" value="OS" id="os_field"> OS<br>
+					<input type="radio" name="styl" value="Flash" id="flash_field"> Flash<br>
+					<input type="radio" name="styl" value="RP" id="pr_field"> RP <br>
+					<input type="radio" name="styl" value="Proba" id="proba_field"> Próba <br>			
 				</div>
 			</div>
 			<div style="clear: both">
-				<h5>nazwa</h5>
-				<p><input type="text" name="nazwa_drogi" value=""> nazwa drogi</p>
-				<p><input type="text" name="nazwa_skaly" value=""> nazwa skaly</p>
-				<p><input type="text" name="nazwa_rejonu" value=""> nazwa rejonu</p>			
+				<h5>Nazwa drogi</h5>
+				<input class="form-control" id="nazwa_field">
+				<h5>Nazwa skały</h5>
+				<input class="form-control" id="skala_field">
+				<h5>Nazwa regionu</h5>
+				<input class="form-control" id="region_field">		
 			</div>
 
-			<h5>trudnosc</h5>
-			<select>
-				 <option value="0">Wybierz trudnosc</option>
+			<h5>Trudność</h5>
+			<select class="form-control" id="trudnosc_field">
 				 <option value="5a">5a</option>
 				 <option value="5b">5b</option>
 				 <option value="5c">5c</option>
@@ -123,15 +113,16 @@
 				 <option value="9c+">9c+</option>
 			</select>
 			<br>
-			<h5> data</h5>
-			<input type="date" id="datePicker" autocomplete="on" >
+			<h5>Data</h5>
+			<input class="form-control" type="date" id="datePicker" autocomplete="on" >
 			<br>
 			<br>
-			<button onclick="dodajDroge()"> Dodaj</button>
+			<button id="dodajDroge" class="btn btn-lg btn-primary btn-block" onclick="dodajDroge()"> Dodaj</button>
 		</div>
-
 	</div> <!-- Koniec - Animacja menu Accordeon -->
 </div> <!-- Koniec - Animacja menu Accordeon -->
+
+<script src="../js/dodajDroge.js"></script>
 
 </body>
 </html>
