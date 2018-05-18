@@ -60,6 +60,8 @@ function logout(){
 	  // An error happened.
 	});
 }
+
+
 function login_facebook_function(){
 facebookConnectPlugin.getLoginStatus(
             function (status) {
@@ -101,32 +103,39 @@ facebookConnectPlugin.getLoginStatus(
 
 
 
-function login_google() {
 
  function login_google_function() {
-                 var provider = new firebase.auth.GoogleAuthProvider();
-                 // alert("Google signin");
-                 if (firebase.auth().currentUser) {
-                 // [START signout]
-                 firebase.auth().signOut();
-                 document.getElementById('login_google').textContent = "Google"
- 
-                 // [END signout]
-                 } else {
-                     firebase.auth().signInWithRedirect(provider).then(function(result) {
-                         document.getElementById('login_google').textContent = "Google"
-                         var token = result.credential.accessToken;
-                         var user = result.user;   
-                        // console.log(token);
-                        // console.log(user);
-                     }).catch(function(error) {
-                         var errorCode = error.code;
-                         var errorMessage = error.message;      
-                        // console.log(error.code);
-                        // console.log(error.message);
-                     });
-                 }
- }
+			 window.plugins.googleplus.login(
+        {
+                 'webClientId' : '244487661018-8rn0cmocvl4p549fsfm3ag6umrgfrfd8.apps.googleusercontent.com',
+                 'offline': true
+        },
+        function (obj) {
+
+		console.log(obj);
+             console.log("Hello, " + obj.displayName + ", " + obj.email);
+            if (!firebase.auth().currentUser) {
+               console.log('signing firebase');
+					console.log(obj.idToken);
+                firebase.auth().signInWithCredential(firebase.auth.GoogleAuthProvider.credential(obj.idToken))
+                .then((success) => {
+                    console.log("success: " + JSON.stringify(success)); // to long json to put it in #feedback
+                })
+                .catch((error) => {
+                        console.log("error0: " + JSON.stringify(error));
+                      });
+            }else{
+                console.log('error1: already sigend in firebase');
+            }
+        },
+        function (msg) {
+          console.log("error2: " + msg);
+        }
+    );	
+	
+}
+ 							
+
 
 			
 			
@@ -176,13 +185,15 @@ firebase.auth().onAuthStateChanged(function(user) {
                 } else {
 						document.getElementById("user_div").style.display = "none";
 						document.getElementById("login_div").style.display = "block";
+						            
+			document.getElementById('login_google').addEventListener('click',login_google_function, false);
+			document.getElementById('login_facebook').addEventListener('click',login_facebook_function, false);
 
                 }
 
             });
 
-           document.getElementById('login_google').addEventListener('click',login_google_function, false);
-			document.getElementById('login_facebook').addEventListener('click',login_facebook_function, false);
+
 
      
 
