@@ -107,7 +107,7 @@ facebookConnectPlugin.getLoginStatus(
    $('#logingoogle').click(function () {
         window.plugins.googleplus.login(
             {
-                'webClientId': '81802368109-e2uljuaep5omiqd1bmdqgb3u8ssmjauu.apps.googleusercontent.com',
+                'webClientId': '81802368109-8pomelv41akmrkb2vrmu6fhuch8bet5s.apps.googleusercontent.com',
                 'offline': true
             },
             function (obj) {
