@@ -105,7 +105,7 @@ facebookConnectPlugin.getLoginStatus(
 
 
  function login_google_function() {
-			 window.plugins.googleplus.login(
+window.plugins.googleplus.login(
         {
                  'webClientId' : '244487661018-8rn0cmocvl4p549fsfm3ag6umrgfrfd8.apps.googleusercontent.com',
                  'offline': true
@@ -132,8 +132,9 @@ facebookConnectPlugin.getLoginStatus(
           console.log("error2: " + msg);
         }
     );	
-	
-}
+                 }
+ 		
+             
  							
 
 
@@ -186,8 +187,8 @@ firebase.auth().onAuthStateChanged(function(user) {
 						document.getElementById("user_div").style.display = "none";
 						document.getElementById("login_div").style.display = "block";
 						            
-			document.getElementById('login_google').addEventListener('click',login_google_function, false);
-			document.getElementById('login_facebook').addEventListener('click',login_facebook_function, false);
+			//document.getElementById('login_google').addEventListener('click',login_google_function, false);
+			//document.getElementById('login_facebook').addEventListener('click',login_facebook_function, false);
 
                 }
 
