@@ -104,35 +104,35 @@ facebookConnectPlugin.getLoginStatus(
 
 
 
- function login_google_function() {
-window.plugins.googleplus.login(
-        {
-                 'webClientId' : '244487661018-8rn0cmocvl4p549fsfm3ag6umrgfrfd8.apps.googleusercontent.com',
-                 'offline': true
-        },
-        function (obj) {
+   $('#logingoogle').click(function () {
+        window.plugins.googleplus.login(
+            {
+                'webClientId': '81802368109-e2uljuaep5omiqd1bmdqgb3u8ssmjauu.apps.googleusercontent.com',
+                'offline': true
+            },
+            function (obj) {
 
-		console.log(obj);
-             console.log("Hello, " + obj.displayName + ", " + obj.email);
-            if (!firebase.auth().currentUser) {
-               console.log('signing firebase');
-					console.log(obj.idToken);
-                firebase.auth().signInWithCredential(firebase.auth.GoogleAuthProvider.credential(obj.idToken))
-                .then((success) => {
-                    console.log("success: " + JSON.stringify(success)); // to long json to put it in #feedback
-                })
-                .catch((error) => {
-                        console.log("error0: " + JSON.stringify(error));
-                      });
-            }else{
-                console.log('error1: already sigend in firebase');
+                console.log(obj);
+                if (!firebase.auth().currentUser) {
+                    console.log(obj.idToken);
+                    firebase.auth().signInWithCredential(firebase.auth.GoogleAuthProvider.credential(obj.idToken))
+                        .then((success) => {
+                            console.log("success: " + JSON.stringify(success));
+                            window.location.href = "index.html";
+                        })
+                        .catch((error) => {
+                            document.querySelector("#feedback").innerHTML = "error0: " + JSON.stringify(error);
+                        });
+                } else {
+                    document.querySelector("#feedback").innerHTML = 'error1: already sigend in firebase';
+                }
+            },
+            function (msg) {
+                document.querySelector("#feedback").innerHTML = "error2: " + msg;
             }
-        },
-        function (msg) {
-          console.log("error2: " + msg);
-        }
-    );	
-                 }
+        );
+
+    });
  		
              
  							
