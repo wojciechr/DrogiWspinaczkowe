@@ -1,4 +1,4 @@
-/*const config = {
+const config = {
     apiKey: "AIzaSyA-ejZDxLBfqxuqcsakiY31p6iXt4cJc8M",
     authDomain: "drogi-wspinaczkowe.firebaseapp.com",
     databaseURL: "https://drogi-wspinaczkowe.firebaseio.com",
@@ -6,7 +6,7 @@
     storageBucket: "drogi-wspinaczkowe.appspot.com",
     messagingSenderId: "81802368109"
   };
-  firebase.initializeApp(config);*/
+  firebase.initializeApp(config);
 
 
  /*window.fbAsyncInit = function() {
@@ -102,16 +102,30 @@ facebookConnectPlugin.getLoginStatus(
 
 
 function login_google() {
- 		var provider = new firebase.auth.GoogleAuthProvider();
- 		
-firebase.auth().signInWithRedirect(provider);
 
-firebase.auth().getRedirectResult().then(function(authData) {
-	console.log(authData);
-}).catch(function(error) {
-	console.log(error);
-});
- 							
+ function login_google_function() {
+                 var provider = new firebase.auth.GoogleAuthProvider();
+                 // alert("Google signin");
+                 if (firebase.auth().currentUser) {
+                 // [START signout]
+                 firebase.auth().signOut();
+                 document.getElementById('login_google').textContent = "Google"
+ 
+                 // [END signout]
+                 } else {
+                     firebase.auth().signInWithRedirect(provider).then(function(result) {
+                         document.getElementById('login_google').textContent = "Google"
+                         var token = result.credential.accessToken;
+                         var user = result.user;   
+                        // console.log(token);
+                        // console.log(user);
+                     }).catch(function(error) {
+                         var errorCode = error.code;
+                         var errorMessage = error.message;      
+                        // console.log(error.code);
+                        // console.log(error.message);
+                     });
+                 }
  }
 
 			
@@ -167,8 +181,8 @@ firebase.auth().onAuthStateChanged(function(user) {
 
             });
 
-          //  document.getElementById('login_google').addEventListener('click',login_google_function, false);
-		//	document.getElementById('login_facebook').addEventListener('click',login_facebook_function, false);
+           document.getElementById('login_google').addEventListener('click',login_google_function, false);
+			document.getElementById('login_facebook').addEventListener('click',login_facebook_function, false);
 
      
 

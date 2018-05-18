@@ -14,7 +14,6 @@
 	<script src="https://www.gstatic.com/firebasejs/5.0.1/firebase-app.js"></script>
 	<script src="https://www.gstatic.com/firebasejs/5.0.1/firebase-auth.js"></script>
 	<script src="https://www.gstatic.com/firebasejs/5.0.1/firebase-database.js"></script>
-	<div id="fb-root"></div> <script src="../js/facebookConnectPlugin.js"></script>
 	<script src="../js/jquery-2.1.4.js"></script>
 	<script src="../js/jquery.mobile-1.4.5.min.js"></script>
 	<script src="../js/cordova.js"></script>
@@ -99,16 +98,17 @@
 
 		    <h3 class="form-signin-heading"><center>Lub</center></h3>
 			  
-	  
+	 <div class="row"> 
         <div class="col-xs-6 col-sm-6 col-md-6">
           <button id="login_facebook" class="btn btn-lg btn-primary btn-block">Facebook</button>
 		  
         </div>
         <div class="col-xs-6 col-sm-6 col-md-6">
-          <button onclick="login_google()" class="btn btn-lg btn-primary btn-block">Google</button>
+          <button id="login_google" class="btn btn-lg btn-primary btn-block">Google</button>
         </div>
 
 	  <a href="#" style="color:white" class="style_soc">Zapomniałeś hasła?</a>
+	  </div>
 	  </div>
 
 
@@ -117,16 +117,9 @@
 
 <!-- Przycisk skrola -->
 <button onclick="topFunction()" id="myBtn" title="Powrót do góry">Do góry</button>
-<script>var config = {
-    apiKey: "AIzaSyA-ejZDxLBfqxuqcsakiY31p6iXt4cJc8M",
-    authDomain: "drogi-wspinaczkowe.firebaseapp.com",
-    databaseURL: "https://drogi-wspinaczkowe.firebaseio.com",
-    projectId: "drogi-wspinaczkowe",
-    storageBucket: "drogi-wspinaczkowe.appspot.com",
-    messagingSenderId: "81802368109"
-  };
-  firebase.initializeApp(config);</script>
-  <script src="../js/index.js"></script>
+ <script src="../js/index.js"></script>
+
+ 
 <script>
 
 
