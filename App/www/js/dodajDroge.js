@@ -9,12 +9,19 @@ const config = {
   firebase.initializeApp(config);
   
 function dodajDroge(){	
+	var userId;
+	var user = firebase.auth().currentUser;
+
+	if (user) {
+		userId = user.uid;
+	} else {
+		window.alert("Nie zalogowałeś się!");
+		return;
+	}
+
 	var firebaseRef = firebase.database().ref();
-	//-----
-	//sprawdzenie czy użytkownik jest zalogowany, jeśli tak to jaki? jeśli nie to brak dodawania drogi
-	var userName = "User1";
-	//----	
-	var userPath = "Users/" + userName;
+	
+	var userPath = "Users/" + userId;
 	var db = firebase.database().ref().child(userPath);	
 	var lastChild = db.orderByKey().limitToLast(1);
 		
@@ -59,7 +66,12 @@ function dodajDroge(){
 		var trudnosc = document.getElementById("trudnosc_field").value;
 		var data = document.getElementById("datePicker").value;
 				
-		var dbNrTrasy = Number(lastChildName.match(/\d+/)[0])+1;
+		var dbNrTrasy;
+		if(typeof lastChildName == 'undefined'){
+			dbNrTrasy = 1;
+		}else{
+			dbNrTrasy = Number(lastChildName.match(/\d+/)[0])+1;
+		}
 		var dbNowaNazwaTrasy;
 		
 		if(dbNrTrasy < 10){			
