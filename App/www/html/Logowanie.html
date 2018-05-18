@@ -16,7 +16,7 @@
 	<script src="https://www.gstatic.com/firebasejs/5.0.1/firebase-database.js"></script>
 	<script src="../js/jquery-2.1.4.js"></script>
 	<script src="../js/jquery.mobile-1.4.5.min.js"></script>
-	<script src="../js/cordova.js"></script>
+	<script src="cordova.js"></script>
 	<link rel="stylesheet" type="text/css" href="../css/font_awesome/css/font-awesome.min.css">
 	<link rel="stylesheet" type="text/css" href="../css/bootstrap.min.css">
 	<link rel="stylesheet" type="text/css" href="../css/w3.css">
@@ -87,7 +87,7 @@
 			  <br>
 			  <input type="password" class="form-control" name="Password" placeholder="Hasło" required="" id="password_field"/>  
 			  <br>
-			<button onclick="login();" class="btn btn-lg btn-primary btn-block">Logowanie</button>
+			<button onclick="login()" class="btn btn-lg btn-primary btn-block">Logowanie</button>
 			<button onclick="register()" class="btn btn-lg btn-primary btn-block">Rejestracja</button>
 			  </div>
 			  <div id="user_div">
@@ -97,18 +97,18 @@
 			  <div><center><b><span id="sign_in_status">Jesteś niezalogowany</span></b></center></div>
 
 		    <h3 class="form-signin-heading"><center>Lub</center></h3>
-			  <hr class="colorgraph">
-      <div class="row">
-	  
+			  
+	 <div class="row"> 
         <div class="col-xs-6 col-sm-6 col-md-6">
           <button id="login_facebook" class="btn btn-lg btn-primary btn-block">Facebook</button>
 		  
         </div>
         <div class="col-xs-6 col-sm-6 col-md-6">
-          <button id="login_google" class="btn btn-lg btn-primary btn-block">Google</button>
+          <button id="logingoogle" class="btn btn-lg btn-primary btn-block">Google</button>
         </div>
-      </div>
+
 	  <a href="#" style="color:white" class="style_soc">Zapomniałeś hasła?</a>
+	  </div>
 	  </div>
 
 
@@ -117,16 +117,9 @@
 
 <!-- Przycisk skrola -->
 <button onclick="topFunction()" id="myBtn" title="Powrót do góry">Do góry</button>
-<script>var config = {
-    apiKey: "AIzaSyA-ejZDxLBfqxuqcsakiY31p6iXt4cJc8M",
-    authDomain: "drogi-wspinaczkowe.firebaseapp.com",
-    databaseURL: "https://drogi-wspinaczkowe.firebaseio.com",
-    projectId: "drogi-wspinaczkowe",
-    storageBucket: "drogi-wspinaczkowe.appspot.com",
-    messagingSenderId: "81802368109"
-  };
-  firebase.initializeApp(config);</script>
-  <script src="../js/index.js"></script>	 
+ <script src="../js/index.js"></script>
+
+ 
 <script>
 
 

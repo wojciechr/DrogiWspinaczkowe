@@ -39,7 +39,9 @@
         <variable name="ANDROID_HOST" value=" " />
         <variable name="ANDROID_PATHPREFIX" value="/" />
     </plugin>
-
+		<plugin name="cordova-plugin-googleplus" source="npm" spec="5.2.1">
+ 		  <variable name="WEB_APPLICATION_CLIENT_ID" value="81802368109-e2uljuaep5omiqd1bmdqgb3u8ssmjauu.apps.googleusercontent.com" />
+ 		</plugin>
 		
 		<plugin name="cordova-plugin-facebook4" source="npm" spec="1.7.4">
  		  <variable name="APP_ID" value="2065286753691545" />

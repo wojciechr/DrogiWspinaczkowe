@@ -1,4 +1,4 @@
-/*const config = {
+const config = {
     apiKey: "AIzaSyA-ejZDxLBfqxuqcsakiY31p6iXt4cJc8M",
     authDomain: "drogi-wspinaczkowe.firebaseapp.com",
     databaseURL: "https://drogi-wspinaczkowe.firebaseio.com",
@@ -6,7 +6,7 @@
     storageBucket: "drogi-wspinaczkowe.appspot.com",
     messagingSenderId: "81802368109"
   };
-  firebase.initializeApp(config);*/
+  firebase.initializeApp(config);
 
 
  /*window.fbAsyncInit = function() {
@@ -60,6 +60,8 @@ function logout(){
 	  // An error happened.
 	});
 }
+
+
 function login_facebook_function(){
 facebookConnectPlugin.getLoginStatus(
             function (status) {
@@ -101,30 +103,41 @@ facebookConnectPlugin.getLoginStatus(
 
 
 
-function login_google_function() {
-                var provider = new firebase.auth.GoogleAuthProvider();
-                // alert("Google signin");
-                if (firebase.auth().currentUser) {
-                // [START signout]
-                firebase.auth().signOut();
-                document.getElementById('login_google').textContent = "Google"
 
-                // [END signout]
+   $('#logingoogle').click(function () {
+        window.plugins.googleplus.login(
+            {
+                'webClientId': '81802368109-8pomelv41akmrkb2vrmu6fhuch8bet5s.apps.googleusercontent.com',
+                'offline': true
+            },
+            function (obj) {
+
+                console.log(obj);
+                if (!firebase.auth().currentUser) {
+                    console.log(obj.idToken);
+                    firebase.auth().signInWithCredential(firebase.auth.GoogleAuthProvider.credential(obj.idToken))
+                        .then((success) => {
+                            console.log("success: " + JSON.stringify(success));
+                            window.location.href = "index.html";
+                        })
+                        .catch((error) => {
+                            document.querySelector("#feedback").innerHTML = "error0: " + JSON.stringify(error);
+                        });
                 } else {
-                    firebase.auth().signInWithRedirect(provider).then(function(result) {
-                        document.getElementById('login_google').textContent = "Google"
-                        var token = result.credential.accessToken;
-                        var user = result.user;   
-                       // console.log(token);
-                       // console.log(user);
-                    }).catch(function(error) {
-                        var errorCode = error.code;
-                        var errorMessage = error.message;      
-                       // console.log(error.code);
-                       // console.log(error.message);
-                    });
+                    document.querySelector("#feedback").innerHTML = 'error1: already sigend in firebase';
                 }
+            },
+            function (msg) {
+                document.querySelector("#feedback").innerHTML = "error2: " + msg;
             }
+        );
+
+    });
+ 		
+             
+ 							
+
+
 			
 			
 
@@ -173,13 +186,15 @@ firebase.auth().onAuthStateChanged(function(user) {
                 } else {
 						document.getElementById("user_div").style.display = "none";
 						document.getElementById("login_div").style.display = "block";
+						            
+			//document.getElementById('login_google').addEventListener('click',login_google_function, false);
+			//document.getElementById('login_facebook').addEventListener('click',login_facebook_function, false);
 
                 }
 
             });
 
-            document.getElementById('login_google').addEventListener('click',login_google_function, false);
-			document.getElementById('login_facebook').addEventListener('click',login_facebook_function, false);
+
 
      
 
