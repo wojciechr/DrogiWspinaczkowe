@@ -10,14 +10,12 @@
 	<script src="../js/jquery.min.js"></script>
 	<script src="../js/jquery.js"></script>
 	<script src="../js/bootstrap.min.js"></script>
-	<script src="https://www.gstatic.com/firebasejs/5.0.1/firebase.js"></script>
 	<script src="https://www.gstatic.com/firebasejs/5.0.1/firebase-app.js"></script>
 	<script src="https://www.gstatic.com/firebasejs/5.0.1/firebase-auth.js"></script>
 	<script src="https://www.gstatic.com/firebasejs/5.0.1/firebase-database.js"></script>
 	<script src="../js/jquery-2.1.4.js"></script>
 	<!--<script src="../js/jquery.mobile-1.4.5.min.js"></script>-->
-	<script src="../js/index.js"></script>
-	<script src="cordova.js"></script>
+	<script src="../js/facebook.js"></script>
 	<link rel="stylesheet" type="text/css" href="../css/font_awesome/css/font-awesome.min.css">
 	<link rel="stylesheet" type="text/css" href="../css/bootstrap.min.css">
 	<link rel="stylesheet" type="text/css" href="../css/w3.css">
@@ -31,7 +29,7 @@
 </style>
 </head>
 
-<body style="background-color: rgb(50, 50, 50);">
+<body onload="init()" style="background-color: rgb(50, 50, 50);">
 
 
 <!-- Belka Menu -->
@@ -80,7 +78,7 @@
 <div class="content w3-animate-bottom">
 
 <!-- Logowanie social -->
-	     <div class="container">
+	     <div class="container" id="login">
 		    <h3 class="form-signin-heading"><center>Logowanie</center></h3>
 			  <hr class="colorgraph"><br>
 			  <div id="login_div">
@@ -105,7 +103,7 @@
 		  
         </div>
         <div class="col-xs-6 col-sm-6 col-md-6">
-          <button id="logingoogle" class="btn btn-lg btn-primary btn-block">Google</button>
+          <button id="btnGoogleLogin" class="btn btn-lg btn-primary btn-block">Google</button>
         </div>
 
 	  <a href="#" style="color:white" class="style_soc">Zapomniałeś hasła?</a>
@@ -116,9 +114,12 @@
 
 <!-- Przycisk skrola -->
 <button onclick="topFunction()" id="myBtn" title="Powrót do góry">Do góry</button>
-
- 
+ <script type="text/javascript" src="cordova.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/4.13.0/firebase.js"></script>
+    <script src="../js/firebase_conf.js"></script>
+<script type="text/javascript" src="../js/index.js"></script>
 <script>
+
 
 
 // Po skrolu 25
