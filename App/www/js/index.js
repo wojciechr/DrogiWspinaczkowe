@@ -117,19 +117,18 @@ facebookConnectPlugin.getLoginStatus(
                     console.log(obj.idToken);
                     firebase.auth().signInWithCredential(firebase.auth.GoogleAuthProvider.credential(obj.idToken))
                         .then((success) => {
-                            console.log("success: " + JSON.stringify(success));
-                            window.location.href = "index.html";
-                        })
-                        .catch((error) => {
-                            document.querySelector("#feedback").innerHTML = "error0: " + JSON.stringify(error);
-                        });
-                } else {
-                    document.querySelector("#feedback").innerHTML = 'error1: already sigend in firebase';
-                }
-            },
-            function (msg) {
-                document.querySelector("#feedback").innerHTML = "error2: " + msg;
+                    console.log("success: " + JSON.stringify(success)); // to long json to put it in #feedback
+                })
+                .catch((error) => {
+                        console.log("error0: " + JSON.stringify(error));
+                      });
+            }else{
+                console.log('error1: already sigend in firebase');
             }
+        },
+        function (msg) {
+          console.log("error2: " + msg);
+}
         );
 
     });
