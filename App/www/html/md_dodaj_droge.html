@@ -6,6 +6,18 @@
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	
+	<script src="../js/jquery.min.js"></script>
+	<script src="../js/bootstrap.min.js"></script>
+	<script src="../js/bootstrap.js"></script>
+	<script src="../js/jquery.js"></script>
+	<script src="../js/jquery-2.1.4.js"></script>
+	<script src="../js/jquery.mobile-1.4.5.min.js"></script>
+	<script src="../js/angular.min.js"></script>
+	<script src="https://www.gstatic.com/firebasejs/5.0.1/firebase.js"></script>
+	<script src="https://www.gstatic.com/firebasejs/5.0.1/firebase-app.js"></script>
+	<script src="https://www.gstatic.com/firebasejs/5.0.1/firebase-auth.js"></script>
+	<script src="https://www.gstatic.com/firebasejs/5.0.1/firebase-database.js"></script>
 
 	<link rel="stylesheet" type="text/css" href="../css/bootstrap.min.css">
 	<link rel="stylesheet" type="text/css" href="../css/font_awesome/css/font-awesome.min.css">
@@ -16,35 +28,12 @@
 	<link rel="stylesheet" type="text/css" href="https://cdn.firebase.com/libs/firebaseui/2.5.1/firebaseui.css">
 	<link rel="stylesheet" type="text/css" href="../css/md_konfiguracja.css">
 
-	<script src="../js/jquery.min.js"></script>
-	<script src="../js/bootstrap.min.js"></script>
-	<script src="../js/bootstrap.js"></script>
-	<script src="../js/jquery.js"></script>
-	<script src="../js/jquery-2.1.4.js"></script>
-	<script src="../js/jquery.mobile-1.4.5.min.js"></script>
-	<script src="../js/angular.min.js"></script>
-	<script src="https://www.gstatic.com/firebasejs/4.13.0/firebase-app.js"></script>
-	<script src="https://www.gstatic.com/firebasejs/4.13.0/firebase-database.js"></script>
+
 <style>
-	<script>
-		function dodajDroge() {
-			console.log("dodaj");
-		}
-		function onload() {
-			setCurrentDate();
-	}
-		function setCurrentDate() {
-			document.getElementById('datePicker').valueAsDate = new Date();
-	}
-	</script>
 </style>
 </head>
 
-<body onload="onload()" style="background-color: rgb(50, 50, 50);">
-
-<!-- Animacja menu Accordeon -->
-<div id="" class="content_all" style="display:block;">
-	<div class="content w3-animate-top">
+<body style="background-color: rgb(50, 50, 50);">
 
 		<!-- Header -->
       <header style="display: flex; height: 52px; padding: 0 15px; margin: 0 0 15px 0; background-color: rgb(35, 35, 35); box-shadow: rgba(0, 0, 0, 1) 0px 0px 10px 0px; border: 1px solid rgb(1,1,1);">
@@ -65,35 +54,39 @@
 			</div>
       </header>
 
+<!-- Animacja menu Accordeon -->
+<div class="content w3-animate-left">
+		
 <!-- CONTENT ************************* -->
 		<div class="content_opt">
 			<div style="width: 45%; float: left;">
-				<h5 style="text-align: center;">typ drogi</h5>
+				<h5 style="text-align: center;">Typ drogi</h5>
 				<div style="padding: 0px 0px 40px 15px; border: 1px solid #696969; border-radius: 5px; margin: 0 0px 0px 0px;">
-					<input type="radio" name="typ_drogi" value="moonboard"> Moonboard<br>
-					<input type="radio" name="typ_drogi" value="skaly"> Skaly<br>
-					<input type="radio" name="typ_drogi" value="scianka"> Scianka <br>				
+					<input type="radio" name="typ_drogi" value="Moonboard" id="moonboard_field"> Moonboard<br>
+					<input type="radio" name="typ_drogi" value="Skały" id="skaly_field"> Skaly<br>
+					<input type="radio" name="typ_drogi" value="Ścianka" id="scianka_field"> Scianka <br>				
 				</div>
 			</div>
 			<div style="width: 45%; float: right;">
-				<h5 style="text-align: center;">styl przejscia</h5>
+				<h5 style="text-align: center;">Styl przejścia</h5>
 				<div style="padding: 0px 0px 13px 15px; border: 1px solid #696969; border-radius: 5px; margin: 0 0px 0px 0px;">
-					<input type="radio" name="styl" value="os"> OS<br>
-					<input type="radio" name="styl" value="fl"> Flash<br>
-					<input type="radio" name="styl" value="rp"> RP <br>
-					<input type="radio" name="styl" value="proba"> Próba <br>			
+					<input type="radio" name="styl" value="OS" id="os_field"> OS<br>
+					<input type="radio" name="styl" value="Flash" id="flash_field"> Flash<br>
+					<input type="radio" name="styl" value="RP" id="pr_field"> RP <br>
+					<input type="radio" name="styl" value="Proba" id="proba_field"> Próba <br>			
 				</div>
 			</div>
 			<div style="clear: both">
-				<h5>nazwa</h5>
-				<p><input type="text" name="nazwa_drogi" value=""> nazwa drogi</p>
-				<p><input type="text" name="nazwa_skaly" value=""> nazwa skaly</p>
-				<p><input type="text" name="nazwa_rejonu" value=""> nazwa rejonu</p>			
+				<h5>Nazwa drogi</h5>
+				<input class="form-control" id="nazwa_field">
+				<h5>Nazwa skały</h5>
+				<input class="form-control" id="skala_field">
+				<h5>Nazwa regionu</h5>
+				<input class="form-control" id="region_field">		
 			</div>
 
-			<h5>trudnosc</h5>
-			<select>
-				 <option value="0">Wybierz trudnosc</option>
+			<h5>Trudność</h5>
+			<select class="form-control" id="trudnosc_field">
 				 <option value="5a">5a</option>
 				 <option value="5b">5b</option>
 				 <option value="5c">5c</option>
@@ -123,15 +116,16 @@
 				 <option value="9c+">9c+</option>
 			</select>
 			<br>
-			<h5> data</h5>
-			<input type="date" id="datePicker" autocomplete="on" >
+			<h5>Data</h5>
+			<input class="form-control" type="date" id="datePicker" autocomplete="on" >
 			<br>
 			<br>
-			<button onclick="dodajDroge()"> Dodaj</button>
+			<button id="dodajDroge" class="btn btn-lg btn-primary btn-block" onclick="dodajDroge()"> Dodaj</button>
 		</div>
-
 	</div> <!-- Koniec - Animacja menu Accordeon -->
 </div> <!-- Koniec - Animacja menu Accordeon -->
+
+<script src="../js/dodajDroge.js"></script>
 
 </body>
 </html>

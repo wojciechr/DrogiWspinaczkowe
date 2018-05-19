@@ -33,9 +33,6 @@
 
 <body style="background-color: rgb(50, 50, 50);">
 
-<!-- Animacja menu Accordeon -->
-<div id="" class="" style="display:block;">
-	<div class="content w3-animate-bottom">
 
 <!-- Belka Menu -->
 <nav class="navbar navbar-inverse" style="background-color: rgb(35, 35, 35);">
@@ -59,7 +56,7 @@
 			</div>
 		  
 			<!-- przycisk back -->
-			<div class="box_back_btn">
+			<div style="box-sizing: border-box; padding: 0 0 0 26px; margin: auto 0px;">
 			<button onclick="window.history.back()" type="button" class="btn btn-xs styl_back_btn"><span class="glyphicon glyphicon-chevron-left"></span></button>
 			</div>
 		</div>
@@ -67,6 +64,7 @@
 		<!-- Menu rozwijane -->
 		<div class="collapse navbar-collapse" id="myNavbar">
 			<ul class="nav navbar-nav navbar-right">
+			
 				<li><a href="../html/Logowanie.html"><span style="padding-right: 10px" class="glyphicon glyphicon-log-in"></span>Zaloguj</a></li>
 				<hr style="margin: 0 auto;width: 92%;border-top: 1px solid;color: rgb(0, 0, 0);">
 				<hr style="margin: 0 auto;width: 92%;border-top: 1px solid;color: rgb(56, 56, 56);">
@@ -78,6 +76,9 @@
 		
   </div>
 </nav>
+
+<!-- Animacja menu Accordeon -->
+<div class="content w3-animate-bottom">
 
 <!-- Rejestracja -->
 <div class="container_soc_all">
@@ -130,8 +131,6 @@
 		
 	</div>
 </div>
-
-	</div> <!-- Koniec - Animacja menu Accordeon -->
 </div> <!-- Koniec - Animacja menu Accordeon -->
 
 <script>
