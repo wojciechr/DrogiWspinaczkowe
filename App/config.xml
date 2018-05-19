@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='utf-8'?>
-<widget id="com.DrogiWspinaczkowe.android" version="1.0.0" xmlns="http://www.w3.org/ns/widgets" xmlns:gap="http://phonegap.com/ns/1.0">
+<widget id="io.github.DrogiWspinaczkowe" version="1.0.0" xmlns="http://www.w3.org/ns/widgets" xmlns:gap="http://phonegap.com/ns/1.0">
     <name>Drogi wspinaczkowe</name>
     <description>Drogi wspinaczkowe mobile app</description>
     <author email="NA" href="NN"> ... </author>
@@ -20,14 +20,6 @@
     <plugin name="cordova-universal-links-plugin" spec="^1.2.1" />
     <plugin name="cordova-plugin-browsertab" spec="^0.2.0" />
     <plugin name="cordova-plugin-inappbrowser" spec="^3.0.0" />
-
-    <plugin name="cordova-plugin-googleplus" spec="5.2.1">
-        <variable name="WEB_APPLICATION_CLIENT_ID" value="81802368109-8pomelv41akmrkb2vrmu6fhuch8bet5s.apps.googleusercontent.com" />
-    </plugin>
-    <plugin name="cordova-plugin-facebook4" spec="1.7.4">
-        <variable name="APP_ID" value="2065286753691545" />
-        <variable name="APP_NAME" value="Drogi wspinaczkowe" />
-    </plugin>
     <preference name="AndroidLaunchMode" value="singleTask" />
     <universal-links>
         <host name="w7t22.app.goo.gl/nM9x" scheme="https" />
