@@ -114,6 +114,7 @@ firebase.auth().onAuthStateChanged(function(user) {
 
             });
 
+app.initialize();
 
      
 
