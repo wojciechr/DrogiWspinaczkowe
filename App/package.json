@@ -1,0 +1,1 @@
+{"name":"com.drogiwspinaczkowe.android","version":"1.0.0","displayName":"Drogi wspinaczkowe","cordova":{"platforms":["android","browser","windows"]},"dependencies":{"cordova-android":"^7.0.0","cordova-browser":"^5.0.3","cordova-windows":"^5.0.0"}}

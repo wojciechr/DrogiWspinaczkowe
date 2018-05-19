@@ -1,61 +1,41 @@
-<?xml version="1.0" encoding="UTF-8" ?>
-	<widget
-	xmlns = "http://www.w3.org/ns/widgets"
-	xmlns:gap = "http://phonegap.com/ns/1.0"
-	id = "com.DrogiWspinaczkowe.android"
-	version = "1.0.0" >
-
-	<name>Drogi wspinaczkowe</name>
-	<description>Drogi wspinaczkowe mobile app</description>
-	<author href="NN" email="NA"> ... </author>
-	<content src="index.html" />
-	<plugin name="cordova-plugin-whitelist" version="1" />
-    <access origin="*"/>
+<?xml version='1.0' encoding='utf-8'?>
+<widget id="com.DrogiWspinaczkowe.android" version="1.0.0" xmlns="http://www.w3.org/ns/widgets" xmlns:gap="http://phonegap.com/ns/1.0">
+    <name>Drogi wspinaczkowe</name>
+    <description>Drogi wspinaczkowe mobile app</description>
+    <author email="NA" href="NN"> ... </author>
+    <content src="index.html" />
+    <plugin name="cordova-plugin-whitelist" version="1" />
+    <access origin="*" />
     <allow-intent href="http://*/*" />
     <allow-intent href="https://*/*" />
     <allow-intent href="tel:*" />
     <allow-intent href="sms:*" />
     <allow-intent href="mailto:*" />
     <allow-intent href="geo:*" />
-		<meta http-equiv="Content-Security-Policy" content="
-    default-src *; 
-    style-src * 'unsafe-inline'; 
-    script-src * 'unsafe-inline'; 
-    media-src *; img-src * data:; 
-	" />
-	<platform name="android">
-		<icon src="climbing.png" density="ldpi" />
-	</platform>
-
-	<plugin name="cordova-plugin-device" spec="2.0.1" />
-	<plugin name="cordova-plugin-dialogs" spec="2.0.1" />
-	    <plugin name="cordova-plugin-buildinfo" spec="^2.0.1" />
+    <meta content="&#xD;&#xA;    default-src *; &#xD;&#xA;    style-src * 'unsafe-inline'; &#xD;&#xA;    script-src * 'unsafe-inline'; &#xD;&#xA;    media-src *; img-src * data:; &#xD;&#xA;	" http-equiv="Content-Security-Policy" />
+    <platform name="android">
+        <icon density="ldpi" src="climbing.png" />
+    </platform>
+    <plugin name="cordova-plugin-buildinfo" spec="^2.0.1" />
     <plugin name="cordova-universal-links-plugin" spec="^1.2.1" />
     <plugin name="cordova-plugin-browsertab" spec="^0.2.0" />
     <plugin name="cordova-plugin-inappbrowser" spec="^3.0.0" />
-    <plugin name="cordova-plugin-customurlscheme" spec="^4.3.0">
-        <variable name="URL_SCHEME" value="com.firebase.cordova" />
-        <variable name="ANDROID_SCHEME" value=" " />
-        <variable name="ANDROID_HOST" value=" " />
-        <variable name="ANDROID_PATHPREFIX" value="/" />
+
+    <plugin name="cordova-plugin-googleplus" spec="5.2.1">
+        <variable name="WEB_APPLICATION_CLIENT_ID" value="81802368109-8pomelv41akmrkb2vrmu6fhuch8bet5s.apps.googleusercontent.com" />
     </plugin>
-		<plugin name="cordova-plugin-googleplus" source="npm" spec="5.2.1">
- 		  <variable name="WEB_APPLICATION_CLIENT_ID" value="81802368109-e2uljuaep5omiqd1bmdqgb3u8ssmjauu.apps.googleusercontent.com" />
- 		</plugin>
-		
-		<plugin name="cordova-plugin-facebook4" source="npm" spec="1.7.4">
- 		  <variable name="APP_ID" value="2065286753691545" />
-		  <variable name="APP_NAME" value="Drogi wspinaczkowe" />
- 		</plugin>
+    <plugin name="cordova-plugin-facebook4" spec="1.7.4">
+        <variable name="APP_ID" value="2065286753691545" />
+        <variable name="APP_NAME" value="Drogi wspinaczkowe" />
+    </plugin>
     <preference name="AndroidLaunchMode" value="singleTask" />
+    <universal-links>
+        <host name="w7t22.app.goo.gl/nM9x" scheme="https" />
+        <host name="drogi-wspinaczkowe.firebaseapp.com" scheme="https">
+            <path url="/__/auth/callback" />
+        </host>
+    </universal-links>
     <engine name="android" spec="^7.0.0" />
     <engine name="browser" spec="^5.0.3" />
     <engine name="windows" spec="^5.0.0" />
-		<universal-links>
-    <host name="w7t22.app.goo.gl/nM9x" scheme="https" />
-    <host name="drogi-wspinaczkowe.firebaseapp.com" scheme="https">
-        <path url="/__/auth/callback"/>
-    </host>
-</universal-links>
-
 </widget>
