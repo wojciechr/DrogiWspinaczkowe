@@ -1,45 +1,29 @@
-function init() {
-	document.addEventListener('deviceready', onDeviceReady, false);
-}
+var app = {
+    // Application Constructor
+    initialize: function() {
+        document.addEventListener('deviceready', this.onDeviceReady.bind(this), false);
+    },
 
-function onDeviceReady() {
-}
-const btnGoogleLogin = document.getElementById('btnGoogleLogin');
-const login_facebook = document.getElementById('login_facebook');
+    // deviceready Event Handler
+    //
+    // Bind any cordova events here. Common events are:
+    // 'pause', 'resume', etc.
+    onDeviceReady: function() {
+        this.receivedEvent('deviceready');
+    },
 
-//Login with Google
-btnGoogleLogin.addEventListener('click', e => {
-    var provider = new firebase.auth.GoogleAuthProvider();
-    firebase.auth().signInWithRedirect(provider)
-        .then(function () {
-            return firebase.auth().getRedirectResult();
-        }).then(function (result) {
-            window.location.href = "index.html";
+    // Update DOM on a Received Event
+    receivedEvent: function(id) {
+        var parentElement = document.getElementById(id);
+        var listeningElement = parentElement.querySelector('.listening');
+        var receivedElement = parentElement.querySelector('.received');
 
-        }).catch(function (error) {
-            alert(error.message);
+        listeningElement.setAttribute('style', 'display:none;');
+        receivedElement.setAttribute('style', 'display:block;');
 
-        });
-});
-login_facebook.addEventListener('click', e => {
-    firebase.auth().setPersistence(firebase.auth.Auth.Persistence.NONE)
-        .then(function () {
-            var provider = new firebase.auth.FacebookAuthProvider();
-            firebase.auth().signInWithRedirect(provider).then(function () {
-                return firebase.auth().getRedirectResult();
-            }).then(function (result) {
-                if (result.credential) {
-                    window.location.href = "index.html";
-
-                }
-                var user = result.user;
-            }).catch(function (error) {
-                if (error.code === "auth/account-exists-with-different-credential") {
-                    alert("This email is already used!");
-                }
-            });
-        });
-});
+        console.log('Received Event: ' + id);
+    }
+};
 
 function login(){
 		var userEmail = document.getElementById("email_field").value;
