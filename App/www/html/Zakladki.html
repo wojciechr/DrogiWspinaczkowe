@@ -49,7 +49,16 @@ nav.navbar {
 	box-shadow: rgb(0, 0, 0) 0px 0px 10px;
 }
 
-button {color: black; border-radius: 5px; padding: 0 15px;}
+button {
+	color: black;
+	border-radius: 5px;
+	padding: 0 15px;
+	font-size: 12px;
+}
+
+button:hover {
+	color: red;
+}
 
 .navbar {
 	margin-bottom: 15px;
@@ -222,7 +231,7 @@ $(document).ready(function () {
     $('#btn-add-tab').click(function () {
         zakladkaID++;
         $('#tab-list').append($('<li><a href="#tab' + zakladkaID + '" role="tab" data-toggle="tab">Zakładka ' + zakladkaID + '<button class="close" type="button" title="Usuń zakładkę">×</button></a></li>'));
-        $('#tab-content').append($('<div class="tab-pane fade" id="tab' + zakladkaID + '"><h5>Zakładka '+ zakladkaID +'</h5> <p><textarea style="max-width:100%;" class="form-control" rows="5" id="Notes">Przeniś tą zakładkę</textarea></p></div>'));
+        $('#tab-content').append($('<div class="tab-pane fade" id="tab' + zakladkaID + '"><h5>Zakładka '+ zakladkaID +'</h5> <p><textarea style="max-width:100%;" class="form-control" rows="5" id="Notes">Przenieś tą zakładkę</textarea></p></div>'));
     });
     $('#tab-list').on('click','.close',function(){
         var zakladkaID = $(this).parents('a').attr('href');
