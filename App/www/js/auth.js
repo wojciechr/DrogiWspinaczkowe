@@ -9,7 +9,11 @@ firebase.auth().onAuthStateChanged(function(user) {
       var email_id = user.email;
       console.log("Welcome User : " + email_id);
 
-    }
+    } else {
+    // No user is signed in.
+	window.alert("You're not logged in!!");
+    location.href="../index.html";
 
+}
   } 
 });
