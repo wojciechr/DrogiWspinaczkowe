@@ -1,11 +1,13 @@
-/* data: 12052018 0135 */
 body, html {
 	height: 100%;
 	position: relative;
 	font-family: segoe UI, sans-serif, Arial;
-	color: #dbdbdb;
+	color: rgb(230, 230, 230);
 	font-weight: 400;
 }
+
+h1, h2, h3, h4, h5, h6 {margin: 10px 0; text-align: center;} 
+h5 {line-height: 1.5; font-weight: 400; font-size: 15px;}
 
 nav.navbar {
 	position: sticky;
@@ -15,7 +17,7 @@ nav.navbar {
 	box-shadow: rgb(0, 0, 0) 0px 0px 10px;
 }
 
-/* konfiguracja: "menu glowne" - niebieski */
+/* "menu glowne" - niebieski */
 .navbar-inverse .navbar-nav > .active > a {
 	color: rgb(137, 172, 255);
 	background-color: #1b1b1b;
@@ -23,15 +25,9 @@ nav.navbar {
 
 .navbar-inverse .navbar-nav > .active > a:hover {
 	color: white;
-} /* konfiguracja: "menu glowne" - niebieski - koniec */
+} /* "menu glowne" - niebieski - koniec */
 
 /* Przycis Back to menu */
-.box_back_btn {
-	box-sizing: border-box;
-	padding: 0 0 0 26px;
-	margin: auto 0px;
-}
-
 .styl_back_btn {
 	color: rgb(90, 90, 90);
 	padding: 1px 5px;
@@ -41,37 +37,31 @@ nav.navbar {
 
 .styl_back_btn:hover {
 	color: rgb(6, 255, 0);
-	background-color: rgb(218, 218, 218);
+	background-color: rgb(150, 150, 150);
 }
+/* Koniec Przycis Back to menu */
 
 /* REJESTRACJA ------------------------ */
-.container_soc_all {
+.container_DW {
 	margin: auto 15px;
+	padding: 0;
 	border: inherit;
 	border-radius: 5px;
-	padding: 0;
+	border: 1px solid rgb(80, 80, 80);
 }
 
-.container_soc {
-	position: inherit;
-	background-color: rgb(65, 65, 65);
-	padding: 0px 15px 15px;
+.content_DW {
+	padding: 15px;
+	text-align: justify;
 	border: 1px solid rgb(36, 36, 36);
 	border-radius: 5px;
+	background-color: rgb(65, 65, 65);
 }
 
 * {box-sizing: border-box;}
 
 #regForm {
 	border-radius: 5px;
-}
-
-h5 {
-	text-align: center;
-	margin: 15px 0 5px;
-	line-height: 1.5;
-	font-weight: 400;
-	font-size: 15px;
 }
 
 .opis_input {
