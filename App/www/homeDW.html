@@ -26,14 +26,18 @@
 	<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
 	<link rel="stylesheet" type="text/css" href="css/jquery.mobile-1.4.5.min.css">
 
+	
+	
+
 <style>
 body, html {
-	color: white;
+	color: rgb(230, 230, 230);
 	font-family: segoe UI, sans-serif, arial;
 }
+h1,h2,h3,h4,h5, h6 {margin: 10px 0; text-align: center; }
+h4 {font-size:20px;}
 
-h3 {text-align: center; margin: 10px 0; font-family: segoe UI, sans-serif, arial;}
-
+/* Header - navbar */
 nav.navbar {
 	position: sticky;
 	top: 0px;
@@ -41,47 +45,26 @@ nav.navbar {
 	box-shadow: rgb(0, 0, 0) 0px 0px 10px;
 }
 
-/* konfiguracja menu  glowne*/
-
-
 .navbar {
 	margin-bottom: 15px;
 }
 
-/* kolor pod menu "drog wspinaczkowych" */
+/* kolor zielony pod menu "drog wspinaczkowych"   */
 .navbar-inverse .navbar-nav .open .dropdown-menu > li > a {
 	color: #6bcf60;
 }
+/* Koniec Header - navbar */
 
-.btn {color:rgb(100, 100, 100)}
-.btn:hover{
-	color: #00ff27;
-	text-decoration: none;
-	background-color: rgb(168, 168, 168);
+.container_DW {
+	margin: auto 15px;
+	padding: 0;
+	border: inherit;
+	border-radius: 5px;
+	border: 1px solid rgb(80, 80, 80);
 }
 
-#myBtn {
-	display: none;
-	position: fixed;
-	bottom: 20px;
-	right: 15px;
-	z-index: 99;
-	font-size: 10px;
-	border: none;
-	outline: none;
-	background-color: red;
-	color: white;
-	cursor: pointer;
-	padding: 6px;
-	border-radius: 10px;
-}
-
-#myBtn:hover {
-	background-color: green;
-}
-
-.kontekst_DW {
-	padding: 10px;
+.content_DW {
+	padding: 15px;
 	text-align: justify;
 	border: 1px solid rgb(36, 36, 36);
 	border-radius: 5px;
@@ -137,6 +120,28 @@ nav.navbar {
 	padding: 0;
 	margin: 0;
 }
+
+/* Scroll up */
+#myBtn {
+	display: none;
+	position: fixed;
+	bottom: 20px;
+	right: 15px;
+	z-index: 99;
+	font-size: 10px;
+	border: none;
+	outline: none;
+	background-color: red;
+	color: white;
+	cursor: pointer;
+	padding: 6px;
+	border-radius: 10px;
+}
+
+#myBtn:hover {
+	background-color: green;
+}
+/* Koniec Scroll up */
 </style>
 </head>
 <body onload="typeWriter();" style="background-color: rgb(50, 50, 50);">
@@ -144,7 +149,7 @@ nav.navbar {
 <!-- Animacja menu Accordeon -->
 <div class="content w3-animate-zoom">
 
-<!-- Belka Menu header-->
+<!-- Menu header-->
 <nav class="navbar navbar-inverse" style="background-color: rgb(35,35,35);">
 	<div class="container-fluid">
 		
@@ -196,17 +201,16 @@ nav.navbar {
 				</li>
 				<li><a href="html/notatnik.html"><span style="padding-right: 10px" class="glyphicon glyphicon-ok"></span>Planowanie</a></li>
 				<li><a href="html/konfiguracja.html"><span style="padding-right: 10px" class="glyphicon glyphicon-wrench"></span>Konfiguracja</a></li>
-				<li><a href="#">Inne</a></li>
+				<li><a href="html/zakladki.html"><span style="padding-right: 10px" class="glyphicon glyphicon-duplicate"></span>Zakładki</a></li>
 		  </ul>
 		</div>
 		<!-- koniec menu rozwijane  -->
   </div>
 </nav>
 
-<!--kontener-->
-<div style="padding: 0; margin: 0 15px 15px; width: auto;">
-	<div class="kontekst_DW">
-		<h3 style="font-family: Lucida Sans Unicode; color: rgb(92, 165, 84); letter-spacing: 2px;"></h3>
+<!-- container -->
+<div class="container_DW">
+	<div class="content_DW">
 		<p id="informacja_typeWriter" style="font-size: 14px; font-family: arial; text-align: left; color: rgb(156, 156, 156); line-height: 1.5; letter-spacing: 0.5px;">
 		
 		</p>
@@ -224,19 +228,20 @@ nav.navbar {
 			  
 			</div>
 	</div>
-</div> <!--container-->
+</div>
+<!-- koniec container-->
 
 	<footer class="footerDW">
 		<div class="w3-xlarge w3-section">
-		  <i class="fa fa-facebook-official w3-hover-opacity"></i>
-		  <i class="fa fa-instagram w3-hover-opacity"></i>
-		  <i class="fa fa-pinterest-p w3-hover-opacity"></i>
-		  <i class="fa fa-twitter w3-hover-opacity"></i>
-		  <i class="fa fa-linkedin w3-hover-opacity"></i>
+			<i class="fa fa-facebook-official w3-hover-opacity"></i>
+			<i class="fa fa-instagram w3-hover-opacity"></i>
+			<i class="fa fa-pinterest-p w3-hover-opacity"></i>
+			<i class="fa fa-twitter w3-hover-opacity"></i>
+			<i class="fa fa-linkedin w3-hover-opacity"></i>
 		</div>
 		<hr class="hr-footer">
-		<p class="txt-footer">Konstrukcja autorska: Szymon, Tomasz, Marcin i Wojciech</p>
-		<p class="txt-footer">Utworzono: &#174; 2018r. v. 1.8</p>
+		<p class="txt-footer">Konstrukcja autorska: Szymon, Tomasz, Marcin i Wojciec</p>
+		<p class="txt-footer">Utworzono: &#174; 20 05 2018r. v. 2.1</p>
 	</footer>
 
 </div> <!-- Koniec - Animacja menu Accordeon -->
@@ -256,8 +261,9 @@ function typeWriter() {
   }
 }
 </script>
+<!-- Koniec - Automatyczne pisanie typeWriter -->
 
-<!-- Przycisk skrola -->
+<!-- Przycisk skrola UP -->
 <button onclick="topFunction()" id="myBtn" title="Powrót do góry">Do góry</button>
 <script>
 // Po skrolu 25
