@@ -69,10 +69,6 @@ firebase.auth().onAuthStateChanged(function(user) {
 					
                 var displayName = user.displayName;
                 var email = user.email;
-                var emailVerified = user.emailVerified;
-                var photoURL = user.photoURL;
-                var isAnonymous = user.isAnonymous;
-                var uid = user.uid;
                 var providerData = user.providerData;
 					
 					document.getElementById("login_div").style.display = "none";
@@ -84,14 +80,6 @@ firebase.auth().onAuthStateChanged(function(user) {
 						if(user != null ){
 							
 							var email_id=user.email;
-							var display = {
-								uid:user.uid,
-								displayName:user.displayName,
-								photoURL:user.photoURL,
-								email:user.email,
-								phoneNumber : user.phoneNumber,
-
-							};
 							
 							document.getElementById("user_para").innerHTML = "Witaj : " + user.email
 						
