@@ -2,7 +2,7 @@
 
 function google_login(){
  		var provider = new firebase.auth.GoogleAuthProvider();
- 		provider.addScope('https://www.googleapis.com/auth/contacts.readonly');
+ 		
  			   firebase.auth().signInWithRedirect(provider);
  				firebase.auth().getRedirectResult().then(function(result)  {
  					if (result.credential) {
