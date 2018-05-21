@@ -1,6 +1,6 @@
 var glprovider = new firebase.auth.GoogleAuthProvider(); 
 
-function google_login_in(){
+function google_login(){
         
 		firebase.auth().signInWithRedirect(glprovider).then(function(result) {
 		  // This gives you a Google Access Token. You can use it to access the Google API.
