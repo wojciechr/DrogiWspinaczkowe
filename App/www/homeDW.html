@@ -62,6 +62,21 @@ nav.navbar {
 .navbar-inverse .navbar-nav .open .dropdown-menu > li > a {
 	color: #6bcf60;
 }
+
+.search_btn {
+	border: 1px solid #3f3f3f;
+	border-radius: 5px;
+	background: transparent;
+	padding: 6px 10px;
+	line-height: 1;
+	font-size: 17px;
+}
+
+.search_btn:hover {
+	border: 1px solid #111;
+	background: #333;
+}
+
 /* Koniec Header - navbar */
 
 .container_DW {
@@ -181,9 +196,12 @@ nav.navbar {
 				</a>
 			</div>
 			
-			<!-- przycisk back -->
-			<div style="width: 50px; height: 50px;">
-			</div> <!-- div - do centrowania obrazka -->
+			<!-- przycisk search -->
+			<div style="box-sizing: border-box; padding: 0 0 0 11px; margin: auto 0px; background: transparent;">
+			<button onclick="window.location.href='html/md_wyszukaj_wsz_drogi.html'" type="button" class="search_btn"><span class="glyphicon glyphicon-search"></span></button>
+			</div>
+			<!-- <div style="width: 50px; height: 50px;">
+			</div>  div - do centrowania obrazka -->
 		</div>
 		
 		<!-- Menu rozwijane -->
@@ -231,9 +249,9 @@ nav.navbar {
 			  <iframe src="html/zegarek.html" align="middle" scrolling="no" frameborder="0" height="200px" width="200px" style="opacity: 0.7;"></iframe>
 			  </div><!--ZEGAREK Koniec-->   
 
-			  <!-- -->
+			  <!-- 
 			  Test <br>1<br>2<br>3<br>4<br>5<br>6<br>7<br>8<br>9<br>KONIEC <br>-<br>behind a footer<br><br><br>
-			  
+			  -->
 			  
 			</div>
 	</div>
