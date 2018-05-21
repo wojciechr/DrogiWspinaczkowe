@@ -26,7 +26,7 @@
     <preference name="AndroidLaunchMode" value="singleTask" />
 	</platform>
 	<universal-links>
-    <host name="https://w7t22.app.goo.gl" scheme="https" />
+    <host name="w7t22.app.goo.gl" scheme="https" />
     <host name="drogi-wspinaczkowe.firebaseapp.com" scheme="https">
             <path url="/__/auth/callback" />
     </host>
