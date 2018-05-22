@@ -4,6 +4,7 @@ function register (){
 			
 			firebase.auth().createUserWithEmailAndPassword(userEmail, userPass).catch(function(error) {
 			console.log(error);
+        
 });
 	
 }

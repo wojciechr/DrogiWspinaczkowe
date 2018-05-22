@@ -151,4 +151,5 @@ firebase.auth().getRedirectResult().then(function(result) {
   var errorCode = error.code;
   var errorMessage = error.message;
   alert(errorMessage);
-});			
+});	
+}		
