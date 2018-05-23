@@ -33,17 +33,7 @@ function logout(){
 	}).catch(function(error) {
 	  // An error happened.
 	});
-    facebookConnectPlugin.logout(function () {
-        console.log("User sign out from Facebook");
-    }, function () {
-        console.log("User not sign out from Facebook");
-    });
-
-    var auth2 = gapi.auth2.getAuthInstance();
-	auth2.signOut().then(function () {
-		console.log('User signed out from Google.');
-	});
-	}			
+}			
 /*function resetpass(){
 var auth = firebase.auth();
 var emailAddress = "user@example.com";
@@ -77,9 +67,9 @@ function loginFirebase() {
 					console.log(obj.idToken);
                 firebase.auth().signInWithCredential(firebase.auth.GoogleAuthProvider.credential(obj.idToken))
                 .then((success) => {
-					console.log("success: " + JSON.stringify(success)); 
-					 alert('Zostałeś poprawnie zalogowany.');
-					document.getElementById("user_para").innerHTML = "Witaj : " + obj.displayName + ", " + obj.email
+					console.log("success: " + JSON.stringify(success)); // to long json to put it in #feedback
+					document.getElementById("user_para").innerHTML = "Witaj : " + obj.email 
+						document.getElementById('sign_in_status').textContent = 'Poprawnie zalogowałeś się';
                     
                 })
                 .catch((error) => {
@@ -115,12 +105,7 @@ function loginFirebase() {
 			  
 				firebase.auth().signInWithCredential(firebase.auth.FacebookAuthProvider.credential(result.authResponse.accessToken))
 					.then((success) => {
-						var user = firebase.auth().currentUser;
-
-						if(user != null ){
-							
-							var email_id=user.email;
-						document.getElementById("user_para").innerHTML = "Witaj : " + user.email
+						
 						console.log("success: " + JSON.stringify(success)); 
 				   })
 				  
@@ -141,9 +126,27 @@ function loginFirebase() {
 	});
 	
 
+		$('#logout').click(function() {
+
+			firebase.auth().signOut().then(function() {
+				
+			  LoggedUser = "Niezalogowany";
+			  $( "#loggedas" ).html(LoggedUser);
+			}, function(error) {
+			  // An error happened.
+			});
+		
+		facebookConnectPlugin.logout(function(){
+                        console.log("FB LOGOUT SUCCESS");
+						$( "#loggedas" ).html('Niezalogowany');
+                    },function(){
+                        console.log("FB LOGOUT FAIL");
+                    }); 
+		});	
 }  
 
 		
+function loginFirebaseStatus() {
 firebase.auth().onAuthStateChanged(function(user) {
 
                 //console.log(user);
@@ -189,9 +192,29 @@ firebase.auth().onAuthStateChanged(function(user) {
                 }
 
             }); 
+}
+async function isUserLogged() {
+	loginFirebaseStatus();
+	await sleep(2000);
+	if (LoggedUser == 'Niezalogowany') {
+		window.location.href = "#logowanie";
+	}
+}
 
 
-
+function isUserEqual(googleUser, firebaseUser) {
+  if (firebaseUser) {
+    var providerData = firebaseUser.providerData;
+    for (var i = 0; i < providerData.length; i++) {
+      if (providerData[i].providerId === firebase.auth.GoogleAuthProvider.PROVIDER_ID &&
+          providerData[i].uid === googleUser.getBasicProfile().getId()) {
+        // We don't need to reauth the Firebase connection.
+        return true;
+      }
+    }
+  }
+  return false;
+}
 			
 function init() {
 	document.addEventListener("deviceready",onDeviceReady, false);
@@ -199,5 +222,6 @@ function init() {
 
 function onDeviceReady() {
 	loginFirebase();
+	loginFirebaseStatus();
 	loginFirebaseStatus();
 }			
