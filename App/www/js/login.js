@@ -99,8 +99,6 @@ function loginFirebase() {
 	 
 	facebookConnectPlugin.login(["email"],function(result){
 		alert('Logged in');
-						document.getElementById("user_div").style.display = "none";
-						document.getElementById("login_div").style.display = "block";
 			console.log("logowanie:");
 			 console.log("RESULT:" + JSON.stringify(result));
 			  console.log("RESULT2:" + JSON.stringify(result.authResponse));
@@ -149,7 +147,7 @@ function loginFirebase() {
 }  
 
 		
-function loginFirebaseStatus() {
+
 firebase.auth().onAuthStateChanged(function(user) {
 
                 //console.log(user);
@@ -195,7 +193,7 @@ firebase.auth().onAuthStateChanged(function(user) {
                 }
 
             }); 
-}
+
 
 
 			
@@ -205,4 +203,6 @@ function init() {
 
 function onDeviceReady() {
 	loginFirebase();
+	loginFirebaseStatus();
+	loginFirebaseStatus();
 }			
