@@ -98,6 +98,7 @@ function loginFirebase() {
 	 );
 	 
 	facebookConnectPlugin.login(["email"],function(result){
+		alert('Logged in');
 			console.log("logowanie:");
 			 console.log("RESULT:" + JSON.stringify(result));
 			  console.log("RESULT2:" + JSON.stringify(result.authResponse));
@@ -193,28 +194,8 @@ firebase.auth().onAuthStateChanged(function(user) {
 
             }); 
 }
-async function isUserLogged() {
-	loginFirebaseStatus();
-	await sleep(2000);
-	if (LoggedUser == 'Niezalogowany') {
-		window.location.href = "#logowanie";
-	}
-}
 
 
-function isUserEqual(googleUser, firebaseUser) {
-  if (firebaseUser) {
-    var providerData = firebaseUser.providerData;
-    for (var i = 0; i < providerData.length; i++) {
-      if (providerData[i].providerId === firebase.auth.GoogleAuthProvider.PROVIDER_ID &&
-          providerData[i].uid === googleUser.getBasicProfile().getId()) {
-        // We don't need to reauth the Firebase connection.
-        return true;
-      }
-    }
-  }
-  return false;
-}
 			
 function init() {
 	document.addEventListener("deviceready",onDeviceReady, false);
