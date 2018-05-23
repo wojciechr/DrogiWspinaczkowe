@@ -98,25 +98,7 @@ function loginFirebase() {
 	 );
 	 
 	facebookConnectPlugin.login(["email"],function(result){
-		var user = firebase.auth().currentUser;
-
-						if(user != null ){
-							
-							var email=user.email;
-							
-							document.getElementById("user_para").innerHTML = "Witaj : " + user.email
-						
-						}							
-                // User is signed in.
-               
-				
-				document.getElementById('sign_in_status').textContent = 'Poprawnie zalogowałeś się';
-				
-
-
-                } else {
-						document.getElementById("user_div").style.display = "none";
-						document.getElementById("login_div").style.display = "block";
+		alert('Logged in');
 			console.log("logowanie:");
 			 console.log("RESULT:" + JSON.stringify(result));
 			  console.log("RESULT2:" + JSON.stringify(result.authResponse));
