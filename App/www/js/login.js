@@ -115,12 +115,7 @@ function loginFirebase() {
 			  
 				firebase.auth().signInWithCredential(firebase.auth.FacebookAuthProvider.credential(result.authResponse.accessToken))
 					.then((success) => {
-						var user = firebase.auth().currentUser;
-
-						if(user != null ){
-							
-							var email_id=user.email;
-						document.getElementById("user_para").innerHTML = "Witaj : " + user.email
+						document.getElementById("user_para").innerHTML = "Witaj : " + public_profile
 						console.log("success: " + JSON.stringify(success)); 
 				   })
 				  
@@ -199,4 +194,5 @@ function init() {
 
 function onDeviceReady() {
 	loginFirebase();
+	loginFirebaseStatus();
 }			
