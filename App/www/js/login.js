@@ -77,7 +77,8 @@ function loginFirebase() {
 					console.log(obj.idToken);
                 firebase.auth().signInWithCredential(firebase.auth.GoogleAuthProvider.credential(obj.idToken))
                 .then((success) => {
-					console.log("success: " + JSON.stringify(success)); // to long json to put it in #feedback
+					console.log("success: " + JSON.stringify(success)); 
+					 alert('Zostałeś poprawnie zalogowany.');
 					document.getElementById("user_para").innerHTML = "Witaj : " + obj.displayName + ", " + obj.email
                     
                 })
@@ -114,7 +115,12 @@ function loginFirebase() {
 			  
 				firebase.auth().signInWithCredential(firebase.auth.FacebookAuthProvider.credential(result.authResponse.accessToken))
 					.then((success) => {
-						document.getElementById("user_para").innerHTML = "Witaj : " + public_profile
+						var user = firebase.auth().currentUser;
+
+						if(user != null ){
+							
+							var email_id=user.email;
+						document.getElementById("user_para").innerHTML = "Witaj : " + user.email
 						console.log("success: " + JSON.stringify(success)); 
 				   })
 				  
@@ -193,5 +199,4 @@ function init() {
 
 function onDeviceReady() {
 	loginFirebase();
-	loginFirebaseStatus();
 }			
