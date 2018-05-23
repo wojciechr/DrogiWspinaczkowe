@@ -203,6 +203,5 @@ function init() {
 
 function onDeviceReady() {
 	loginFirebase();
-	loginFirebaseStatus();
-	loginFirebaseStatus();
+
 }			
