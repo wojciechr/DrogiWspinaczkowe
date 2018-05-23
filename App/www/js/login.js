@@ -113,8 +113,6 @@ function loginFirebase() {
                 firebase.auth().signInWithCredential(firebase.auth.GoogleAuthProvider.credential(obj.idToken))
                 .then((success) => {
 					console.log("success: " + JSON.stringify(success)); // to long json to put it in #feedback
-					document.getElementById("user_para").innerHTML = "Witaj : " + obj.email 
-						document.getElementById('sign_in_status').textContent = 'Poprawnie zalogowałeś się';
                     
                 })
                 .catch((error) => {
