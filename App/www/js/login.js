@@ -14,51 +14,6 @@ function login(){
 
 }
 
-firebase.auth().onAuthStateChanged(function(user) {
-
-                //console.log(user);
-
-                if (user) {
-					
-			var displayName = user.displayName;
-			LoggedUser = user.email;
-			var email = user.email;
-			var emailVerified = user.emailVerified;
-			var photoURL = user.photoURL;
-			var isAnonymous = user.isAnonymous;
-			var uid = user.uid;
-			var providerData = user.providerData;
-					
-					document.getElementById("login_div").style.display = "none";
-					document.getElementById("user_div").style.display = "block";
-
-                
-						var user = firebase.auth().currentUser;
-
-						if(user != null ){
-							
-							var email_id=user.email;
-							
-							document.getElementById("user_para").innerHTML = "Witaj : " + user.email
-						
-						}							
-                // User is signed in.
-               
-				
-				document.getElementById('sign_in_status').textContent = 'Poprawnie zalogowałeś się';
-				
-
-
-                } else {
-						document.getElementById("user_div").style.display = "none";
-						document.getElementById("login_div").style.display = "block";
-						            
-			//document.getElementById('login_google').addEventListener('click',login_google_function, false);
-			//document.getElementById('login_facebook').addEventListener('click',login_facebook_function, false);
-
-                }
-
-            }); 
 
 function register (){
 		var userEmail = document.getElementById("email_field").value;
@@ -79,17 +34,6 @@ function logout(){
 	  // An error happened.
 	});
 }			
-/*function resetpass(){
-var auth = firebase.auth();
-var emailAddress = "user@example.com";
-
-auth.sendPasswordResetEmail(emailAddress).then(function() {
-  // Email sent.
-}).catch(function(error) {
-  // An error happened.
-});
-}*/
-
 			
 var LoggedUser = "Niezalogowany";
 
@@ -113,6 +57,8 @@ function loginFirebase() {
                 firebase.auth().signInWithCredential(firebase.auth.GoogleAuthProvider.credential(obj.idToken))
                 .then((success) => {
 					console.log("success: " + JSON.stringify(success)); // to long json to put it in #feedback
+					document.getElementById("user_para").innerHTML = "Witaj : " + obj.email 
+						document.getElementById('sign_in_status').textContent = 'Poprawnie zalogowałeś się';
                     
                 })
                 .catch((error) => {
@@ -141,7 +87,6 @@ function loginFirebase() {
 	 );
 	 
 	facebookConnectPlugin.login(["email"],function(result){
-		alert('Logged in');
 			console.log("logowanie:");
 			 console.log("RESULT:" + JSON.stringify(result));
 			  console.log("RESULT2:" + JSON.stringify(result.authResponse));
@@ -190,10 +135,75 @@ function loginFirebase() {
 }  
 
 		
+function loginFirebaseStatus() {
+firebase.auth().onAuthStateChanged(function(user) {
+
+                //console.log(user);
+
+                if (user) {
+					
+			var displayName = user.displayName;
+			LoggedUser = user.email;
+			var email = user.email;
+			var emailVerified = user.emailVerified;
+			var photoURL = user.photoURL;
+			var isAnonymous = user.isAnonymous;
+			var uid = user.uid;
+			var providerData = user.providerData;
+					
+					document.getElementById("login_div").style.display = "none";
+					document.getElementById("user_div").style.display = "block";
+
+                
+						var user = firebase.auth().currentUser;
+
+						if(user != null ){
+							
+							var email_id=user.email;
+							
+							document.getElementById("user_para").innerHTML = "Witaj : " + user.email
+						
+						}							
+                // User is signed in.
+               
+				
+				document.getElementById('sign_in_status').textContent = 'Poprawnie zalogowałeś się';
+				
 
 
+                } else {
+						document.getElementById("user_div").style.display = "none";
+						document.getElementById("login_div").style.display = "block";
+						            
+			//document.getElementById('login_google').addEventListener('click',login_google_function, false);
+			//document.getElementById('login_facebook').addEventListener('click',login_facebook_function, false);
+
+                }
+
+            }); 
+}
+async function isUserLogged() {
+	loginFirebaseStatus();
+	await sleep(2000);
+	if (LoggedUser == 'Niezalogowany') {
+		window.location.href = "#logowanie";
+	}
+}
 
 
+function isUserEqual(googleUser, firebaseUser) {
+  if (firebaseUser) {
+    var providerData = firebaseUser.providerData;
+    for (var i = 0; i < providerData.length; i++) {
+      if (providerData[i].providerId === firebase.auth.GoogleAuthProvider.PROVIDER_ID &&
+          providerData[i].uid === googleUser.getBasicProfile().getId()) {
+        // We don't need to reauth the Firebase connection.
+        return true;
+      }
+    }
+  }
+  return false;
+}
 			
 function init() {
 	document.addEventListener("deviceready",onDeviceReady, false);
@@ -201,5 +211,6 @@ function init() {
 
 function onDeviceReady() {
 	loginFirebase();
-
-}			
+	loginFirebaseStatus();
+	loginFirebaseStatus();
+}	
