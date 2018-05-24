@@ -62,26 +62,7 @@ function loginFirebase() {
 		 ,function(userData){
 			 //API success callback
 			 console.log(JSON.stringify(userData));
-			 		if(user != null ){
-							
-							var email_id=user.email;
-							
-							document.getElementById("user_para").innerHTML = "Witaj : " + user.email
-						
-						}							
-                // User is signed in.
-               
-				
-				document.getElementById('sign_in_status').textContent = 'Poprawnie zalogowałeś się';
-				
-
-
-                 else if {
-						document.getElementById("user_div").style.display = "none";
-						document.getElementById("login_div").style.display = "block";
-			 
-		  }
-	},function(error){
+		  },function(error){
 			 //API error callback
 			 console.log(JSON.stringify(error));
 		  });
