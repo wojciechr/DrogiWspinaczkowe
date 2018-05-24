@@ -24,6 +24,7 @@
     <allow-navigation href="*" />
     <allow-intent href="*" />
     <platform name="android">
+	<resource-file src="google-services.json" target="google-services.json" />
         <preference name="android-minSdkVersion" value="20" />
         <preference name="android-targetSdkVersion" value="24" />
         <allow-intent href="market:*" />

@@ -47,8 +47,7 @@ function loginFirebase() {
 	 
 	facebookConnectPlugin.login(["email"],function(result){
 			console.log("logowanie:");
-			alert("Poprawnie zalogowano" + JSON.stringify(email));
-			
+			alert("Poprawnie zalogowano");
 
 			 console.log("RESULT:" + JSON.stringify(result));
 			  console.log("RESULT2:" + JSON.stringify(result.authResponse));
@@ -63,6 +62,7 @@ function loginFirebase() {
 		 facebookConnectPlugin.api("/me?fields=email,name,picture",["public_profile","email"]
 		 ,function(userData){
 			 //API success callback
+
 		  },function(error){
 			 //API error callback
 			 console.log(JSON.stringify(error));
