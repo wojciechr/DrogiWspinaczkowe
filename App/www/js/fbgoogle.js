@@ -3,7 +3,7 @@ function loginFirebase() {
 		$('#logingoogle').click(function() {
 			 window.plugins.googleplus.login(
         {
-                 'webClientId' : '81802368109-p67qhb1mbrgdi3k1s82f1obi5pchg44j.apps.googleusercontent.com',
+                 'webClientId' : '81802368109-h5upmq3vdcvho6en15rv0m7d0vejsag2.apps.googleusercontent.com',
                  'offline': true
         },
         function (obj) {
