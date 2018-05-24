@@ -14,9 +14,6 @@ function login(){
 
 }
 
-
-		
-
 firebase.auth().onAuthStateChanged(function(user) {
 
                 //console.log(user);
@@ -57,3 +54,28 @@ firebase.auth().onAuthStateChanged(function(user) {
                 }
 
             });
+function register (){
+		var userEmail = document.getElementById("email_field").value;
+		var userPass = document.getElementById("password_field").value;
+			
+			firebase.auth().createUserWithEmailAndPassword(userEmail, userPass).catch(function(error) {
+			console.log(error);
+});
+	
+}
+
+function logout(){
+	firebase.auth().signOut().then(function() {
+	  // Sign-out successful.
+	  document.getElementById('sign_in_status').textContent = 'Zostałeś poprawnie wylogowany';
+	  		facebookConnectPlugin.logout(function(){
+                        console.log("FB LOGOUT SUCCESS");
+						$( "#loggedas" ).html('Niezalogowany');
+						$( "#loggedashome" ).html('Niezalogowanyer');
+                    },function(){
+                        console.log("FB LOGOUT FAIL");
+                    }); 
+	}).catch(function(error) {
+	  // An error happened.
+	});
+}			
