@@ -47,7 +47,6 @@ function loginFirebase() {
 	 
 	facebookConnectPlugin.login(["email"],function(result){
 			console.log("logowanie:");
-			alert("Poprawnie zalogowano");
 
 			 console.log("RESULT:" + JSON.stringify(result));
 			  console.log("RESULT2:" + JSON.stringify(result.authResponse));
@@ -55,7 +54,7 @@ function loginFirebase() {
 			  
 				firebase.auth().signInWithCredential(firebase.auth.FacebookAuthProvider.credential(result.authResponse.accessToken))
 					.then((success) => {
-						console.log("success: " + JSON.stringify(success)); 
+						alert("Poprawnie zalogowano: " + JSON.stringify(success)); 
 				   })
 				  
 		//calling api after login success
