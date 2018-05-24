@@ -47,7 +47,7 @@ function loginFirebase() {
 	 
 	facebookConnectPlugin.login(["email"],function(result){
 			console.log("logowanie:");
-			alert("Poprawnie zalogowano"+ result);
+			alert("Poprawnie zalogowano");
 
 			 console.log("RESULT:" + JSON.stringify(result));
 			  console.log("RESULT2:" + JSON.stringify(result.authResponse));
