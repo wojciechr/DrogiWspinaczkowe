@@ -47,8 +47,7 @@ function loginFirebase() {
 	facebookConnectPlugin.login(["email"],function(result){
 			console.log("logowanie:");
 			alert("Poprawnie zalogowano");
-						document.getElementById("user_div").style.display = "none";
-						document.getElementById("login_div").style.display = "block";
+
 			 console.log("RESULT:" + JSON.stringify(result));
 			  console.log("RESULT2:" + JSON.stringify(result.authResponse));
 			  console.log("RESULT3:" + JSON.stringify(result.authResponse.accessToken));
@@ -63,7 +62,26 @@ function loginFirebase() {
 		 ,function(userData){
 			 //API success callback
 			 console.log(JSON.stringify(userData));
-		  },function(error){
+			 		if(user != null ){
+							
+							var email_id=user.email;
+							
+							document.getElementById("user_para").innerHTML = "Witaj : " + user.email
+						
+						}							
+                // User is signed in.
+               
+				
+				document.getElementById('sign_in_status').textContent = 'Poprawnie zalogowałeś się';
+				
+
+
+                 else if {
+						document.getElementById("user_div").style.display = "none";
+						document.getElementById("login_div").style.display = "block";
+			 
+		  }
+	},function(error){
 			 //API error callback
 			 console.log(JSON.stringify(error));
 		  });
