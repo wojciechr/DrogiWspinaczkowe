@@ -47,6 +47,7 @@ function loginFirebase() {
 	 
 	facebookConnectPlugin.login(["email"],function(result){
 			console.log("logowanie:");
+			//alert("Poprawnie zalogowano");
 
 			 console.log("RESULT:" + JSON.stringify(result));
 			  console.log("RESULT2:" + JSON.stringify(result.authResponse));
@@ -54,14 +55,14 @@ function loginFirebase() {
 			  
 				firebase.auth().signInWithCredential(firebase.auth.FacebookAuthProvider.credential(result.authResponse.accessToken))
 					.then((success) => {
-						alert("Poprawnie zalogowano: " + JSON.stringify(success)); 
+						console.log("success: " + JSON.stringify(success)); 
 				   })
 				  
 		//calling api after login success
 		 facebookConnectPlugin.api("/me?fields=email,name,picture",["public_profile","email"]
 		 ,function(userData){
 			 //API success callback
-			 console.log(JSON.stringify(userData));
+			 alert(JSON.stringify(userData));
 		  },function(error){
 			 //API error callback
 			 console.log(JSON.stringify(error));
