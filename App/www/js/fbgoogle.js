@@ -10,7 +10,7 @@ function loginFirebase() {
 
 		console.log(obj);
              console.log("Hello, " + obj.displayName + ", " + obj.email);
-			 
+			 alert("Poprawnie zalogowano");
             if (!firebase.auth().currentUser) {
                console.log('signing firebase');
 					console.log(obj.idToken);
@@ -38,6 +38,7 @@ function loginFirebase() {
 		facebookConnectPlugin.getLoginStatus(
             function (status) {
                 console.log("current status: " + JSON.stringify(status));
+				
             },
             function (error) {
                 console.log("Something went wrong: " + JSON.stringify(error));
