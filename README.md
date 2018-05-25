@@ -17,3 +17,13 @@ Będzie mógł przeglądać drogi które przeszedł (lub próbował) oraz modyfi
 4. Zapisywanie danych użytkowników (dróg które się przeszło):
     - w przypadku braku dostępu do Internetu zapisywanie lokalnie, przy nawiązaniu polaczenia synchronizacja
     - po połączeniu z Internetem dane będą zsynchronizowane z tymi na serwerze
+## Skład zespołu:
+Szymon Pasierbek (kierownik projektu), Marcin Poręba, Tomasz Romanowicz, Wojciech Rokosz
+
+Link do repozytorium GitHub: https://github.com/wojciechr/DrogiWspinaczkowe
+Link do strony internetowej projektu: https://wojciechr.github.io/DrogiWspinaczkowe/
+Link do Trello: https://trello.com/b/WUgtAE2G/drogi-wspinaczkowe
+## Raport wykonanych prac:
+https://trello.com/b/WUgtAE2G/drogi-wspinaczkowe
+## Prototyp aplikacji
+https://marvelapp.com/project/2911702/canvas/41211099/
