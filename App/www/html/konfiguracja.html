@@ -68,51 +68,73 @@
 			<h5>Opcje dodatkowe:</h5>
 			<div class="contenet_one_opt" ng-app="">
 				<form>
-				Otworz:
+				Otworz edycję tras:
 					<input type="checkbox" ng-model="myVar">
 				</form>
 				<div ng-show="myVar">
-					<p><input class="w3-input w3-padding-16 w3-border" type="text" placeholder="Jakis text" required name="Name"></p>
-					<p><input class="w3-input w3-padding-16 w3-border" type="number" placeholder="Ile aaaa bbbb" required name="People"></p>
-					<p><input class="w3-input w3-padding-16 w3-border" type="datetime-local" placeholder="Date and time" required name="date" value="zzzz kkkkk"></p>
-					<p><input class="w3-input w3-padding-16 w3-border" type="text" placeholder="aaa bbb ccc" required name="Message"></p>
-					<p><button class="w3-button" type="submit">zzzz</button></p>
+					<p><input class="w3-input w3-padding-16 w3-border" type="text" placeholder="trasy" required name="Name"></p>
+					<p><input class="w3-input w3-padding-16 w3-border" type="number" placeholder="skale" required name="People"></p>
+					<p><input class="w3-input w3-padding-16 w3-border" type="datetime-local" placeholder="Date and time" required name="date" value="drogi"></p>
 				</div>
-				<div class="">
-					<label><input type="radio" name="optradio">Opcja 1</label>
+				<div style="">
+					<label><input type="radio" name="optradio">Trasa 1</label>
 				</div>
-				<div class="">
-					<label><input type="radio" name="optradio">Opcja 2</label>
+				<div style="">
+					<label><input type="radio" name="optradio">Trasa 2</label>
 				</div>
-				<div class="">
-					<label><input type="radio" name="optradio" disabled>Opcja 3</label>
+				<div style="">
+					<label><input type="radio" name="optradio" disabled>Trasa 3</label>
 				</div> 
 			</div>
-
+			<div>
 			<form>
-			 <div class="form-group">
+			 <div style="padding: 15px 0;">
 				<label for="sel1">Wybor opcji</label>
 				<select class="form-control" id="sel1">
-				  <option>1</option>
-				  <option>2</option>
-				  <option>3</option>
-				  <option>4</option>
+					<option value="5a">5a</option>
+					<option value="5b">5b</option>
+					<option value="5c">5c</option>
+					<option value="6a">6a</option>
+					<option value="6a+">6a+</option>
+					<option value="6b">6b</option>
+					<option value="6b+">6b+</option>
+					<option value="6c">6c</option>
+					<option value="6c+">6c+</option>
+					<option value="7a">7a</option>
+					<option value="7a+">7a+</option>
+					<option value="7b">7b</option>
+					<option value="7b+">7b+</option>
+					<option value="7c">7c</option>
+					<option value="7c+">7c+</option>
+					<option value="8a">8a</option>
+					<option value="8a+">8a+</option>
+					<option value="8b">8b</option>
+					<option value="8b+">8b+</option>
+					<option value="8c">8c</option>
+					<option value="8c+">8c+</option>
+					<option value="9a">9a</option>
+					<option value="9a+">9a+</option>
+					<option value="9b">9b</option>
+					<option value="9b+">9b+</option>
+					<option value="9c">9c</option>
+					<option value="9c+">9c+</option>
 				</select>
 				<br>
 			 </div>
 			</form>
+			</div>
 		
 		</div>
 
 		<div class="content_opt">
 			<h5>Pozostałe opcje:</h5>
-			<p><input required="" name="People" placeholder="How many people" class="input" type="number"></p>
+			<p><input required="" name="People" placeholder="Aktywacja tras" class="input" type="number"></p>
 			<div class="contenet_one_opt" ng-app="">
 				<div class="">
-				  <label><input type="checkbox" value="">Option 2</label>
+				  <label><input type="checkbox" value="">5-6</label>
 				</div>
 				<div class="">
-				  <label><input type="checkbox" value="" disabled>Option 3</label>
+				  <label><input type="checkbox" value="">7-9</label>
 				</div>
 			</div>
 
