@@ -21,8 +21,11 @@ Będzie mógł przeglądać drogi które przeszedł (lub próbował) oraz modyfi
 Szymon Pasierbek (kierownik projektu), Marcin Poręba, Tomasz Romanowicz, Wojciech Rokosz
 
 Link do repozytorium GitHub: https://github.com/wojciechr/DrogiWspinaczkowe
+
 Link do strony internetowej projektu: https://wojciechr.github.io/DrogiWspinaczkowe/
+
 Link do Trello: https://trello.com/b/WUgtAE2G/drogi-wspinaczkowe
+
 ## Raport wykonanych prac:
 https://trello.com/b/WUgtAE2G/drogi-wspinaczkowe
 ## Prototyp aplikacji
