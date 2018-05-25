@@ -216,7 +216,7 @@ nav.navbar {
 		  <div id="tab-content" class="tab-content">
 				<div class="tab-pane fade in active" id="tab1">
 				<p style="margin:5px 0; padding:0;">
-				<textarea style="max-width: 100%; margin-top: 10px;" class="form-control" rows="5" id="Notes">Dodaj zakładkę 2, 3 i  przenies w inne miejsce </textarea></p>
+				<textarea style="max-width: 100%; min-height: 300px; margin-top: 10px;" class="form-control" rows="5" id="Notes">text</textarea></p>
 				</div>
 		  </div>
 		  <p style="margin:5px 0; padding:0; text-align: center;">
@@ -229,14 +229,14 @@ nav.navbar {
 
 </div> <!-- Koniec - Animacja menu Accordeon -->
 
-<!-- tabsy 
+<!-- tabsy >-->
 <script type="text/javascript">
 $(document).ready(function () {
     var zakladkaID = 1;
     $('#btn-add-tab').click(function () {
         zakladkaID++;
         $('#tab-list').append($('<li><a href="#tab' + zakladkaID + '" role="tab" data-toggle="tab">Zakładka ' + zakladkaID + '<button class="close" type="button" title="Usuń zakładkę">×</button></a></li>'));
-        $('#tab-content').append($('<div class="tab-pane fade" id="tab' + zakladkaID + '"><h5>Zakładka '+ zakladkaID +'</h5> <p><textarea style="max-width:100%;" class="form-control" rows="5" id="Notes">Przenieś tą zakładkę</textarea></p></div>'));
+        $('#tab-content').append($('<div class="tab-pane fade" id="tab' + zakladkaID + '"><h5>Zakładka '+ zakladkaID +'</h5> <p><textarea style="max-width:100%; min-height: 350px;" class="form-control" rows="5" id="Notes">Przenieś tą zakładkę</textarea></p></div>'));
     });
     $('#tab-list').on('click','.close',function(){
         var zakladkaID = $(this).parents('a').attr('href');
@@ -252,7 +252,7 @@ $(document).ready(function () {
     new Sortable(list);
 
 });
-</script>-->
+</script
 <!-- Koniec tabsy -->
 
 <!-- Przycisk skrola UP -->
