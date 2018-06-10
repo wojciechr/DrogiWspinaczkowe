@@ -97,7 +97,6 @@ function getData() {
             }]
         };
 
-
         return data;
 
     }, function (error) {
