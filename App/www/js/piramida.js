@@ -8,7 +8,7 @@ const config = {
 };
 firebase.initializeApp(config);
 
-// function getData() {
+function getData() {
     var userId;
 
     var user = firebase.auth().currentUser;
@@ -173,4 +173,4 @@ firebase.initializeApp(config);
         console.log("Error: " + error.code);
     });
 
-// }
+}
