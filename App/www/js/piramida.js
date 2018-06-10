@@ -91,8 +91,6 @@ function getData() {
                 hoverBackgroundColor: "rgba(46,185,235,1)"
             }]
         };
-        firebaseRef.delete();
-
         return data;
 
 

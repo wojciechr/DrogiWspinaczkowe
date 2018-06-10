@@ -64,6 +64,8 @@ function wyszukajDrogi() {
             data.innerHTML = route.Data;
         }
 
+        firebaseRef.delete();
+
     }, function (error) {
         console.log("Error: " + error.code);
     });
