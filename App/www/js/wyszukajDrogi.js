@@ -43,7 +43,7 @@ function wyszukajDrogi() {
 
     firebaseRef.on("value", function(snapshot) {
         console.log(snapshot.val());
-        logbox.value = snapshot.val();
+        logbox.value = JSON.stringify(snapshot.val());
     }, function (error) {
         console.log("Error: " + error.code);
     });
