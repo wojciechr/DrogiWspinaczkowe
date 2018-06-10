@@ -56,7 +56,7 @@ function wyszukajDrogi() {
             var trudnosc = row.insertCell(4);
             var data = row.insertCell(5);
             droga.innerHTML = JSON.stringify(route);
-            skala.innerHTML = JSON.stringify(route.val());
+            skala.innerHTML = "";
             region.innerHTML = JSON.stringify(route[0].val());
             styl.innerHTML = JSON.stringify(route[0]);
             trudnosc.innerHTML = route[0].Trudność;
