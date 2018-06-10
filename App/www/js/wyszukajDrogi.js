@@ -70,7 +70,7 @@ function wyszukajDrogi() {
     //         "Typ": "Skały"
     //     }
     // };
-        var routes = snapshot;
+        var routes = snapshot.val();
         // logbox.value = JSON.stringify(routes.val());
 
         for (var route_key in routes) {
