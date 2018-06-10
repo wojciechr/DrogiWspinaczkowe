@@ -14,7 +14,6 @@ firebase.initializeApp(config);
 // }
 
 function wyszukajDrogi() {
-    $("body").append("123");
     var logbox = document.getElementById("logbox");
 
     logbox.value = "1";
@@ -38,107 +37,37 @@ function wyszukajDrogi() {
     var firebaseRef = firebase.database().ref().child(userPath);
 
     logbox.value = "88888";
-    $("body").append("456");
+
+    var routes;
 
     firebaseRef.on("value", function(snapshot) {
         console.log(snapshot.val());
         logbox.value = JSON.stringify(snapshot.val());
+        routes = snapshot.val();
     }, function (error) {
         console.log("Error: " + error.code);
     });
 
-    // var lastChild = db.orderByKey().limitToLast(1);
-    //
-    // lastChild.once("value", snap = > {
-    //     var lastChildName;
-    // snap.forEach(function (child) {
-    //     lastChildName = child.key;
-    // });
-    //
-    // var typ;
-    // var stylMoonboard = document.getElementById("moonboard_field").checked;
-    // var stylSkaly = document.getElementById("skaly_field").checked;
-    // var stylScianka = document.getElementById("scianka_field").checked;
-    //
-    // if (stylMoonboard) {
-    //     typ = document.getElementById("moonboard_field").value;
-    // } else if (stylScianka) {
-    //     typ = document.getElementById("scianka_field").value;
-    // } else if (stylSkaly) {
-    //     typ = document.getElementById("skaly_field").value;
-    // }
-    //
-    // var stylPrzejscia;
-    // var typOS = document.getElementById("os_field").checked;
-    // var typFlash = document.getElementById("flash_field").checked;
-    // var typRP = document.getElementById("pr_field").checked;
-    // var typProba = document.getElementById("proba_field").checked;
-    //
-    // if (typOS) {
-    //     stylPrzejscia = document.getElementById("os_field").value;
-    // } else if (typFlash) {
-    //     stylPrzejscia = document.getElementById("flash_field").value;
-    // } else if (typRP) {
-    //     stylPrzejscia = document.getElementById("pr_field").value;
-    // } else if (typProba) {
-    //     stylPrzejscia = document.getElementById("proba_field").value;
-    // }
-    //
-    // var nazwaDrogi = document.getElementById("nazwa_field").value;
-    // var nazwaSkaly = document.getElementById("skala_field").value;
-    // var nazwaRegion = document.getElementById("region_field").value;
-    // var trudnosc = document.getElementById("trudnosc_field").value;
-    // var data = document.getElementById("datePicker").value;
-    //
-    // var dbNrTrasy;
-    // if (typeof lastChildName == 'undefined') {
-    //     dbNrTrasy = 1;
-    // } else {
-    //     dbNrTrasy = Number(lastChildName.match(/\d+/)[0]) + 1;
-    // }
-    // var dbNowaNazwaTrasy;
-    //
-    // if (dbNrTrasy < 10) {
-    //     dbNowaNazwaTrasy = "Trasa0" + dbNrTrasy.toString();
-    // } else {
-    //     dbNowaNazwaTrasy = "Trasa" + dbNrTrasy.toString();
-    // }
-    //
-    // if (typeof stylPrzejscia == 'undefined') {
-    //     window.alert("Nie wybrałeś stylu przejścia!");
-    //     return;
-    // }
-    // if (typeof typ == 'undefined') {
-    //     window.alert("Nie wybrałeś typu drogi!");
-    //     return;
-    // }
-    // if (nazwaDrogi == 'undefined') {
-    //     window.alert("Nie wpisałeś nazwy drogi!");
-    //     return;
-    // }
-    // if (nazwaSkaly.length == 0) {
-    //     window.alert("Nie wpisałeś nazwy skały!");
-    //     return;
-    // }
-    // if (nazwaRegion.length == 0) {
-    //     window.alert("Nie wpisałeś nazwy regionu!");
-    //     return;
-    // }
-    // if (data.length == 0) {
-    //     window.alert("Nie wybrałeś daty!");
-    //     return;
-    // }
-    //
-    // var dbNazwaTrasy = db.child(dbNowaNazwaTrasy);
-    // db.child(dbNazwaTrasy.key).set({
-    //     NazwaDrogi: nazwaDrogi,
-    //     NazwaSkały: nazwaSkaly,
-    //     NazwaRegionu: nazwaRegion,
-    //     Typ: typ,
-    //     Trudność: trudnosc,
-    //     StylSrzejścia: stylPrzejscia,
-    //     Data: data
-    // });
-    //
-    // window.alert("Droga została dodana do bazy.");
+    for(var route in routes) {
+        var table = document.getElementById("wyniki_wyszukiwania");
+        table.style="border: 1px solid black;";
+        var row = table.insertRow(1);
+
+        var droga = row.insertCell(0);
+        var skala = row.insertCell(1);
+        var region = row.insertCell(2);
+        var styl = row.insertCell(3);
+        var trudnosc = row.insertCell(4);
+        var data = row.insertCell(5);
+        droga.innerHTML = "droga1";
+        skala.innerHTML = "skala1";
+        region.innerHTML = "region1";
+        styl.innerHTML = "styl1";
+        trudnosc.innerHTML = "trudnosc1";
+        data.innerHTML = "data1";
+
+    }
+
+
+
 }
