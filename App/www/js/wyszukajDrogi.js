@@ -45,9 +45,8 @@ function wyszukajDrogi() {
         routes = snapshot.val();
         logbox.value = JSON.stringify(routes);
 
-        for (var route in routes) {
-            logbox1.value = JSON.stringify(route);
-            logbox2.value = JSON.stringify(route);
+        for (var route_ in routes) {
+            var route = route_.val();
             logbox3.value = JSON.stringify(route);
 
             var table = document.getElementById("wyniki_wyszukiwania");
