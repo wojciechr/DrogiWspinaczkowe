@@ -41,6 +41,12 @@ function wyszukajDrogi() {
     logbox.value = "88888";
     $("body").append("456");
 
+    firebaseRef.on("value", function(snapshot) {
+        console.log(snapshot.val());
+        logbox.value = snapshot.val();
+    }, function (error) {
+        console.log("Error: " + error.code);
+    });
 
     // var lastChild = db.orderByKey().limitToLast(1);
     //
