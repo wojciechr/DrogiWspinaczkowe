@@ -98,6 +98,16 @@
 </div> <!-- Koniec - Animacja menu Accordeon -->
 
 <script>
+    const config = {
+        apiKey: "AIzaSyA-ejZDxLBfqxuqcsakiY31p6iXt4cJc8M",
+        authDomain: "drogi-wspinaczkowe.firebaseapp.com",
+        databaseURL: "https://drogi-wspinaczkowe.firebaseio.com",
+        projectId: "drogi-wspinaczkowe",
+        storageBucket: "drogi-wspinaczkowe.appspot.com",
+        messagingSenderId: "81802368109"
+    };
+    firebase.initializeApp(config);
+
 	var barOptions_stacked = {
 		 tooltips: {
 			  enabled: false
@@ -149,13 +159,6 @@
 						 var meta = chartInstance.controller.getDatasetMeta(i);
 						 Chart.helpers.each(meta.data.forEach(function (bar, index) {
 							  data = dataset.data[index];
-							  /*
-					if(i==0){
-									ctx.fillText(data, 50, bar._model.y+4);
-							  } else {
-									ctx.fillText(data, bar._model.x-25, bar._model.y+4);
-							  }
-					*/
 						 }),this)
 					}),this);
 			  }
@@ -166,35 +169,50 @@
 
 	var ctx = document.getElementById("myChart");
 
-	var labels = ["9c", "9b+", "9b", "9a+", "9a", "8c+", "8c"];
-	var dataRP = [1, 3, 18, 35, 95, 119, 105];
-	var dataFL = [0, 0, 0, 1, 2, 1, 1];
-	var dataOS = [0, 0, 0, 0, 3, 18, 58];
+    var userId;
 
-	var myChart = new Chart(ctx, {
-		 type: 'horizontalBar',
-		 data: {
-			  labels: labels,
+    var user = firebase.auth().currentUser;
+    if (user) {
+        userId = user.uid;
+    } else {
+        window.alert("Nie zalogowałeś się!");
+        throw new Error("Nie zalogowałeś się!");
+    }
+    var userPath = "Users/" + userId;
+    var firebaseRef = firebase.database().ref().child(userPath);
 
-			  datasets: [{
-					data: dataRP,
-					backgroundColor: "rgba(63,103,126,1)",
-					hoverBackgroundColor: "rgba(50,90,100,1)"
-			  },{
-					data: dataFL,
-					backgroundColor: "rgba(163,103,126,1)",
-					hoverBackgroundColor: "rgba(140,85,100,1)"
-			  },{
-					data: dataOS,
-					backgroundColor: "rgba(63,203,226,1)",
-					hoverBackgroundColor: "rgba(46,185,235,1)"
-			  }]
-		 },
+    firebaseRef.on("value", function (snapshot) {
 
-		 options: barOptions_stacked,
-	});
+        var labels = ["9c", "9b+", "9b", "9a+", "9a", "8c+", "8c"];
+        var dataRP = [1, 3, 18, 35, 95, 119, 105];
+        var dataFL = [0, 0, 0, 1, 2, 1, 1];
+        var dataOS = [0, 0, 0, 0, 3, 18, 58];
 
-	myChart.
+        var myChart = new Chart(ctx, {
+            type: 'horizontalBar',
+            data: {
+                labels: labels,
+                datasets: [{
+                    data: dataRP,
+                    backgroundColor: "rgba(63,103,126,1)",
+                    hoverBackgroundColor: "rgba(50,90,100,1)"
+                },{
+                    data: dataFL,
+                    backgroundColor: "rgba(163,103,126,1)",
+                    hoverBackgroundColor: "rgba(140,85,100,1)"
+                },{
+                    data: dataOS,
+                    backgroundColor: "rgba(63,203,226,1)",
+                    hoverBackgroundColor: "rgba(46,185,235,1)"
+                }]
+            },
+            options: barOptions_stacked,
+        });
+    }, function (error) {
+        console.log("Error: " + error.code);
+    });
+
+
 </script>
 
 
