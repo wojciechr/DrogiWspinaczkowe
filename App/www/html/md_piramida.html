@@ -174,11 +174,6 @@
         window.alert("przed pobieraniem");
         // var dataa = getData();
 
-        window.alert("pobrano");
-        window.alert(typeof(dataa));
-        window.alert(dataa);
-
-
         // promise.then(function(result) {
         //     console.log(result); // "Stuff worked!"
         // }, function(err) {
@@ -186,9 +181,6 @@
         // });
 
         getData().then(function(dataa) {
-            window.alert("pobrano");
-            window.alert(typeof(dataa));
-            window.alert(dataa);
             window.alert("przed rysowniem");
             var myChart = new Chart(ctx, {
                 type: 'horizontalBar',
