@@ -92,9 +92,6 @@ function getData() {
             }]
         };
 
-        window.alert(labels +" "+ dataOS +" "+ dataFL +" "+ dataRP );
-        window.alert(data);
-
         return data;
 
 

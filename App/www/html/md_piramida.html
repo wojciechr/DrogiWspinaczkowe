@@ -172,9 +172,12 @@
         var dataFL = [0, 0, 0, 1, 2, 1, 1];
         var dataOS = [0, 0, 0, 0, 3, 18, 58];
 
+        var data = getData();
+        window.alert(data);
+
         var myChart = new Chart(ctx, {
             type: 'horizontalBar',
-            data: getData(),
+            data: data,
             options: barOptions_stacked,
         });
     }
