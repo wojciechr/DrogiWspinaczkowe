@@ -35,15 +35,15 @@ function getData() {
             dict[grades[i]] = [0,0,0];
         }
 
-        // var labels = [];
-        // var dataOS = [];
-        // var dataFL = [];
-        // var dataRP = [];
+        var labels = [];
+        var dataOS = [];
+        var dataFL = [];
+        var dataRP = [];
 
-        var labels = ["a"];
-        var dataOS = ["1"];
-        var dataFL = ["2"];
-        var dataRP = ["3"];
+        // var labels = ["a"];
+        // var dataOS = ["1"];
+        // var dataFL = ["2"];
+        // var dataRP = ["3"];
 
         for (var route_key in routes) {
             route = routes[route_key];
