@@ -46,6 +46,10 @@ function wyszukajDrogi() {
         logbox.value = JSON.stringify(routes);
 
         for (var route in routes) {
+            logbox1.value = JSON.stringify(route);
+            logbox2.value = JSON.stringify(route);
+            logbox3.value = JSON.stringify(route);
+
             var table = document.getElementById("wyniki_wyszukiwania");
             var row = table.insertRow(1);
 
