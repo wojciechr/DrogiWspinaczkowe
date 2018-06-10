@@ -97,13 +97,12 @@ function getData() {
             }]
         };
 
-        return data;
-
         window.alert(labels);
         window.alert(dataRP);
         window.alert(dataFL);
         window.alert(dataOS);
 
+        return data;
 
     }, function (error) {
         console.log("Error: " + error.code);
