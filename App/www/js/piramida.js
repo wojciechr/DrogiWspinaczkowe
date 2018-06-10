@@ -57,14 +57,15 @@ function getData() {
     };
 
 
-        var dict = [];
+        var dict = {};
         var grades = ["5a","5a+","5b","5b+","5c","5c+",
                       "6a","6a+","6b","6b+","6c","6c+",
                       "7a","7a+","7b","7b+","7c","7c+",
                       "8a","8a+","8b","8b+","8c","8c+",
                       "9a","9a+","9b","9b+","9c","9c+"];
         for(var i in grades) {
-            dict.push({key: grades[i], value: [0, 0, 0]});
+            // dict.push({key: grades[i], value: [0, 0, 0]});
+            dict[grades[i]] = [0,0,0];
         }
 
         // var labels = ["9c", "9b+", "9b", "9a+", "9a", "8c+", "8c"];
@@ -91,12 +92,6 @@ function getData() {
             var styl = route.StylSrzejścia;
             var trudnosc = route.Trudność;
 
-            console.log(styl);
-            console.log(trudnosc);
-            console.log(dict);
-            console.log(dict["7a+"]);
-            console.log(dict[trudnosc]);
-
             if (styl == "OS"){
                 dict[trudnosc][0] = dict[trudnosc][0] + 1;
             } else if (styl == "Flash") {
@@ -108,12 +103,13 @@ function getData() {
         }
 
         for (var key in dict) {
+            console.log(key);
             var value = dict[key]
             if (value[0]+value[1]+value[2] > 0) {
-                labels.append(key);
-                dataOS.append(value[0]);
-                dataFL.append(value[1]);
-                dataRP.append(value[2]);
+                labels.push(key);
+                dataOS.push(value[0]);
+                dataFL.push(value[1]);
+                dataRP.push(value[2]);
             }
         }
 
