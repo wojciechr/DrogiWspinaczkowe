@@ -40,35 +40,32 @@ function wyszukajDrogi() {
 
     var routes;
 
-    firebaseRef.on("value", function(snapshot) {
+    firebaseRef.on("value", function (snapshot) {
         console.log(snapshot.val());
         routes = snapshot.val();
+        logbox.value = JSON.stringify(routes);
+
+        for (var route in routes) {
+            var table = document.getElementById("wyniki_wyszukiwania");
+            var row = table.insertRow(1);
+
+            var droga = row.insertCell(0);
+            var skala = row.insertCell(1);
+            var region = row.insertCell(2);
+            var styl = row.insertCell(3);
+            var trudnosc = row.insertCell(4);
+            var data = row.insertCell(5);
+            droga.innerHTML = route.NazwaDrogi;
+            skala.innerHTML = route.NazwaSkały;
+            region.innerHTML = route.NazwaRegionu;
+            styl.innerHTML = route.StylSrzejścia;
+            trudnosc.innerHTML = route.Trudność;
+            data.innerHTML = route.Data;
+        }
+
     }, function (error) {
         console.log("Error: " + error.code);
     });
-
-    logbox.value = JSON.stringify(routes);
-
-    $("body").append("123");
-    for(var route in routes) {
-        var table = document.getElementById("wyniki_wyszukiwania");
-        var row = table.insertRow(1);
-
-        var droga = row.insertCell(0);
-        var skala = row.insertCell(1);
-        var region = row.insertCell(2);
-        var styl = row.insertCell(3);
-        var trudnosc = row.insertCell(4);
-        var data = row.insertCell(5);
-        droga.innerHTML = "droga1";
-        skala.innerHTML = "skala1";
-        region.innerHTML = "region1";
-        styl.innerHTML = "styl1";
-        trudnosc.innerHTML = "trudnosc1";
-        data.innerHTML = "data1";
-        $("body").append("456");
-    }
-
 
 
 }
