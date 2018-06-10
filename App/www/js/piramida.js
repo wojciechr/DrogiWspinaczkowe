@@ -92,7 +92,7 @@ function getData() {
             }]
         };
 
-        return data;
+        return data.val();
 
 
     }, function (error) {
