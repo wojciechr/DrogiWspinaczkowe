@@ -80,29 +80,25 @@ function getData() {
             }
         }
 
-        // var data = {
-        //     labels: labels,
-        //     datasets: [{
-        //         data: dataRP,
-        //         backgroundColor: "rgba(63,103,126,1)",
-        //         hoverBackgroundColor: "rgba(50,90,100,1)"
-        //     }, {
-        //         data: dataFL,
-        //         backgroundColor: "rgba(163,103,126,1)",
-        //         hoverBackgroundColor: "rgba(140,85,100,1)"
-        //     }, {
-        //         data: dataOS,
-        //         backgroundColor: "rgba(63,203,226,1)",
-        //         hoverBackgroundColor: "rgba(46,185,235,1)"
-        //     }]
-        // };
+        var data = {
+            labels: labels,
+            datasets: [{
+                data: dataRP,
+                backgroundColor: "rgba(63,103,126,1)",
+                hoverBackgroundColor: "rgba(50,90,100,1)"
+            }, {
+                data: dataFL,
+                backgroundColor: "rgba(163,103,126,1)",
+                hoverBackgroundColor: "rgba(140,85,100,1)"
+            }, {
+                data: dataOS,
+                backgroundColor: "rgba(63,203,226,1)",
+                hoverBackgroundColor: "rgba(46,185,235,1)"
+            }]
+        };
 
-        window.alert(labels);
-        window.alert(dataRP);
-        window.alert(dataFL);
-        window.alert(dataOS);
 
-        return [ labels, dataRP, dataFL, dataOS];
+        return data;
 
     }, function (error) {
         console.log("Error: " + error.code);

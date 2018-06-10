@@ -174,10 +174,10 @@
 
         var dataa = getData();
 
-        window.alert(dataa[0]);
-        window.alert(dataa[1]);
-        window.alert(dataa[2]);
-        window.alert(dataa[3]);
+        window.alert(dataa.labels);
+        window.alert(dataa.dataRP);
+        window.alert(dataa.dataFL);
+        window.alert(dataa.dataOS);
 
         var data = {
             labels: dataa[0],
@@ -198,7 +198,7 @@
 
         var myChart = new Chart(ctx, {
             type: 'horizontalBar',
-            data: data,
+            data: dataa,
             options: barOptions_stacked,
         });
     }
