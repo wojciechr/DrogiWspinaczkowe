@@ -23,7 +23,7 @@ function getData() {
 
     firebaseRef.on("value", function (snapshot) {
 
-        routes = snapshot.val()
+        routes = snapshot.val();
 
         var dict = {};
         var grades = ["5a","5a+","5b","5b+","5c","5c+",
@@ -96,6 +96,9 @@ function getData() {
                 hoverBackgroundColor: "rgba(46,185,235,1)"
             }]
         };
+
+        window.alert(typeof(data));
+        window.alert(data);
 
         return data;
 
