@@ -40,11 +40,6 @@ function getData() {
         var dataFL = [];
         var dataRP = [];
 
-    //     var labels = ["a"];
-    //     var dataOS = ["1"];
-    //     var dataFL = ["2"];
-    //     var dataRP = ["3"];
-
         for (var route_key in routes) {
             route = routes[route_key];
 
@@ -96,7 +91,7 @@ function getData() {
             }]
         };
 
-
+        window.alert('asd');
 
         var barOptions_stacked = {
             tooltips: {
