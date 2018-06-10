@@ -46,7 +46,6 @@ function wyszukajDrogi() {
         for (var route in routes.val()) {
             $("body").append("123");
 
-
             var table = document.getElementById("wyniki_wyszukiwania");
             var row = table.insertRow(1);
 
@@ -56,12 +55,13 @@ function wyszukajDrogi() {
             var styl = row.insertCell(3);
             var trudnosc = row.insertCell(4);
             var data = row.insertCell(5);
-            droga.innerHTML = route.NazwaDrogi;
-            skala.innerHTML = route.NazwaSkały;
-            region.innerHTML = route.NazwaRegionu;
-            styl.innerHTML = route.StylSrzejścia;
-            trudnosc.innerHTML = route.Trudność;
-            data.innerHTML = route.Data;
+            droga.innerHTML = route[0].NazwaDrogi;
+            skala.innerHTML = route[0].NazwaSkały;
+            region.innerHTML = route[0].NazwaRegionu;
+            styl.innerHTML = route[0].StylSrzejścia;
+            trudnosc.innerHTML = route[0].Trudność;
+            data.innerHTML = route[0].Data;
+            $("body").append("456 ");
         }
 
     }, function (error) {
