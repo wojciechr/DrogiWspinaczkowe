@@ -35,15 +35,15 @@ function getData() {
             dict[grades[i]] = [0,0,0];
         }
 
-        var labels = [];
-        var dataOS = [];
-        var dataFL = [];
-        var dataRP = [];
+        // var labels = [];
+        // var dataOS = [];
+        // var dataFL = [];
+        // var dataRP = [];
 
-    //     var labels = ["a"];
-    //     var dataOS = ["1"];
-    //     var dataFL = ["2"];
-    //     var dataRP = ["3"];
+        var labels = ["a"];
+        var dataOS = ["1"];
+        var dataFL = ["2"];
+        var dataRP = ["3"];
 
         for (var route_key in routes) {
             route = routes[route_key];
@@ -97,18 +97,21 @@ function getData() {
             }]
         };
 
-        window.alert("przed returnem");
+    window.alert("przed returnem");
+
         return new Promise((resolve, reject ) => {
             if (1 != 0) {
+                window.alert("przed resolve");
                 resolve(data);
             }else {
+                window.alert("przed reject");
                 reject(data);
             }
         });
 
-    }, function (error) {
-        console.log("Error: " + error.code);
-    });
+    // }, function (error) {
+    //     console.log("Error: " + error.code);
+    // });
 
 
 }
