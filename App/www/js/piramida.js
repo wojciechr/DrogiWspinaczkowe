@@ -9,53 +9,21 @@ const config = {
 firebase.initializeApp(config);
 
 function getData() {
-    // var userId;
-    //
-    // var user = firebase.auth().currentUser;
-    // if (user) {
-    //     userId = user.uid;
-    // } else {
-    //     window.alert("Nie zalogowałeś się!");
-    //     return;
-    // }
-    // var userPath = "Users/" + userId;
-    // var firebaseRef = firebase.database().ref().child(userPath);
-    //
-    // firebaseRef.on("value", function (snapshot) {
+    var userId;
 
+    var user = firebase.auth().currentUser;
+    if (user) {
+        userId = user.uid;
+    } else {
+        window.alert("Nie zalogowałeś się!");
+        return;
+    }
+    var userPath = "Users/" + userId;
+    var firebaseRef = firebase.database().ref().child(userPath);
 
-        // routes = snapshot.val()
+    firebaseRef.on("value", function (snapshot) {
 
-    routes ={
-        "Trasa01": {
-            "Data": "2018-06-08",
-            "NazwaDrogi": "Skurwysyn",
-            "NazwaRegionu": "Tyniec",
-            "NazwaSkały": "Skurwysyn",
-            "StylSrzejścia": "OS",
-            "Trudność": "7a+",
-            "Typ": "Skały"
-        },
-        "Trasa02": {
-            "Data": "2018-06-08",
-            "NazwaDrogi": "Skurwysyn",
-            "NazwaRegionu": "Tyniec",
-            "NazwaSkały": "Przdskurwysyn",
-            "StylSrzejścia": "RP",
-            "Trudność": "7b",
-            "Typ": "Ścianka"
-        },
-        "Trasa03": {
-            "Data": "2018-06-08",
-            "NazwaDrogi": "Wawrzynegger",
-            "NazwaRegionu": "Tyniec",
-            "NazwaSkały": "Skurwysyn",
-            "StylSrzejścia": "Proba",
-            "Trudność": "8a",
-            "Typ": "Skały"
-        }
-    };
-
+        routes = snapshot.val()
 
         var dict = {};
         var grades = ["5a","5a+","5b","5b+","5c","5c+",
@@ -64,14 +32,8 @@ function getData() {
                       "8a","8a+","8b","8b+","8c","8c+",
                       "9a","9a+","9b","9b+","9c","9c+"];
         for(var i in grades) {
-            // dict.push({key: grades[i], value: [0, 0, 0]});
             dict[grades[i]] = [0,0,0];
         }
-
-        // var labels = ["9c", "9b+", "9b", "9a+", "9a", "8c+", "8c"];
-        // var dataRP = [1, 3, 18, 35, 95, 119, 105];
-        // var dataFL = [0, 0, 0, 1, 2, 1, 1];
-        // var dataOS = [0, 0, 0, 0, 3, 18, 58];
 
         var labels = [];
         var dataOS = [];
@@ -129,12 +91,14 @@ function getData() {
                 hoverBackgroundColor: "rgba(46,185,235,1)"
             }]
         };
+        firebaseRef.delete();
+
         return data;
 
 
-    // }, function (error) {
-    //     console.log("Error: " + error.code);
-    // });
+    }, function (error) {
+        console.log("Error: " + error.code);
+    });
 
 
 }
