@@ -172,34 +172,51 @@
         var dataFL = [0, 0, 0, 1, 2, 1, 1];
         var dataOS = [0, 0, 0, 0, 3, 18, 58];
         window.alert("przed pobieraniem");
-        var dataa = getData();
+        // var dataa = getData();
 
         window.alert("pobrano");
         window.alert(typeof(dataa));
         window.alert(dataa);
 
-        var data = {
-            labels: dataa[0],
-            datasets: [{
-                data: dataa[1],
-                backgroundColor: "rgba(63,103,126,1)",
-                hoverBackgroundColor: "rgba(50,90,100,1)"
-            }, {
-                data: dataa[2],
-                backgroundColor: "rgba(163,103,126,1)",
-                hoverBackgroundColor: "rgba(140,85,100,1)"
-            }, {
-                data: dataa[3],
-                backgroundColor: "rgba(63,203,226,1)",
-                hoverBackgroundColor: "rgba(46,185,235,1)"
-            }]
-        };
-        window.alert("przed rysownie");
-        var myChart = new Chart(ctx, {
-            type: 'horizontalBar',
-            data: dataa,
-            options: barOptions_stacked,
-        });
+
+        // promise.then(function(result) {
+        //     console.log(result); // "Stuff worked!"
+        // }, function(err) {
+        //     console.log(err); // Error: "It broke"
+        // });
+
+        getData().then(function(dataa) {
+            window.alert("pobrano");
+            window.alert(typeof(dataa));
+            window.alert(dataa);
+            window.alert("przed rysowniem");
+            var myChart = new Chart(ctx, {
+                type: 'horizontalBar',
+                data: dataa,
+                options: barOptions_stacked,
+            });
+        }, function(err) {
+
+		});
+
+
+        // var data = {
+        //     labels: dataa[0],
+        //     datasets: [{
+        //         data: dataa[1],
+        //         backgroundColor: "rgba(63,103,126,1)",
+        //         hoverBackgroundColor: "rgba(50,90,100,1)"
+        //     }, {
+        //         data: dataa[2],
+        //         backgroundColor: "rgba(163,103,126,1)",
+        //         hoverBackgroundColor: "rgba(140,85,100,1)"
+        //     }, {
+        //         data: dataa[3],
+        //         backgroundColor: "rgba(63,203,226,1)",
+        //         hoverBackgroundColor: "rgba(46,185,235,1)"
+        //     }]
+        // };
+
     }
 
     setTimeout(populateChart, 2000)
