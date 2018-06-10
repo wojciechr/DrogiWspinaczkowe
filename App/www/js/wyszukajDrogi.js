@@ -45,12 +45,12 @@ function wyszukajDrogi() {
         routes = snapshot.val();
         logbox.value = JSON.stringify(routes);
 
-        for (var route in routes) {
-            logbox.value = route.val();
-            logbox1.value = route;
-            logbox2.value = JSON.stringify(route);
-            logbox3.value = JSON.stringify(route.val());
-
+        // for (var route in routes) {
+        //     logbox.value = route.val();
+        //     logbox1.value = route;
+        //     logbox2.value = JSON.stringify(route);
+        //     logbox3.value = JSON.stringify(route.val());
+        //
             var table = document.getElementById("wyniki_wyszukiwania");
             var row = table.insertRow(1);
 
@@ -66,7 +66,7 @@ function wyszukajDrogi() {
             styl.innerHTML = route.StylSrzejścia;
             trudnosc.innerHTML = route.Trudność;
             data.innerHTML = route.Data;
-        }
+        // }
 
     }, function (error) {
         console.log("Error: " + error.code);
