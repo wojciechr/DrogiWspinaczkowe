@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="06194ed5-0ac3-4cb5-b2a2-e9138c5983b6" name="Default" comment="dodana zakladka do wyszukiwania drog">
-      <change beforePath="$PROJECT_DIR$/App/www/html/md_prze_swo_drogi.html" afterPath="$PROJECT_DIR$/App/www/html/md_prze_swo_drogi.html" />
       <change beforePath="$PROJECT_DIR$/App/www/js/wyszukajDrogi.js" afterPath="$PROJECT_DIR$/App/www/js/wyszukajDrogi.js" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
@@ -52,8 +51,8 @@
       <file leaf-file-name="wyszukajDrogi.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/App/www/js/wyszukajDrogi.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="362">
-              <caret line="39" column="13" lean-forward="false" selection-start-line="39" selection-start-column="13" selection-end-line="39" selection-end-column="13" />
+            <state relative-caret-position="413">
+              <caret line="45" column="43" lean-forward="true" selection-start-line="45" selection-start-column="43" selection-end-line="45" selection-end-column="43" />
               <folding />
             </state>
           </provider>
@@ -115,11 +114,11 @@
       <find>userPath</find>
       <find>routes.val</find>
       <find>trudnosc_fi</find>
-      <find>style</find>
       <find>trudnosc</find>
       <find>nazwaRegion</find>
-      <find>typ</find>
       <find>route</find>
+      <find>typ</find>
+      <find>style</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -274,7 +273,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="25778000" />
+    <option name="totallyTimeSpent" value="26094000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
@@ -561,20 +560,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/App/www/html/md_prze_swo_drogi.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="146">
-          <caret line="123" column="50" lean-forward="false" selection-start-line="123" selection-start-column="41" selection-end-line="123" selection-end-column="50" />
-          <folding>
-            <element signature="n#style#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <marker date="1528630648221" expanded="false" signature="7288:7299" ph="..." />
-            <marker date="1528630648221" expanded="false" signature="7375:7386" ph="..." />
-            <marker date="1528630648221" expanded="false" signature="7462:7473" ph="..." />
-            <marker date="1528630648221" expanded="false" signature="7573:7584" ph="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/App/www/js/dodajDroge.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="473">
@@ -598,10 +583,24 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/App/www/html/md_prze_swo_drogi.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="146">
+          <caret line="123" column="50" lean-forward="false" selection-start-line="123" selection-start-column="41" selection-end-line="123" selection-end-column="50" />
+          <folding>
+            <element signature="n#style#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <marker date="1528630648221" expanded="false" signature="7288:7299" ph="..." />
+            <marker date="1528630648221" expanded="false" signature="7375:7386" ph="..." />
+            <marker date="1528630648221" expanded="false" signature="7462:7473" ph="..." />
+            <marker date="1528630648221" expanded="false" signature="7573:7584" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/App/www/js/wyszukajDrogi.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="362">
-          <caret line="39" column="13" lean-forward="false" selection-start-line="39" selection-start-column="13" selection-end-line="39" selection-end-column="13" />
+        <state relative-caret-position="413">
+          <caret line="45" column="43" lean-forward="true" selection-start-line="45" selection-start-column="43" selection-end-line="45" selection-end-column="43" />
           <folding />
         </state>
       </provider>

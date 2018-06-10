@@ -33,11 +33,17 @@ function wyszukajDrogi() {
         for (var route_key in snapshot.val()) {
             route = routes[route_key];
 
+            $("body").append("droga ");
+
             if (typ != "Wszystkie") {
+                $("body").append("nie wszystkie ");
                 if (typ != route.Typ) {
+                    $("body").append("nie moj typ ");
                     continue;
                 }
+                $("body").append("moj typ ");
             }
+            $("body").append("wpisujemy ");
 
             var table = document.getElementById("wyniki_wyszukiwania");
             var row = table.insertRow(1);
