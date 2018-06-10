@@ -33,10 +33,9 @@ function wyszukajDrogi() {
         return;
     }
     logbox.value = "6";
-    var firebaseRef = firebase.database().ref();
-    logbox.value = "7";
     var userPath = "Users/" + userId;
-    var db = firebase.database().ref().child(userPath);
+    logbox.value = "7";
+    var firebaseRef = firebase.database().ref().child(userPath);
 
     logbox.value = "88888";
     $("body").append("456");
