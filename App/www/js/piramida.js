@@ -109,9 +109,9 @@ function getData() {
             }
         });
 
-    // }, function (error) {
-    //     console.log("Error: " + error.code);
-    // });
+    }, function (error) {
+        console.log("Error: " + error.code);
+    });
 
 
 }
