@@ -56,7 +56,7 @@ function wyszukajDrogi() {
             var styl = row.insertCell(3);
             var trudnosc = row.insertCell(4);
             var data = row.insertCell(5);
-            droga.innerHTML = route.val().NazwaDrogi;
+            droga.innerHTML = route.NazwaDrogi;
             skala.innerHTML = route.NazwaSkały;
             region.innerHTML = route.NazwaRegionu;
             styl.innerHTML = route.StylSrzejścia;
