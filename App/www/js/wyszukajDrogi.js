@@ -14,7 +14,7 @@ function wyszukajDrogi(){
 }
 
 function wyszukajDrogi(){
-    var logbox = dociment.getElementById("logbox");
+    var logbox = document.getElementById("logbox");
 
     logbox.value = "1";
 
