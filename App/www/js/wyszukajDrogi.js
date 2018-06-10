@@ -5,15 +5,16 @@ const config = {
     projectId: "drogi-wspinaczkowe",
     storageBucket: "drogi-wspinaczkowe.appspot.com",
     messagingSenderId: "81802368109"
-  };
-  firebase.initializeApp(config);
-  
+};
+firebase.initializeApp(config);
+
 // function wyszukajDrogi(){
 // 	var firebaseRef = firebase.database().ref();
 //
 // }
 
-function wyszukajDrogi(){
+function wyszukajDrogi() {
+    $("body").append("123");
     var logbox = document.getElementById("logbox");
 
     logbox.value = "1";
@@ -38,13 +39,14 @@ function wyszukajDrogi(){
     var db = firebase.database().ref().child(userPath);
 
     logbox.value = "88888";
+    $("body").append("456");
 
-    //
+
     // var lastChild = db.orderByKey().limitToLast(1);
     //
-    // lastChild.once("value", snap => {
+    // lastChild.once("value", snap = > {
     //     var lastChildName;
-    // snap.forEach(function(child) {
+    // snap.forEach(function (child) {
     //     lastChildName = child.key;
     // });
     //
@@ -53,11 +55,11 @@ function wyszukajDrogi(){
     // var stylSkaly = document.getElementById("skaly_field").checked;
     // var stylScianka = document.getElementById("scianka_field").checked;
     //
-    // if(stylMoonboard){
+    // if (stylMoonboard) {
     //     typ = document.getElementById("moonboard_field").value;
-    // }else if(stylScianka){
+    // } else if (stylScianka) {
     //     typ = document.getElementById("scianka_field").value;
-    // }else if(stylSkaly){
+    // } else if (stylSkaly) {
     //     typ = document.getElementById("skaly_field").value;
     // }
     //
@@ -67,13 +69,13 @@ function wyszukajDrogi(){
     // var typRP = document.getElementById("pr_field").checked;
     // var typProba = document.getElementById("proba_field").checked;
     //
-    // if(typOS){
+    // if (typOS) {
     //     stylPrzejscia = document.getElementById("os_field").value;
-    // }else if(typFlash){
+    // } else if (typFlash) {
     //     stylPrzejscia = document.getElementById("flash_field").value;
-    // }else if(typRP){
+    // } else if (typRP) {
     //     stylPrzejscia = document.getElementById("pr_field").value;
-    // }else if(typProba){
+    // } else if (typProba) {
     //     stylPrzejscia = document.getElementById("proba_field").value;
     // }
     //
@@ -84,40 +86,40 @@ function wyszukajDrogi(){
     // var data = document.getElementById("datePicker").value;
     //
     // var dbNrTrasy;
-    // if(typeof lastChildName == 'undefined'){
+    // if (typeof lastChildName == 'undefined') {
     //     dbNrTrasy = 1;
-    // }else{
-    //     dbNrTrasy = Number(lastChildName.match(/\d+/)[0])+1;
+    // } else {
+    //     dbNrTrasy = Number(lastChildName.match(/\d+/)[0]) + 1;
     // }
     // var dbNowaNazwaTrasy;
     //
-    // if(dbNrTrasy < 10){
+    // if (dbNrTrasy < 10) {
     //     dbNowaNazwaTrasy = "Trasa0" + dbNrTrasy.toString();
-    // }else{
+    // } else {
     //     dbNowaNazwaTrasy = "Trasa" + dbNrTrasy.toString();
     // }
     //
-    // if(typeof stylPrzejscia == 'undefined'){
+    // if (typeof stylPrzejscia == 'undefined') {
     //     window.alert("Nie wybrałeś stylu przejścia!");
     //     return;
     // }
-    // if(typeof typ == 'undefined'){
+    // if (typeof typ == 'undefined') {
     //     window.alert("Nie wybrałeś typu drogi!");
     //     return;
     // }
-    // if(nazwaDrogi == 'undefined'){
+    // if (nazwaDrogi == 'undefined') {
     //     window.alert("Nie wpisałeś nazwy drogi!");
     //     return;
     // }
-    // if(nazwaSkaly.length == 0){
+    // if (nazwaSkaly.length == 0) {
     //     window.alert("Nie wpisałeś nazwy skały!");
     //     return;
     // }
-    // if(nazwaRegion.length == 0){
+    // if (nazwaRegion.length == 0) {
     //     window.alert("Nie wpisałeś nazwy regionu!");
     //     return;
     // }
-    // if(data.length == 0){
+    // if (data.length == 0) {
     //     window.alert("Nie wybrałeś daty!");
     //     return;
     // }
@@ -132,7 +134,6 @@ function wyszukajDrogi(){
     //     StylSrzejścia: stylPrzejscia,
     //     Data: data
     // });
-
-    window.alert("Droga została dodana do bazy.");
-});
+    //
+    // window.alert("Droga została dodana do bazy.");
 }
