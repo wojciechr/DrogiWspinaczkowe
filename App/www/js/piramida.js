@@ -91,6 +91,9 @@ function getData() {
                 hoverBackgroundColor: "rgba(46,185,235,1)"
             }]
         };
+
+        window.alert(labels);
+
         return data;
 
 
