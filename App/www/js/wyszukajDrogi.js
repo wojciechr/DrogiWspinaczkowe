@@ -44,9 +44,11 @@ function wyszukajDrogi() {
         console.log(snapshot.val());
         routes = snapshot;
         logbox.value = JSON.stringify(routes.val());
-        $("#wyniki_wyszukiwania tbody tr").remove();
 
         for (var route in routes) {
+            logbox.value = route.val();
+            logbox1.value = route;
+            logbox2.value = JSON.stringify(route);
             logbox3.value = JSON.stringify(route.val());
 
             var table = document.getElementById("wyniki_wyszukiwania");

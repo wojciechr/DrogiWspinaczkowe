@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="06194ed5-0ac3-4cb5-b2a2-e9138c5983b6" name="Default" comment="dodana zakladka do wyszukiwania drog">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change beforePath="$PROJECT_DIR$/App/www/html/md_prze_swo_drogi.html" afterPath="$PROJECT_DIR$/App/www/html/md_prze_swo_drogi.html" />
       <change beforePath="$PROJECT_DIR$/App/www/js/wyszukajDrogi.js" afterPath="$PROJECT_DIR$/App/www/js/wyszukajDrogi.js" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
@@ -33,26 +33,26 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="md_prze_swo_drogi.html" pinned="false" current-in-tab="false">
+      <file leaf-file-name="md_prze_swo_drogi.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/App/www/html/md_prze_swo_drogi.html">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="187">
-              <caret line="119" column="45" lean-forward="true" selection-start-line="119" selection-start-column="45" selection-end-line="119" selection-end-column="45" />
+              <caret line="119" column="63" lean-forward="true" selection-start-line="119" selection-start-column="63" selection-end-line="119" selection-end-column="63" />
               <folding>
-                <marker date="1528624633127" expanded="false" signature="6115:6126" ph="..." />
-                <marker date="1528624633127" expanded="false" signature="6202:6213" ph="..." />
-                <marker date="1528624633127" expanded="false" signature="6289:6300" ph="..." />
-                <marker date="1528624633127" expanded="false" signature="6397:6408" ph="..." />
+                <marker date="1528625438832" expanded="false" signature="6121:6132" ph="..." />
+                <marker date="1528625438832" expanded="false" signature="6208:6219" ph="..." />
+                <marker date="1528625438832" expanded="false" signature="6295:6306" ph="..." />
+                <marker date="1528625438832" expanded="false" signature="6403:6414" ph="..." />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="wyszukajDrogi.js" pinned="false" current-in-tab="true">
+      <file leaf-file-name="wyszukajDrogi.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/App/www/js/wyszukajDrogi.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="231">
-              <caret line="46" column="31" lean-forward="false" selection-start-line="46" selection-start-column="31" selection-end-line="46" selection-end-column="31" />
+            <state relative-caret-position="129">
+              <caret line="45" column="52" lean-forward="true" selection-start-line="45" selection-start-column="52" selection-end-line="45" selection-end-column="52" />
               <folding />
             </state>
           </provider>
@@ -110,8 +110,8 @@
       <find>firebaseRef</find>
       <find>userPath</find>
       <find>db</find>
-      <find>routes</find>
       <find>dodajDroge</find>
+      <find>routes</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -127,8 +127,8 @@
         <option value="$PROJECT_DIR$/App/www/add.html" />
         <option value="$PROJECT_DIR$/App/www/search.html" />
         <option value="$PROJECT_DIR$/App/www/js/dodajDroge.js" />
-        <option value="$PROJECT_DIR$/App/www/html/md_prze_swo_drogi.html" />
         <option value="$PROJECT_DIR$/App/www/js/wyszukajDrogi.js" />
+        <option value="$PROJECT_DIR$/App/www/html/md_prze_swo_drogi.html" />
       </list>
     </option>
   </component>
@@ -266,7 +266,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="20123000" />
+    <option name="totallyTimeSpent" value="20388000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
@@ -561,19 +561,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/App/www/html/md_prze_swo_drogi.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="119" column="45" lean-forward="true" selection-start-line="119" selection-start-column="45" selection-end-line="119" selection-end-column="45" />
-          <folding>
-            <marker date="1528624633127" expanded="false" signature="6115:6126" ph="..." />
-            <marker date="1528624633127" expanded="false" signature="6202:6213" ph="..." />
-            <marker date="1528624633127" expanded="false" signature="6289:6300" ph="..." />
-            <marker date="1528624633127" expanded="false" signature="6397:6408" ph="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/App/www/html/md_dodaj_droge.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1258">
@@ -591,9 +578,22 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/App/www/js/wyszukajDrogi.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="231">
-          <caret line="46" column="31" lean-forward="false" selection-start-line="46" selection-start-column="31" selection-end-line="46" selection-end-column="31" />
+        <state relative-caret-position="129">
+          <caret line="45" column="52" lean-forward="true" selection-start-line="45" selection-start-column="52" selection-end-line="45" selection-end-column="52" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/App/www/html/md_prze_swo_drogi.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="119" column="63" lean-forward="true" selection-start-line="119" selection-start-column="63" selection-end-line="119" selection-end-column="63" />
+          <folding>
+            <marker date="1528625438832" expanded="false" signature="6121:6132" ph="..." />
+            <marker date="1528625438832" expanded="false" signature="6208:6219" ph="..." />
+            <marker date="1528625438832" expanded="false" signature="6295:6306" ph="..." />
+            <marker date="1528625438832" expanded="false" signature="6403:6414" ph="..." />
+          </folding>
         </state>
       </provider>
     </entry>
