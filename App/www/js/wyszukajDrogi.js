@@ -42,12 +42,12 @@ function wyszukajDrogi() {
 
     firebaseRef.on("value", function (snapshot) {
         console.log(snapshot.val());
-        routes = snapshot.val();
-        logbox.value = JSON.stringify(routes);
+        routes = snapshot;
+        logbox.value = JSON.stringify(routes.val());
+        $("#wyniki_wyszukiwania tbody tr").remove();
 
-        for (var route_ in routes) {
-            var route = route_.val();
-            logbox3.value = JSON.stringify(route);
+        for (var route in routes) {
+            logbox3.value = JSON.stringify(route.val());
 
             var table = document.getElementById("wyniki_wyszukiwania");
             var row = table.insertRow(1);
