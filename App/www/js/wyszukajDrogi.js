@@ -8,11 +8,6 @@ const config = {
 };
 firebase.initializeApp(config);
 
-// function wyszukajDrogi(){
-// 	var firebaseRef = firebase.database().ref();
-//
-// }
-
 function wyszukajDrogi() {
     var userId;
 
