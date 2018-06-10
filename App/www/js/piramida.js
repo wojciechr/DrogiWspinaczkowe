@@ -66,7 +66,6 @@ function getData() {
             } else if (styl == "RP") {
                 dict[trudnosc][2] = dict[trudnosc][2] + 1;
             }
-
         }
 
         for (var key in dict) {
