@@ -2,8 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="06194ed5-0ac3-4cb5-b2a2-e9138c5983b6" name="Default" comment="dodana zakladka do wyszukiwania drog">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/App/www/html/md_prze_swo_drogi.html" afterPath="$PROJECT_DIR$/App/www/html/md_prze_swo_drogi.html" />
       <change beforePath="$PROJECT_DIR$/App/www/js/wyszukajDrogi.js" afterPath="$PROJECT_DIR$/App/www/js/wyszukajDrogi.js" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
@@ -37,8 +35,8 @@
       <file leaf-file-name="md_prze_swo_drogi.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/App/www/html/md_prze_swo_drogi.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="419">
-              <caret line="102" column="54" lean-forward="false" selection-start-line="102" selection-start-column="48" selection-end-line="102" selection-end-column="54" />
+            <state relative-caret-position="368">
+              <caret line="99" column="102" lean-forward="false" selection-start-line="99" selection-start-column="89" selection-end-line="99" selection-end-column="102" />
               <folding>
                 <marker date="1528618231115" expanded="false" signature="5490:5501" ph="..." />
                 <marker date="1528618231115" expanded="false" signature="5577:5588" ph="..." />
@@ -52,8 +50,8 @@
       <file leaf-file-name="wyszukajDrogi.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/App/www/js/wyszukajDrogi.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="340">
-              <caret line="32" column="34" lean-forward="false" selection-start-line="32" selection-start-column="34" selection-end-line="32" selection-end-column="34" />
+            <state relative-caret-position="493">
+              <caret line="29" column="27" lean-forward="true" selection-start-line="29" selection-start-column="27" selection-end-line="29" selection-end-column="27" />
               <folding />
             </state>
           </provider>
@@ -62,7 +60,7 @@
       <file leaf-file-name="md_dodaj_droge.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/App/www/html/md_dodaj_droge.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="680">
+            <state relative-caret-position="884">
               <caret line="148" column="93" lean-forward="true" selection-start-line="148" selection-start-column="93" selection-end-line="148" selection-end-column="93" />
               <folding>
                 <element signature="n#head#0;n#html#0;n#!!top" expanded="false" />
@@ -79,8 +77,8 @@
       <file leaf-file-name="dodajDroge.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/App/www/js/dodajDroge.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="300">
-              <caret line="91" column="54" lean-forward="true" selection-start-line="91" selection-start-column="54" selection-end-line="91" selection-end-column="54" />
+            <state relative-caret-position="368">
+              <caret line="95" column="54" lean-forward="true" selection-start-line="95" selection-start-column="54" selection-end-line="95" selection-end-column="54" />
               <folding />
             </state>
           </provider>
@@ -257,7 +255,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="13233000" />
+    <option name="totallyTimeSpent" value="13736000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-1928" y="-749" width="1936" height="1056" extended-state="6" />
@@ -543,9 +541,30 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/App/www/js/dodajDroge.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="368">
+          <caret line="95" column="54" lean-forward="true" selection-start-line="95" selection-start-column="54" selection-end-line="95" selection-end-column="54" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/App/www/html/md_prze_swo_drogi.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="368">
+          <caret line="99" column="102" lean-forward="false" selection-start-line="99" selection-start-column="89" selection-end-line="99" selection-end-column="102" />
+          <folding>
+            <marker date="1528618231115" expanded="false" signature="5490:5501" ph="..." />
+            <marker date="1528618231115" expanded="false" signature="5577:5588" ph="..." />
+            <marker date="1528618231115" expanded="false" signature="5664:5675" ph="..." />
+            <marker date="1528618231115" expanded="false" signature="5772:5783" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/App/www/html/md_dodaj_droge.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="680">
+        <state relative-caret-position="884">
           <caret line="148" column="93" lean-forward="true" selection-start-line="148" selection-start-column="93" selection-end-line="148" selection-end-column="93" />
           <folding>
             <element signature="n#head#0;n#html#0;n#!!top" expanded="false" />
@@ -558,31 +577,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/App/www/html/md_prze_swo_drogi.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="419">
-          <caret line="102" column="54" lean-forward="false" selection-start-line="102" selection-start-column="48" selection-end-line="102" selection-end-column="54" />
-          <folding>
-            <marker date="1528618231115" expanded="false" signature="5490:5501" ph="..." />
-            <marker date="1528618231115" expanded="false" signature="5577:5588" ph="..." />
-            <marker date="1528618231115" expanded="false" signature="5664:5675" ph="..." />
-            <marker date="1528618231115" expanded="false" signature="5772:5783" ph="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/App/www/js/dodajDroge.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="300">
-          <caret line="91" column="54" lean-forward="true" selection-start-line="91" selection-start-column="54" selection-end-line="91" selection-end-column="54" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/App/www/js/wyszukajDrogi.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="340">
-          <caret line="32" column="34" lean-forward="false" selection-start-line="32" selection-start-column="34" selection-end-line="32" selection-end-column="34" />
+        <state relative-caret-position="493">
+          <caret line="29" column="27" lean-forward="true" selection-start-line="29" selection-start-column="27" selection-end-line="29" selection-end-column="27" />
           <folding />
         </state>
       </provider>

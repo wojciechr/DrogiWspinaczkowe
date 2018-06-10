@@ -13,24 +13,31 @@ function wyszukajDrogi(){
 	
 }
 
-function dodajDroge(){
-    var userId;
-    var user = firebase.auth().currentUser;
+function wyszukajDrogi(){
+    var logbox = dociment.getElementById("logbox");
 
+    logbox.value = "1";
+
+    var userId;
+
+    logbox.value = "2";
+    var user = firebase.auth().currentUser;
+    logbox.value = "3";
     if (user) {
         userId = user.uid;
+        logbox.value = "4";
     } else {
+        logbox.value = "5";
         window.alert("Nie zalogowałeś się!");
         return;
     }
-
+    logbox.value = "6";
     var firebaseRef = firebase.database().ref();
-
+    logbox.value = "7";
     var userPath = "Users/" + userId;
     var db = firebase.database().ref().child(userPath);
 
-    var logbox = dociment.getElementById("logbox");
-    logbox.value = "cos sie robi";
+    logbox.value = "88888";
 
     //
     // var lastChild = db.orderByKey().limitToLast(1);
