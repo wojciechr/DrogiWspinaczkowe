@@ -43,26 +43,28 @@ function wyszukajDrogi() {
         var routes = snapshot;
         logbox.value = JSON.stringify(routes.val());
 
-        for (var route in routes.val()) {
-            $("body").append("123");
+        $("body").append(snapshot[0][0].Typ);
 
-            var table = document.getElementById("wyniki_wyszukiwania");
-            var row = table.insertRow(1);
-
-            var droga = row.insertCell(0);
-            var skala = row.insertCell(1);
-            var region = row.insertCell(2);
-            var styl = row.insertCell(3);
-            var trudnosc = row.insertCell(4);
-            var data = row.insertCell(5);
-            droga.innerHTML = JSON.stringify(route);
-            skala.innerHTML = "";
-            region.innerHTML = JSON.stringify(route[0]);
-            styl.innerHTML = JSON.stringify(route[0].val());
-            trudnosc.innerHTML = route[0].Trudność;
-            data.innerHTML = route[0].Data;
-            $("body").append("456 ");
-        }
+        // for (var route in routes.val()) {
+        //     $("body").append("123");
+        //
+        //     var table = document.getElementById("wyniki_wyszukiwania");
+        //     var row = table.insertRow(1);
+        //
+        //     var droga = row.insertCell(0);
+        //     var skala = row.insertCell(1);
+        //     var region = row.insertCell(2);
+        //     var styl = row.insertCell(3);
+        //     var trudnosc = row.insertCell(4);
+        //     var data = row.insertCell(5);
+        //     droga.innerHTML = JSON.stringify(route);
+        //     skala.innerHTML = "";
+        //     region.innerHTML = JSON.stringify(route[0]);
+        //     styl.innerHTML = JSON.stringify(route[0].val());
+        //     trudnosc.innerHTML = route[0].Trudność;
+        //     data.innerHTML = route[0].Data;
+        //     $("body").append("456 ");
+        // }
 
     }, function (error) {
         console.log("Error: " + error.code);
