@@ -55,10 +55,10 @@ function wyszukajDrogi() {
             var styl = row.insertCell(3);
             var trudnosc = row.insertCell(4);
             var data = row.insertCell(5);
-            droga.innerHTML = route[0].NazwaDrogi;
-            skala.innerHTML = route[0].NazwaSkały;
-            region.innerHTML = route[0].NazwaRegionu;
-            styl.innerHTML = route[0].StylSrzejścia;
+            droga.innerHTML = JSON.stringify(route);
+            skala.innerHTML = JSON.stringify(route.val());
+            region.innerHTML = JSON.stringify(route[0].val());
+            styl.innerHTML = JSON.stringify(route[0]);
             trudnosc.innerHTML = route[0].Trudność;
             data.innerHTML = route[0].Data;
             $("body").append("456 ");
