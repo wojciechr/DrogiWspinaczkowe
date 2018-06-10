@@ -42,15 +42,17 @@ function wyszukajDrogi() {
 
     firebaseRef.on("value", function(snapshot) {
         console.log(snapshot.val());
-        logbox.value = JSON.stringify(snapshot.val());
         routes = snapshot.val();
     }, function (error) {
         console.log("Error: " + error.code);
     });
 
+    logbox.value = JSON.stringify(routes);
+
+    table.style="border: 1px solid black;";
+    $("body").append("123");
     for(var route in routes) {
         var table = document.getElementById("wyniki_wyszukiwania");
-        table.style="border: 1px solid black;";
         var row = table.insertRow(1);
 
         var droga = row.insertCell(0);
@@ -65,7 +67,7 @@ function wyszukajDrogi() {
         styl.innerHTML = "styl1";
         trudnosc.innerHTML = "trudnosc1";
         data.innerHTML = "data1";
-
+        $("body").append("456");
     }
 
 
