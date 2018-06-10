@@ -23,7 +23,6 @@ function wyszukajDrogi() {
 
     firebaseRef.on("value", function (snapshot) {
 
-
         routes = snapshot.val()
 
         var typ = document.getElementById("typ_field").value;
@@ -40,9 +39,7 @@ function wyszukajDrogi() {
             route = routes[route_key];
 
             if (typ != "Wszystkie") {
-                $("body").append("nie wszystkie ");
                 if (typ != route.Typ) {
-                    $("body").append("nie moj typ ");
                     continue;
                 }
             }
