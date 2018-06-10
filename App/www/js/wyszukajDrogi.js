@@ -42,8 +42,8 @@ function wyszukajDrogi() {
 
     firebaseRef.on("value", function (snapshot) {
         console.log(snapshot.val());
-        routes = snapshot;
-        logbox.value = JSON.stringify(routes.val());
+        routes = snapshot.val();
+        logbox.value = JSON.stringify(routes);
 
         for (var route in routes) {
             logbox.value = route.val();
