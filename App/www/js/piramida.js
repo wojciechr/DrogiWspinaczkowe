@@ -98,7 +98,13 @@ function getData() {
         };
 
         window.alert("przed returnem");
-        return data;
+        return new Promise((resolve, reject ) => {
+            if (1 != 0) {
+                resolve(data);
+            }else {
+                reject(data);
+            }
+        });
 
     }, function (error) {
         console.log("Error: " + error.code);
