@@ -21,11 +21,9 @@
       <file leaf-file-name="piramida.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/App/www/js/piramida.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="170">
-              <caret line="10" column="16" lean-forward="false" selection-start-line="10" selection-start-column="9" selection-end-line="10" selection-end-column="16" />
-              <folding>
-                <element signature="e#2934#5202#0" expanded="false" />
-              </folding>
+            <state relative-caret-position="657">
+              <caret line="99" column="8" lean-forward="false" selection-start-line="99" selection-start-column="8" selection-end-line="99" selection-end-column="39" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -33,8 +31,8 @@
       <file leaf-file-name="md_piramida.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/App/www/html/md_piramida.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="306">
-              <caret line="103" column="7" lean-forward="true" selection-start-line="103" selection-start-column="7" selection-end-line="103" selection-end-column="7" />
+            <state relative-caret-position="237">
+              <caret line="177" column="0" lean-forward="true" selection-start-line="177" selection-start-column="0" selection-end-line="177" selection-end-column="0" />
               <folding>
                 <element signature="n#head#0;n#html#0;n#!!top" expanded="false" />
                 <element signature="n#style#0;n#body#0;n#html#0;n#!!top" expanded="true" />
@@ -57,7 +55,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>piramida.</find>
       <find>dbNazwaTrasy</find>
       <find>content_opt</find>
       <find>apiKey: &quot;AIzaSyA-ejZDxLBfqxuqcsakiY31p6iXt4cJc8M&quot;,</find>
@@ -87,6 +84,7 @@
       <find>labels</find>
       <find>populateChart</find>
       <find>ctx</find>
+      <find>dataa</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -243,7 +241,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="40533000" />
+    <option name="totallyTimeSpent" value="40787000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-1928" y="-749" width="1936" height="1056" extended-state="6" />
@@ -572,18 +570,16 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/App/www/js/piramida.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="10" column="16" lean-forward="false" selection-start-line="10" selection-start-column="9" selection-end-line="10" selection-end-column="16" />
-          <folding>
-            <element signature="e#2934#5202#0" expanded="false" />
-          </folding>
+        <state relative-caret-position="657">
+          <caret line="99" column="8" lean-forward="false" selection-start-line="99" selection-start-column="8" selection-end-line="99" selection-end-column="39" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/App/www/html/md_piramida.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
-          <caret line="103" column="7" lean-forward="true" selection-start-line="103" selection-start-column="7" selection-end-line="103" selection-end-column="7" />
+        <state relative-caret-position="237">
+          <caret line="177" column="0" lean-forward="true" selection-start-line="177" selection-start-column="0" selection-end-line="177" selection-end-column="0" />
           <folding>
             <element signature="n#head#0;n#html#0;n#!!top" expanded="false" />
             <element signature="n#style#0;n#body#0;n#html#0;n#!!top" expanded="true" />
