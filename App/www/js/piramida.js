@@ -9,7 +9,7 @@ const config = {
 firebase.initializeApp(config);
 
 function getData() {
-    var userId;
+/*    var userId;
 
     var user = firebase.auth().currentUser;
     if (user) {
@@ -39,12 +39,12 @@ function getData() {
         var dataOS = [];
         var dataFL = [];
         var dataRP = [];
-
-        // var labels = ["a"];
-        // var dataOS = ["1"];
-        // var dataFL = ["2"];
-        // var dataRP = ["3"];
-
+*/
+         var labels = ["a"];
+         var dataOS = ["1"];
+         var dataFL = ["2"];
+         var dataRP = ["3"];
+/*
         for (var route_key in routes) {
             route = routes[route_key];
 
@@ -79,7 +79,7 @@ function getData() {
                 dataRP.push(value[2]);
             }
         }
-
+*/
         var data = {
             labels: labels,
             datasets: [{
@@ -109,9 +109,9 @@ function getData() {
             }
         });
 
-    }, function (error) {
-        console.log("Error: " + error.code);
-    });
+ //   }, function (error) {
+ //       console.log("Error: " + error.code);
+ //   });
 
 
 }
